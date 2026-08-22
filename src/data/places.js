@@ -120,6 +120,11 @@ export const PLACES = [
     note: 'Herod Antipas’s fortress east of the Dead Sea. Josephus names it as the place John the Baptist was imprisoned and executed.',
   }),
   P('petra', 'Sela / Petra (Edom)', 30.3285, 35.4444, 'secure', { modern: 'Petra, Jordan' }),
+  P('uz', 'The land of Uz', 30.6000, 35.7000, 'disputed', {
+    note: 'Unlocated. Lamentations 4:21 associates Uz with Edom, which is why it is drawn here; ' +
+          'others place it in the Hauran, well to the north. The book of Job gives no geography ' +
+          'beyond the name, and mentions neither Israel nor the covenant.',
+  }),
   P('beth-shan', 'Beth Shan', 32.5031, 35.5031, 'secure' ),
   P('abel-meholah', 'Abel Meholah', 32.3500, 35.5300, 'disputed', {
     note: 'Elisha’s home, somewhere in the Jordan valley south of Beth Shan. Several tells have been proposed and none is settled.',

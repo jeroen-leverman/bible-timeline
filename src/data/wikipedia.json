@@ -1757,5 +1757,18 @@
   "extract": "Rhodes ( ; Greek: Ρόδος, romanized: Ródos [ˈroðos]) is the largest of Greece's Dodecanese islands and their historical capital; it is the ninth largest island in the  Mediterranean Sea. Administratively, Rhodes constitutes a separate municipality within the Rhodes regional unit, which is part of the South Aegean administrative region.",
   "image": null,
   "distanceKm": 0
+ },
+ "uz": {
+  "title": "Land of Uz",
+  "url": "https://en.wikipedia.org/wiki/Land_of_Uz",
+  "extract": "The land of Uz (Hebrew: אֶרֶץ־עוּץ – ʾereṣ-ʿŪṣ) is a location mentioned in the Hebrew Bible, most prominently in the Book of Job, which begins, \"There was a man in the land of Uz, whose name was Job\". \nThe name \"Uz\" is used most often to refer to Uz, son of Aram, presumably the region's namesake.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Kingdoms_of_the_Levant_Map_830.png/960px-Kingdoms_of_the_Levant_Map_830.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Kingdoms_of_the_Levant_Map_830.xcf: *Kingdoms_around_Israel_830_map.svg: *Kingdoms_of_Israel_and_Judah_map_830.svg: *Oldtidens_Israel_&amp;_Judea.svg: FinnWikiNo\nderivative work: Richardprins (talk)\nderivative work: Richardprins (talk)\nKingdoms_of_Israel_and_Judah_map_830.svg: *Oldtidens_Israel_&amp;_Judea.svg: FinnWikiNo\nderivative work: Richardprins (talk)\nderivative work: Dlv999 (talk)\nderivative work: Dlv999 (talk)",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Kingdoms_of_the_Levant_Map_830.png"
+  },
+  "distanceKm": 0
  }
 }

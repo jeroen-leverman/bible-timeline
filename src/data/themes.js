@@ -20,6 +20,11 @@ export const THEMES = [
     'The one life in Genesis told almost entirely without geography. Nothing is located until the ark grounds on the mountains of Ararat, and no year is given at any point.',
     ['noah-ark', 'noah-enters-ark', 'flood', 'noah-dove', 'noah-altar', 'noah-covenant', 'noah-vineyard']),
 
+  theme('job', 'Job', 'life', 'Job 1–42',
+    'The other undated life, and the more stubbornly so: no king, no covenant, no Israel, no year. Its customs read as patriarchal, which is the only reason it sits where it does — and the argument at its centre is never actually settled, only interrupted.',
+    ['job-prosperity', 'job-losses', 'job-affliction', 'job-friends', 'job-dialogues',
+     'job-whirlwind', 'job-restored']),
+
   theme('abraham', 'Abraham', 'life', 'Genesis 11–25',
     'From Ur to Haran to Canaan to Egypt and back — roughly 1,500 miles, all of it on the promise of a land he never owns and a son he does not yet have.',
     ['abram-ur', 'call-abram', 'abram-egypt', 'abraham-covenant', 'sodom', 'isaac-born', 'binding-isaac']),
@@ -99,6 +104,11 @@ export const THEMES = [
   theme('isaiah', 'Isaiah', 'life', 'Isaiah 1–39',
     'Called in the year King Uzziah died, and active through the two Assyrian crises that defined his lifetime: the north falling in 722, and Jerusalem surviving 701.',
     ['isaiah-call', 'samaria-falls', 'sennacherib', 'lachish']),
+
+  theme('hezekiah', 'Hezekiah', 'life', '2 Kings 18–20; Isaiah 36–39',
+    'The king who cut a tunnel through rock to beat a siege, and whose reign leaves more physical evidence than any other in Kings — the tunnel, the inscription in it, and an Assyrian prism boasting about a city it never took.',
+    ['hezekiah-reform', 'hezekiah-illness', 'hezekiah-tunnel', 'hezekiah-envoys',
+     'sennacherib', 'lachish']),
 
   theme('jeremiah', 'Jeremiah', 'life', 'Jeremiah 1–52',
     'Forty years telling a city it will fall and that resistance is pointless — imprisoned, thrown into a cistern, and finally proved right, which helped nobody.',

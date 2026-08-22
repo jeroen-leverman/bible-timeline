@@ -4,7 +4,7 @@ An interactive timeline and historical map of events described in the Bible, fro
 Genesis through Revelation — including the period between the testaments, because the
 New Testament opens in a world that period created.
 
-**203 events · 146 places · 45 mapped routes · 31 curated threads · 226 passages · 9 territories**
+**214 events · 147 places · 45 mapped routes · 33 curated threads · 241 passages · 9 territories**
 
 ## Lives and threads
 
@@ -12,15 +12,20 @@ An era answers *when*. An event type answers *what kind*. A theme answers *whose
 is this* — it gathers one life, or one long argument, so the timeline can be read as that
 story instead of the whole sweep.
 
-Twenty-eight lives — Noah, Abraham, Isaac, Jacob, Joseph, Moses, Joshua, Deborah, Gideon,
-Samson, Ruth, Samuel, Saul, David, Solomon, Elijah, Elisha, Jonah, Isaiah, Jeremiah,
-Daniel, Esther, Nehemiah, John the Baptist, Mary, Jesus, Peter, Paul — and three threads
-that cut across eras: **The Temple** (a tent, two buildings and a ruin), **Exile and
-return**, and **The covenants**.
+Thirty lives — Noah, Job, Abraham, Isaac, Jacob, Joseph, Moses, Joshua, Deborah, Gideon,
+Samson, Ruth, Samuel, Saul, David, Solomon, Elijah, Elisha, Jonah, Isaiah, Hezekiah,
+Jeremiah, Daniel, Esther, Nehemiah, John the Baptist, Mary, Jesus, Peter, Paul — and
+three threads that cut across eras: **The Temple** (a tent, two buildings and a ruin),
+**Exile and return**, and **The covenants**.
 
-Noah is the instructive one. His seven events carry no dates at all, and no location
-until the ark grounds on the mountains of Ararat — so his life reads as a sequence
-without a chronology, which is exactly what Genesis gives.
+Noah and Job are the instructive ones. Neither carries a date. Noah has no location
+either until the ark grounds on Ararat; Job has only the name of a land nobody can
+place, and mentions neither Israel nor the covenant nor any king. Both read as a
+sequence without a chronology, which is exactly what the text gives.
+
+Hezekiah is the opposite case, and worth comparing: his reign leaves more physical
+evidence than any other in Kings — the tunnel, the inscription cut by the men who dug
+it, and an Assyrian prism boasting about a city it never actually took.
 
 Themes are curations rather than categories: an event can sit in several, and plenty sit
 in none. Event ids are validated on load, so a typo fails loudly instead of quietly

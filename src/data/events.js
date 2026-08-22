@@ -109,6 +109,42 @@ export const EVENTS = [
   }),
 
   // ----------------------------------------------------------- patriarchs
+  event('job-prosperity', 'Job’s prosperity, and the wager', -2100, 'patriarchs', 'covenant', ['uz'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Job 1:1–12'],
+    summary: 'The richest man in the east, scrupulous to the point of sacrificing in case his children have sinned privately — and a conversation about him he never hears.',
+    note: 'Job is the least anchored book in the canon: no king, no covenant, no Israel, no date. Its customs read as patriarchal, which is why it sits here, but the placement is a convention rather than a finding, and the book’s composition is usually put far later than its setting.',
+  }),
+  event('job-losses', 'Four messengers', -2099, 'patriarchs', 'covenant', ['uz'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Job 1:13–22'],
+    summary: 'Raiders, fire, raiders again, and a wind out of the desert. Each messenger arrives while the last is still speaking.',
+  }),
+  event('job-affliction', 'Job is afflicted', -2098, 'patriarchs', 'covenant', ['uz'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Job 2:1–10'],
+    summary: 'Sores from head to foot, a potsherd to scrape himself with, and a wife who tells him to curse God and die.',
+  }),
+  event('job-friends', 'The friends sit down', -2097, 'patriarchs', 'covenant', ['uz'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Job 2:11–3:26'],
+    summary: 'Three friends come to comfort him and say nothing for seven days and seven nights, which is the wisest thing any of them does.',
+  }),
+  event('job-dialogues', 'The argument', -2096, 'patriarchs', 'prophet', ['uz'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Job 4–31'],
+    summary: 'Three cycles of speeches insisting that suffering must be deserved, and one man refusing to agree because he knows it is not true of him.',
+  }),
+  event('job-whirlwind', 'The voice from the whirlwind', -2095, 'patriarchs', 'prophet', ['uz'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Job 38–41'],
+    summary: 'God answers at last, and never mentions the wager — only wild goats, the ostrich, the horse and the storehouses of snow.',
+  }),
+  event('job-restored', 'Job is restored', -2094, 'patriarchs', 'covenant', ['uz'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Job 42'],
+    summary: 'The friends are rebuked for not speaking rightly, Job prays for them, and everything is returned twice over — except the children, who are replaced rather than restored.',
+  }),
   event('abram-ur', 'Terah’s family leaves Ur', -2091, 'patriarchs', 'migration', ['ur', 'haran'], {
     dateLabel: 'c. 2091 BC traditional · c. 1900–1750 BC academic', dateConfidence: 'disputed',
     scripture: ['Genesis 11:31'],
@@ -707,12 +743,33 @@ export const EVENTS = [
     scripture: ['Isaiah 6'],
     summary: '“In the year that King Uzziah died” — a vision in the temple, and a commission.',
   }),
+  event('hezekiah-reform', 'Hezekiah’s reform', -715, 'divided-kingdom', 'temple', ['temple-mount', 'jerusalem'], {
+    dateLabel: 'c. 715 BC', dateConfidence: 'estimated',
+    scripture: ['2 Kings 18:1–8', '2 Chronicles 29–31'],
+    summary: 'The high places come down, and so does the bronze serpent Moses had made, because people had started burning incense to it. He reopens the temple and keeps a Passover the north is invited to.',
+  }),
   event('samaria-falls', 'Fall of Samaria — the end of Israel', -722, 'divided-kingdom', 'battle', ['samaria', 'nineveh'], {
     dateLabel: '722 BC', dateConfidence: 'anchored',
     scripture: ['2 Kings 17'],
     summary: 'After a three-year siege the Assyrians take Samaria and deport its population. The ten northern tribes do not return.',
     route: ['samaria', 'asshur', 'nineveh'], featured: true,
     anchor: 'Recorded by Sargon II, who claims 27,290 deportees. The northern kingdom ends here.',
+  }),
+  event('hezekiah-illness', 'Hezekiah’s illness', -703, 'divided-kingdom', 'prophet', ['jerusalem'], {
+    dateLabel: 'c. 703 BC', dateConfidence: 'estimated',
+    scripture: ['2 Kings 20:1–11', 'Isaiah 38'],
+    summary: 'Told to put his house in order, he turns to the wall and weeps, and is given fifteen more years — the years in which everything else here happens.',
+  }),
+  event('hezekiah-tunnel', 'Hezekiah’s tunnel', -702, 'divided-kingdom', 'kingdom', ['jerusalem'], {
+    dateLabel: 'c. 702 BC', dateConfidence: 'anchored',
+    scripture: ['2 Kings 20:20', '2 Chronicles 32:30'],
+    summary: 'A third of a mile cut through solid rock to bring the Gihon spring inside the walls before the Assyrians arrive. It still carries water.',
+    anchor: 'The Siloam inscription, found in the tunnel in 1880, describes the two teams of diggers meeting in the middle — a contemporary account of the work by the men who did it.',
+  }),
+  event('hezekiah-envoys', 'The envoys from Babylon', -702, 'divided-kingdom', 'kingdom', ['jerusalem', 'babylon'], {
+    dateLabel: 'c. 702 BC', dateConfidence: 'estimated',
+    scripture: ['2 Kings 20:12–19', 'Isaiah 39'],
+    summary: 'Flattered by a delegation from a then-minor power, he shows them the entire treasury. Isaiah tells him it will all go to Babylon, and he is relieved it will not happen in his lifetime.',
   }),
   event('sennacherib', 'Sennacherib besieges Jerusalem', -701, 'divided-kingdom', 'battle', ['lachish', 'jerusalem', 'nineveh'], {
     dateLabel: '701 BC', dateConfidence: 'anchored',

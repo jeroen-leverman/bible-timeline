@@ -44,6 +44,7 @@ const TITLES = {
   aphek: 'Aphek (biblical)', zarephath: 'Sarepta', rhodes: 'Rhodes',
   'moab-plains': 'Moab', mizpah: 'Mizpah in Benjamin', nob: 'Nob (biblical town)',
   ziklag: 'Ziklag', marah: 'Marah (Bible)', 'red-sea-crossing': 'Crossing the Red Sea',
+  uz: 'Land of Uz',
 }
 
 /** Licences we are allowed to redistribute. Anything else is dropped. */
