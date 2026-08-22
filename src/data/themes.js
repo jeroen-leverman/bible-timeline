@@ -24,6 +24,11 @@ export const THEMES = [
     'From Ur to Haran to Canaan to Egypt and back — roughly 1,500 miles, all of it on the promise of a land he never owns and a son he does not yet have.',
     ['abram-ur', 'call-abram', 'abram-egypt', 'abraham-covenant', 'sodom', 'isaac-born', 'binding-isaac']),
 
+  theme('isaac', 'Isaac', 'life', 'Genesis 21–35',
+    'The quietest of the three patriarchs, and the only one who never leaves Canaan. He is carried through his own story by other people — bound by his father, chosen a wife by a servant, deceived by his son — and gets exactly one chapter of his own.',
+    ['isaac-born', 'binding-isaac', 'isaac-rebekah', 'jacob-born', 'isaac-gerar', 'jacob-esau',
+     'isaac-death']),
+
   theme('jacob', 'Jacob', 'life', 'Genesis 25–49',
     'A man who takes what he wants by cunning, spends twenty years in exile for it, and comes home limping with a new name.',
     ['jacob-born', 'jacob-esau', 'jacobs-ladder', 'jacob-haran', 'jacob-wrestles', 'jacob-reunion',
@@ -63,6 +68,11 @@ export const THEMES = [
     'Born to a woman who was mocked for wanting a child, handed to a shrine, and left as the last judge — the man who both installs Israel’s first king and warns them what a king will cost.',
     ['samuel-born', 'samuel-call', 'ark-captured', 'saul-king', 'samuel-anoints-david']),
 
+  theme('saul', 'Saul', 'life', '1 Samuel 9–31',
+    'Israel’s first king, and a study in a man given a job he cannot hold. Unanimous after Jabesh Gilead, rejected twice for acting on his own judgement, and consulting by night the mediums he had outlawed by day.',
+    ['saul-king', 'saul-jabesh', 'saul-gilgal', 'saul-agag', 'samuel-anoints-david', 'david-flees',
+     'saul-endor', 'gilboa']),
+
   theme('david', 'David', 'life', '1 Samuel 16 – 1 Kings 2',
     'Shepherd, outlaw, king, adulterer, refugee from his own son. The most fully told life in the Hebrew Bible, and the least flattering.',
     ['samuel-anoints-david', 'david-goliath', 'david-flees', 'gilboa', 'david-king', 'jerusalem-captured',
@@ -73,9 +83,14 @@ export const THEMES = [
     ['solomon-king', 'solomon-judgment', 'first-temple', 'temple-dedication', 'queen-sheba',
      'solomon-trade', 'solomon-apostasy', 'division']),
 
-  theme('elijah', 'Elijah and Elisha', 'life', '1 Kings 17 – 2 Kings 13',
-    'Fire on Carmel, then a whisper at Horeb. The mantle passes to a successor who does twice as many miracles and gets a fraction of the attention.',
-    ['elijah-carmel', 'elijah-horeb', 'naboth', 'elisha']),
+  theme('elijah', 'Elijah', 'life', '1 Kings 17 – 2 Kings 2',
+    'Fire on Carmel, then a whisper at Horeb — the same prophet, a day apart, and the second scene is the one that matters. He does not die; he is collected.',
+    ['elijah-carmel', 'elijah-horeb', 'elisha-called', 'naboth', 'elijah-taken']),
+
+  theme('elisha', 'Elisha', 'life', '1 Kings 19 – 2 Kings 13',
+    'Asks for a double share and arguably gets it, then spends fifty years on things his master never did: healing water, feeding crowds, curing a foreign general, and lifting a siege. He dies of an ordinary illness, which the book does not treat as a failure.',
+    ['elisha-called', 'elijah-taken', 'elisha', 'naaman', 'elisha-blindness', 'elisha-siege',
+     'elisha-death']),
 
   theme('jonah', 'Jonah', 'life', 'Jonah 1–4',
     'Sent north-east and sails as far west as a ship can go. The only prophet whose mission succeeds completely and the only one who is furious about it — the book ends on a question he never answers.',
@@ -105,6 +120,11 @@ export const THEMES = [
   theme('john-baptist', 'John the Baptist', 'life', 'Luke 1; Mark 1–6',
     'Six months older than his cousin, and the one firm chronological peg in the Gospels — Luke dates his preaching to the fifteenth year of Tiberius. Killed at a fortress Josephus names.',
     ['john-born', 'john-preaching', 'baptism', 'john-death']),
+
+  theme('mary', 'Mary', 'life', 'Luke 1–2; John 2, 19',
+    'Present at the start and at the end, and largely silent in between. Her one long speech is a song about thrones being emptied, and the last thing anyone says to her in the temple is that a sword will go through her too.',
+    ['annunciation', 'visitation', 'nativity', 'presentation', 'flight-egypt', 'boy-temple',
+     'cana', 'crucifixion', 'pentecost']),
 
   theme('jesus', 'Jesus', 'life', 'The Gospels',
     'From a birth placed before Herod’s death in 4 BC to an execution dated either AD 30 or 33 — a life whose start and end are both approximate.',

@@ -148,10 +148,22 @@ export const EVENTS = [
     summary: 'Abraham is told to sacrifice Isaac on a mountain in Moriah, and is stopped. Chronicles later identifies Moriah with the temple hill.',
     route: ['beersheba', 'temple-mount'],
   }),
+  event('isaac-rebekah', 'A wife for Isaac', -2026, 'patriarchs', 'covenant', ['haran', 'beersheba'], {
+    dateLabel: 'c. 2026 BC traditional · c. 1880–1730 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 24'],
+    summary: 'A servant is sent back to Haran to find a wife among Abraham’s kin, and picks the woman who offers to water ten camels. Isaac is not consulted.',
+    route: ['beersheba', 'haran', 'beersheba'],
+  }),
   event('jacob-born', 'Jacob and Esau are born', -2006, 'patriarchs', 'covenant', ['beersheba'], {
     dateLabel: 'c. 2006 BC traditional · c. 1850–1700 BC academic', dateConfidence: 'disputed',
     scripture: ['Genesis 25:19–34'],
     summary: 'Twins who struggle before they are born, and an oracle that the elder will serve the younger. The birthright goes for a bowl of stew.',
+  }),
+  event('isaac-gerar', 'Isaac and the wells at Gerar', -2000, 'patriarchs', 'covenant', ['gerar', 'beersheba'], {
+    dateLabel: 'c. 2000 BC traditional · c. 1850–1700 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 26'],
+    summary: 'Famine, the same lie his father told about his wife, and a patient campaign of re-digging wells the Philistines keep filling in. The one chapter where Isaac acts rather than is acted upon.',
+    route: ['beersheba', 'gerar', 'beersheba'],
   }),
   event('jacob-esau', 'Jacob takes Esau’s blessing', -1929, 'patriarchs', 'covenant', ['beersheba'], {
     dateLabel: 'c. 1929 BC traditional · c. 1850–1700 BC academic', dateConfidence: 'disputed',
@@ -200,6 +212,11 @@ export const EVENTS = [
     dateLabel: 'c. 1890 BC traditional · c. 1800–1650 BC academic', dateConfidence: 'disputed',
     scripture: ['Genesis 39–40'],
     summary: 'Trusted with a household, accused by his master’s wife, and jailed — where he reads the dreams of a cupbearer and a baker, and is then forgotten for two years.',
+  }),
+  event('isaac-death', 'The death of Isaac', -1886, 'patriarchs', 'covenant', ['hebron'], {
+    dateLabel: 'c. 1886 BC traditional · c. 1800–1650 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 35:27–29'],
+    summary: 'He dies at Mamre and his two sons, who have not been in the same place since the stolen blessing, bury him together.',
   }),
   event('joseph-vizier', 'Joseph rises in Egypt', -1885, 'patriarchs', 'kingdom', ['memphis'], {
     dateLabel: 'c. 1885 BC traditional · c. 1800–1650 BC academic', dateConfidence: 'disputed',
@@ -457,6 +474,21 @@ export const EVENTS = [
     scripture: ['1 Samuel 16:1–13'],
     summary: 'Seven sons are passed over before the youngest is fetched in from the sheep.',
   }),
+  event('saul-jabesh', 'Saul relieves Jabesh Gilead', -1049, 'united-monarchy', 'battle', ['jabesh-gilead', 'gibeah'], {
+    dateLabel: 'c. 1049 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 11'],
+    summary: 'An Ammonite offers terms that involve gouging out every right eye. Saul cuts up his oxen, sends the pieces through Israel as a summons, and wins — the one moment his kingship is unanimous.',
+  }),
+  event('saul-gilgal', 'Saul’s unlawful sacrifice', -1045, 'united-monarchy', 'kingdom', ['gilgal'], {
+    dateLabel: 'c. 1045 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 13'],
+    summary: 'The army is deserting and Samuel is late, so Saul makes the offering himself. Samuel arrives as he finishes and tells him the kingdom will not stay in his family.',
+  }),
+  event('saul-agag', 'Saul spares Agag', -1028, 'united-monarchy', 'prophet', ['gilgal'], {
+    dateLabel: 'c. 1028 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 15'],
+    summary: 'Ordered to destroy the Amalekites entirely, he keeps the king and the best livestock, and explains they were for sacrifice. "To obey is better than sacrifice." Samuel never sees him again.',
+  }),
   event('david-goliath', 'David and Goliath', -1025, 'united-monarchy', 'battle', ['elah', 'gath', 'bethlehem'], {
     dateLabel: 'c. 1025 BC', dateConfidence: 'estimated',
     scripture: ['1 Samuel 17'],
@@ -468,6 +500,11 @@ export const EVENTS = [
     scripture: ['1 Samuel 19–30'],
     summary: 'Hunted by Saul, David gathers a band in the wilderness strongholds of Adullam and En Gedi, and twice spares the king’s life.',
     route: ['nob', 'gath', 'adullam', 'en-gedi', 'ziklag'],
+  }),
+  event('saul-endor', 'Saul and the medium at Endor', -1011, 'united-monarchy', 'kingdom', ['endor', 'gilboa'], {
+    dateLabel: 'c. 1011 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 28'],
+    summary: 'Having outlawed mediums himself, he goes in disguise by night to consult one, and is told what he already knows: tomorrow.',
   }),
   event('gilboa', 'Saul dies at Gilboa', -1010, 'united-monarchy', 'battle', ['gilboa', 'beth-shan', 'jabesh-gilead'], {
     dateLabel: 'c. 1010 BC', dateConfidence: 'estimated',
@@ -578,6 +615,11 @@ export const EVENTS = [
     summary: 'A contest with the prophets of Baal over which god answers by fire, in the reign of Ahab and Jezebel.',
     route: ['zarephath', 'carmel', 'jezreel'], featured: true,
   }),
+  event('elisha-called', 'Elisha is called from the plough', -858, 'divided-kingdom', 'prophet', ['abel-meholah'], {
+    dateLabel: 'c. 858 BC', dateConfidence: 'estimated',
+    scripture: ['1 Kings 19:19–21'],
+    summary: 'Elijah throws his cloak over a man ploughing with twelve yoke of oxen. Elisha slaughters the oxen, burns the equipment to cook them, and does not go back.',
+  }),
   event('elijah-horeb', 'Elijah at Horeb', -859, 'divided-kingdom', 'prophet', ['beersheba', 'sinai'], {
     dateLabel: 'c. 859 BC', dateConfidence: 'estimated',
     scripture: ['1 Kings 19'],
@@ -595,10 +637,37 @@ export const EVENTS = [
     summary: 'A coalition of Levantine states, Ahab among them, checks Assyria on the Orontes. The Bible does not mention the battle; Assyria does.',
     anchor: 'The Kurkh Monolith of Shalmaneser III credits “Ahab the Israelite” with 2,000 chariots — the first named Israelite king in an external record.',
   }),
-  event('elisha', 'The ministry of Elisha', -850, 'divided-kingdom', 'prophet', ['samaria', 'jericho', 'damascus'], {
+  event('elijah-taken', 'Elijah is taken up', -850, 'divided-kingdom', 'miracle', ['jericho', 'jordan-crossing'], {
+    dateLabel: 'c. 850 BC', dateConfidence: 'estimated',
+    scripture: ['2 Kings 2:1–18'],
+    summary: 'Three times told to stay behind and three times refusing, Elisha asks for a double share and watches the whirlwind take his master. Fifty men search for three days anyway.',
+    route: ['gilgal', 'bethel', 'jericho', 'jordan-crossing'],
+  }),
+  event('elisha', 'Elisha’s miracles in Israel', -848, 'divided-kingdom', 'miracle', ['samaria', 'jezreel', 'jericho'], {
     dateLabel: 'c. 850–800 BC', dateConfidence: 'estimated',
-    scripture: ['2 Kings 2–13'],
-    summary: 'Elijah is taken up in a whirlwind and Elisha receives a double share — healing Naaman, feeding the hungry and out-manoeuvring Aram.',
+    scripture: ['2 Kings 2:19–4:44'],
+    summary: 'A spring healed, a widow’s oil that keeps pouring, a poisoned stew made safe, a hundred men fed from twenty loaves, and a Shunammite’s son raised.',
+  }),
+  event('naaman', 'Naaman is healed', -845, 'divided-kingdom', 'miracle', ['damascus', 'samaria', 'jordan-crossing'], {
+    dateLabel: 'c. 845 BC', dateConfidence: 'estimated',
+    scripture: ['2 Kings 5'],
+    summary: 'A Syrian general with a skin disease, sent by an Israelite slave girl, is insulted to be told to wash seven times in a muddy local river. His servants talk him into it.',
+    route: ['damascus', 'samaria', 'jordan-crossing'],
+  }),
+  event('elisha-blindness', 'The army struck blind at Dothan', -840, 'divided-kingdom', 'miracle', ['dothan', 'samaria'], {
+    dateLabel: 'c. 840 BC', dateConfidence: 'estimated',
+    scripture: ['2 Kings 6:8–23'],
+    summary: 'Surrounded overnight, his servant panics and is shown the hills full of horses and chariots of fire. Elisha leads the blinded raiders into Samaria and then feeds them.',
+  }),
+  event('elisha-siege', 'The siege of Samaria lifted', -835, 'divided-kingdom', 'prophet', ['samaria'], {
+    dateLabel: 'c. 835 BC', dateConfidence: 'estimated',
+    scripture: ['2 Kings 6:24–7:20'],
+    summary: 'Famine so severe the city turns to cannibalism, and Elisha promises flour at market price by tomorrow. Four lepers find the besieging camp abandoned.',
+  }),
+  event('elisha-death', 'Elisha’s death, and the bones', -797, 'divided-kingdom', 'prophet', ['samaria'], {
+    dateLabel: 'c. 797 BC', dateConfidence: 'estimated',
+    scripture: ['2 Kings 13:14–21'],
+    summary: 'He dies of an illness, which the book does not treat as a failure. A body thrown hastily into his grave during a raid touches his bones and revives.',
   }),
   event('jehu', 'Jehu’s purge', -841, 'divided-kingdom', 'kingdom', ['jezreel', 'samaria'], {
     dateLabel: '841 BC', dateConfidence: 'anchored',
@@ -857,6 +926,17 @@ export const EVENTS = [
   }),
 
   // --------------------------------------------------------- life of Jesus
+  event('annunciation', 'The Annunciation', -6, 'jesus', 'covenant', ['nazareth'], {
+    dateLabel: 'c. 7–6 BC', dateConfidence: 'estimated',
+    scripture: ['Luke 1:26–38'],
+    summary: 'Gabriel comes to a girl in an unremarkable Galilean village. She asks how, is told, and consents — the only person in the story who is asked.',
+  }),
+  event('visitation', 'Mary visits Elizabeth', -6, 'jesus', 'ministry', ['nazareth', 'jerusalem'], {
+    dateLabel: 'c. 7–6 BC', dateConfidence: 'estimated',
+    scripture: ['Luke 1:39–56'],
+    summary: 'She travels to the hill country to a older kinswoman six months pregnant, and answers with the Magnificat — a song about thrones being emptied and the hungry being fed.',
+    route: ['nazareth', 'jerusalem'],
+  }),
   event('john-born', 'The birth of John the Baptist', -6, 'jesus', 'prophet', ['temple-mount', 'jerusalem'], {
     dateLabel: 'c. 7–6 BC', dateConfidence: 'estimated',
     scripture: ['Luke 1'],
@@ -868,6 +948,11 @@ export const EVENTS = [
     summary: 'Born in Bethlehem in the days of Herod; shepherds in Luke, magi in Matthew.',
     route: ['nazareth', 'bethlehem'], featured: true,
     note: 'Not AD 1. Matthew places the birth before Herod the Great’s death in 4 BC, so 6–4 BC is the usual range. The AD/BC scale was calculated in the 6th century by Dionysius Exiguus, who was simply off by a few years.',
+  }),
+  event('presentation', 'The presentation in the Temple', -5, 'jesus', 'temple', ['temple-mount'], {
+    dateLabel: 'c. 5–4 BC', dateConfidence: 'estimated',
+    scripture: ['Luke 2:22–38'],
+    summary: 'Forty days after the birth, the offering of the poor — two birds rather than a lamb. Simeon blesses them and then tells Mary a sword will go through her own soul.',
   }),
   event('flight-egypt', 'The flight into Egypt', -4, 'jesus', 'migration', ['bethlehem', 'alexandria', 'nazareth'], {
     dateLabel: 'c. 5–4 BC', dateConfidence: 'estimated',

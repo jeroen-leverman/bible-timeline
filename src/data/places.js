@@ -69,6 +69,7 @@ export const PLACES = [
   P('bethlehem', 'Bethlehem', 31.7054, 35.2024, 'secure'),
   P('hebron', 'Hebron', 31.5326, 35.0998, 'secure'),
   P('beersheba', 'Beersheba', 31.2518, 34.7913, 'secure'),
+  P('gerar', 'Gerar', 31.3833, 34.5833, 'probable', { modern: 'Tel Haror, Israel' }),
   P('bethel', 'Bethel', 31.9275, 35.2333, 'probable', { modern: 'Beitin' }),
   P('ai', 'Ai', 31.9167, 35.2611, 'disputed', { modern: 'et-Tell' }),
   P('shechem', 'Shechem', 32.2137, 35.2833, 'secure', { modern: 'Tell Balata, Nablus' }),
@@ -120,6 +121,9 @@ export const PLACES = [
   }),
   P('petra', 'Sela / Petra (Edom)', 30.3285, 35.4444, 'secure', { modern: 'Petra, Jordan' }),
   P('beth-shan', 'Beth Shan', 32.5031, 35.5031, 'secure' ),
+  P('abel-meholah', 'Abel Meholah', 32.3500, 35.5300, 'disputed', {
+    note: 'Elisha’s home, somewhere in the Jordan valley south of Beth Shan. Several tells have been proposed and none is settled.',
+  }),
   P('jezreel', 'Jezreel', 32.5556, 35.3306, 'secure'),
   P('gilboa', 'Mount Gilboa', 32.5000, 35.4000, 'secure'),
   P('endor', 'Endor', 32.6300, 35.4200, 'probable'),
