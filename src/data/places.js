@@ -149,6 +149,8 @@ export const PLACES = [
   P('ashkelon', 'Ashkelon', 31.6667, 34.5500, 'secure'),
   P('ashdod', 'Ashdod', 31.8000, 34.6500, 'secure'),
   P('ekron', 'Ekron', 31.7783, 34.8514, 'secure', { modern: 'Tel Miqne' }),
+  P('zorah', 'Zorah', 31.7661, 34.9781, 'probable', { modern: 'Tzor‘a, Israel' }),
+  P('timnah', 'Timnah', 31.7953, 34.9089, 'secure', { modern: 'Tel Batash' }),
   P('gath', 'Gath', 31.6997, 34.8472, 'probable', { modern: 'Tell es-Safi' }),
 
   // ---- Syria, Phoenicia, Arabia -----------------------------------------

@@ -26,11 +26,13 @@ export const THEMES = [
 
   theme('jacob', 'Jacob', 'life', 'Genesis 25–49',
     'A man who takes what he wants by cunning, spends twenty years in exile for it, and comes home limping with a new name.',
-    ['jacob-esau', 'jacobs-ladder', 'jacob-wrestles', 'jacob-egypt']),
+    ['jacob-born', 'jacob-esau', 'jacobs-ladder', 'jacob-haran', 'jacob-wrestles', 'jacob-reunion',
+     'jacob-bethel-return', 'jacob-egypt', 'jacob-blesses']),
 
   theme('joseph', 'Joseph', 'life', 'Genesis 37–50',
     'Sold by his brothers at Dothan and carried down the coastal road; the story ends with him governing the country he arrived in as property.',
-    ['joseph-sold', 'joseph-vizier', 'jacob-egypt']),
+    ['joseph-dreams', 'joseph-sold', 'joseph-potiphar', 'joseph-vizier', 'joseph-brothers',
+     'joseph-reveals', 'jacob-egypt', 'joseph-forgives']),
 
   theme('moses', 'Moses', 'life', 'Exodus – Deuteronomy',
     'Eighty years before the burning bush and forty after it. He argues with God, carries a nation across a desert, and dies within sight of the destination.',
@@ -40,6 +42,18 @@ export const THEMES = [
   theme('joshua', 'Joshua', 'life', 'Joshua 1–24',
     'The campaigns, and the archaeology that both supports and complicates them — Hazor burns on schedule, Jericho does not.',
     ['jordan-crossing-ev', 'jericho', 'ai', 'gibeon-sun', 'hazor-burn', 'shechem-covenant']),
+
+  theme('deborah', 'Deborah', 'life', 'Judges 4–5',
+    'The only judge who is also a prophet, and the only one people travel to for rulings. Her war is won by two women and remembered in a poem older than the account beside it.',
+    ['deborah-judge', 'deborah', 'jael', 'deborah-song']),
+
+  theme('gideon', 'Gideon', 'life', 'Judges 6–8',
+    'Hiding in a winepress when he is hailed as a mighty warrior, and cautious enough to ask for the sign twice. Wins with three hundred men, then makes an idol out of the plunder.',
+    ['gideon-call', 'gideon-fleece', 'gideon', 'gideon-ephod']),
+
+  theme('samson', 'Samson', 'life', 'Judges 13–16',
+    'Set apart from the womb and incapable of keeping any of it. The strongest man in the book is also the least self-governed, and the Philistines never beat him — a haircut does.',
+    ['samson-born', 'samson-timnah', 'samson-delilah', 'samson']),
 
   theme('ruth', 'Ruth', 'life', 'Ruth 1–4',
     'A famine, two widows, and a foreign woman who refuses to go home. The whole book turns on a legal technicality about redeeming a dead man’s land, and ends by making her David’s great-grandmother.',
@@ -56,11 +70,16 @@ export const THEMES = [
 
   theme('solomon', 'Solomon', 'life', '1 Kings 1–11',
     'Asks for wisdom rather than long life or riches, builds the temple, and leaves a kingdom that splits the moment he dies.',
-    ['solomon-king', 'first-temple', 'queen-sheba', 'division']),
+    ['solomon-king', 'solomon-judgment', 'first-temple', 'temple-dedication', 'queen-sheba',
+     'solomon-trade', 'solomon-apostasy', 'division']),
 
   theme('elijah', 'Elijah and Elisha', 'life', '1 Kings 17 – 2 Kings 13',
     'Fire on Carmel, then a whisper at Horeb. The mantle passes to a successor who does twice as many miracles and gets a fraction of the attention.',
     ['elijah-carmel', 'elijah-horeb', 'naboth', 'elisha']),
+
+  theme('jonah', 'Jonah', 'life', 'Jonah 1–4',
+    'Sent north-east and sails as far west as a ship can go. The only prophet whose mission succeeds completely and the only one who is furious about it — the book ends on a question he never answers.',
+    ['jonah', 'jonah-fish', 'jonah-nineveh', 'jonah-plant']),
 
   theme('isaiah', 'Isaiah', 'life', 'Isaiah 1–39',
     'Called in the year King Uzziah died, and active through the two Assyrian crises that defined his lifetime: the north falling in 722, and Jerusalem surviving 701.',
@@ -78,6 +97,10 @@ export const THEMES = [
   theme('esther', 'Esther', 'life', 'Esther 1–10',
     'The one book in the canon that never mentions God. A queen who has concealed who she is decides, at the last possible moment, not to stay quiet.',
     ['esther-vashti', 'esther', 'esther-haman', 'esther-purim']),
+
+  theme('nehemiah', 'Nehemiah', 'life', 'Nehemiah 1–13',
+    'A civil servant who takes leave to rebuild a city wall, finishes it in fifty-two days against organised obstruction, and comes back years later to find most of it undone.',
+    ['nehemiah-news', 'nehemiah', 'nehemiah-opposition', 'nehemiah-reading', 'nehemiah-reforms']),
 
   theme('john-baptist', 'John the Baptist', 'life', 'Luke 1; Mark 1–6',
     'Six months older than his cousin, and the one firm chronological peg in the Gospels — Luke dates his preaching to the fifteenth year of Tiberius. Killed at a fortress Josephus names.',
@@ -108,8 +131,9 @@ export const THEMES = [
 
   theme('exile', 'Exile and return', 'thread', '722 – 445 BC',
     'The best-dated stretch of the Old Testament, because Assyria and Babylon kept records. Two kingdoms fall, one comes back.',
-    ['samaria-falls', 'sennacherib', 'carchemish', 'first-deportation', 'jerusalem-falls', 'ezekiel',
-     'daniel-lions', 'babylon-falls', 'cyrus-decree', 'return', 'second-temple', 'ezra', 'nehemiah']),
+    ['samaria-falls', 'sennacherib', 'carchemish', 'first-deportation', 'ezekiel', 'jerusalem-falls',
+     'babylon-falls', 'cyrus-decree', 'daniel-lions', 'return', 'second-temple', 'ezra', 'nehemiah',
+     'nehemiah-reading']),
 
   theme('covenants', 'The covenants', 'thread', 'Noah to the upper room',
     'The agreements the whole library is built around — with a creature, a family, a nation, a king, and finally over bread and a cup.',

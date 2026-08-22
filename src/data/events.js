@@ -148,6 +148,11 @@ export const EVENTS = [
     summary: 'Abraham is told to sacrifice Isaac on a mountain in Moriah, and is stopped. Chronicles later identifies Moriah with the temple hill.',
     route: ['beersheba', 'temple-mount'],
   }),
+  event('jacob-born', 'Jacob and Esau are born', -2006, 'patriarchs', 'covenant', ['beersheba'], {
+    dateLabel: 'c. 2006 BC traditional · c. 1850–1700 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 25:19–34'],
+    summary: 'Twins who struggle before they are born, and an oracle that the elder will serve the younger. The birthright goes for a bowl of stew.',
+  }),
   event('jacob-esau', 'Jacob takes Esau’s blessing', -1929, 'patriarchs', 'covenant', ['beersheba'], {
     dateLabel: 'c. 1929 BC traditional · c. 1850–1700 BC academic', dateConfidence: 'disputed',
     scripture: ['Genesis 27'],
@@ -158,11 +163,32 @@ export const EVENTS = [
     scripture: ['Genesis 28:10–22'],
     summary: 'A dream of a stairway to heaven; Jacob names the place Bethel, “house of God”.',
   }),
+  event('jacob-haran', 'Jacob serves Laban for Rachel', -1921, 'patriarchs', 'migration', ['haran'], {
+    dateLabel: 'c. 1928–1908 BC traditional · c. 1850–1700 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 29–31'],
+    summary: 'Seven years for Rachel, and Leah delivered instead; then seven more. Twenty years in Paddan-aram, and eleven of the twelve sons born there.',
+  }),
   event('jacob-wrestles', 'Jacob wrestles at Penuel', -1908, 'patriarchs', 'covenant', ['haran', 'mahanaim', 'penuel', 'shechem'], {
     dateLabel: 'c. 1908 BC traditional · c. 1850–1700 BC academic', dateConfidence: 'disputed',
     scripture: ['Genesis 31–35'],
     summary: 'Returning to Canaan, Jacob wrestles a stranger until daybreak and is renamed Israel. He leaves with a limp.',
     route: ['haran', 'mahanaim', 'penuel', 'shechem', 'bethel', 'hebron'],
+  }),
+  event('jacob-reunion', 'Jacob and Esau meet again', -1907, 'patriarchs', 'covenant', ['penuel', 'shechem'], {
+    dateLabel: 'c. 1907 BC traditional · c. 1850–1700 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 33'],
+    summary: 'Jacob divides his camp and sends gifts ahead, expecting four hundred armed men. Esau runs to meet him and embraces him.',
+  }),
+  event('jacob-bethel-return', 'Jacob returns to Bethel', -1906, 'patriarchs', 'covenant', ['bethel', 'bethlehem'], {
+    dateLabel: 'c. 1906 BC traditional · c. 1850–1700 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 35'],
+    summary: 'The household gods are buried under an oak and the name Israel is confirmed. Rachel dies on the road giving birth to Benjamin.',
+    route: ['shechem', 'bethel', 'bethlehem', 'hebron'],
+  }),
+  event('joseph-dreams', 'Joseph’s dreams and the coat', -1899, 'patriarchs', 'prophet', ['hebron'], {
+    dateLabel: 'c. 1899 BC traditional · c. 1800–1650 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 37:1–11'],
+    summary: 'A favoured son, a long coat, and two dreams in which his family bows to him. He tells them about both.',
   }),
   event('joseph-sold', 'Joseph sold by his brothers', -1898, 'patriarchs', 'migration', ['dothan', 'goshen'], {
     dateLabel: 'c. 1898 BC traditional · c. 1800–1650 BC academic', dateConfidence: 'disputed',
@@ -170,11 +196,27 @@ export const EVENTS = [
     summary: 'Thrown into a pit at Dothan and sold to a caravan bound for Egypt.',
     route: ROUTE_JOSEPH,
   }),
+  event('joseph-potiphar', 'Potiphar’s house and the prison', -1890, 'patriarchs', 'prophet', ['memphis'], {
+    dateLabel: 'c. 1890 BC traditional · c. 1800–1650 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 39–40'],
+    summary: 'Trusted with a household, accused by his master’s wife, and jailed — where he reads the dreams of a cupbearer and a baker, and is then forgotten for two years.',
+  }),
   event('joseph-vizier', 'Joseph rises in Egypt', -1885, 'patriarchs', 'kingdom', ['memphis'], {
     dateLabel: 'c. 1885 BC traditional · c. 1800–1650 BC academic', dateConfidence: 'disputed',
     scripture: ['Genesis 41'],
     summary: 'Interpreting Pharaoh’s dreams, Joseph is put in charge of Egypt’s grain.',
     note: 'Semitic officials did hold high office in Egypt during the Hyksos period, c. 1650–1550 BC, which is the usual setting proposed for Joseph — though no Egyptian source names him.',
+  }),
+  event('joseph-brothers', 'The brothers come for grain', -1877, 'patriarchs', 'migration', ['hebron', 'memphis'], {
+    dateLabel: 'c. 1877 BC traditional · c. 1750–1600 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 42–44'],
+    summary: 'They bow without recognising him. He tests them through two journeys, a planted cup, and a demand for the youngest brother.',
+    route: ['hebron', 'goshen', 'memphis'],
+  }),
+  event('joseph-reveals', 'I am Joseph your brother', -1876, 'patriarchs', 'covenant', ['memphis'], {
+    dateLabel: 'c. 1876 BC traditional · c. 1750–1600 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 45'],
+    summary: 'He sends the Egyptians out of the room before he says it, and they are too shaken to answer.',
   }),
   event('jacob-egypt', 'Jacob’s family settles in Goshen', -1876, 'patriarchs', 'migration', ['hebron', 'goshen'], {
     dateLabel: 'c. 1876 BC traditional · c. 1750–1600 BC academic', dateConfidence: 'disputed',
@@ -184,6 +226,16 @@ export const EVENTS = [
   }),
 
   // -------------------------------------------------------- egypt & exodus
+  event('jacob-blesses', 'Jacob blesses his sons', -1859, 'patriarchs', 'kingdom', ['goshen'], {
+    dateLabel: 'c. 1859 BC traditional · c. 1730–1580 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 49'],
+    summary: 'Twelve oracles, one per son, that later readers would treat as the charter of the twelve tribes. He asks to be buried at Hebron, not in Egypt.',
+  }),
+  event('joseph-forgives', 'You meant it for evil', -1855, 'patriarchs', 'covenant', ['goshen'], {
+    dateLabel: 'c. 1855 BC traditional · c. 1730–1580 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 50:15–21'],
+    summary: 'With their father dead the brothers expect reprisal. Joseph weeps at the suggestion, and Genesis ends with a coffin waiting to go home.',
+  }),
   event('slavery', 'Israel enslaved in Egypt', -1730, 'egypt-exodus', 'kingdom', ['rameses', 'pithom'], {
     dateLabel: 'c. 1730–1446 BC traditional · c. 1500–1250 BC academic', dateConfidence: 'disputed',
     scripture: ['Exodus 1'],
@@ -290,15 +342,46 @@ export const EVENTS = [
     scripture: ['Joshua 24'],
     summary: '“Choose this day whom you will serve.” The tribes commit to the covenant between the two mountains.',
   }),
+  event('deborah-judge', 'Deborah judges under the palm', -1155, 'conquest-judges', 'prophet', ['bethel', 'ramah'], {
+    dateLabel: 'c. 1200–1125 BC', dateConfidence: 'estimated',
+    scripture: ['Judges 4:1–10'],
+    summary: 'The only judge who is also called a prophet, and the only one people come to for rulings. Barak will not go to war unless she goes with him.',
+  }),
   event('deborah', 'Deborah and Barak defeat Sisera', -1150, 'conquest-judges', 'battle', ['megiddo', 'hazor', 'dan'], {
     dateLabel: 'c. 1200–1125 BC', dateConfidence: 'estimated',
     scripture: ['Judges 4–5'],
     summary: 'A prophet and judge sends Barak against Sisera’s chariots by the Kishon. The victory song in Judges 5 is among the oldest Hebrew poetry preserved.',
   }),
+  event('jael', 'Jael and the tent peg', -1150, 'conquest-judges', 'battle', ['megiddo'], {
+    dateLabel: 'c. 1200–1125 BC', dateConfidence: 'estimated',
+    scripture: ['Judges 4:17–24'],
+    summary: 'Sisera flees on foot to what he takes for a friendly tent, asks for water, is given milk, and falls asleep.',
+  }),
+  event('deborah-song', 'The Song of Deborah', -1149, 'conquest-judges', 'prophet', ['megiddo'], {
+    dateLabel: 'c. 1200–1125 BC', dateConfidence: 'estimated',
+    scripture: ['Judges 5'],
+    summary: 'A victory poem that names which tribes came and which stayed home, and ends at a window where Sisera’s mother waits for a son who is not coming.',
+    note: 'Judges 5 is widely held to be among the oldest Hebrew poetry preserved, older than the prose account beside it.',
+  }),
+  event('gideon-call', 'The angel at the winepress', -1145, 'conquest-judges', 'covenant', ['jezreel'], {
+    dateLabel: 'c. 1175–1100 BC', dateConfidence: 'estimated',
+    scripture: ['Judges 6:11–24'],
+    summary: 'Gideon is threshing wheat in a winepress to hide it from raiders when he is greeted as a mighty warrior.',
+  }),
+  event('gideon-fleece', 'The fleece', -1143, 'conquest-judges', 'covenant', ['jezreel'], {
+    dateLabel: 'c. 1175–1100 BC', dateConfidence: 'estimated',
+    scripture: ['Judges 6:36–40'],
+    summary: 'Wet fleece on dry ground, then dry fleece on wet ground. He asks twice, and apologises for asking.',
+  }),
   event('gideon', 'Gideon routs the Midianites', -1140, 'conquest-judges', 'battle', ['jezreel', 'endor'], {
     dateLabel: 'c. 1175–1100 BC', dateConfidence: 'estimated',
     scripture: ['Judges 6–8'],
     summary: 'An army cut to three hundred, armed with trumpets, jars and torches.',
+  }),
+  event('gideon-ephod', 'Gideon’s ephod', -1138, 'conquest-judges', 'temple', ['jezreel'], {
+    dateLabel: 'c. 1175–1100 BC', dateConfidence: 'estimated',
+    scripture: ['Judges 8:22–27'],
+    summary: 'Offered the crown, he refuses it — then melts the plunder into an ephod that the text says became a snare to him and his house.',
   }),
   event('ruth-moab', 'Naomi’s family leaves for Moab', -1130, 'conquest-judges', 'migration', ['bethlehem', 'moab-plains'], {
     dateLabel: 'c. 1150–1100 BC', dateConfidence: 'estimated',
@@ -337,10 +420,25 @@ export const EVENTS = [
     scripture: ['1 Samuel 3'],
     summary: 'A boy sleeping beside the ark hears his name three times and mistakes it for the old priest calling him.',
   }),
-  event('samson', 'Samson and the Philistines', -1075, 'conquest-judges', 'battle', ['gaza', 'ashkelon'], {
+  event('samson-born', 'The birth of Samson', -1095, 'conquest-judges', 'covenant', ['zorah'], {
     dateLabel: 'c. 1100–1050 BC', dateConfidence: 'estimated',
-    scripture: ['Judges 13–16'],
-    summary: 'A Nazirite of prodigious strength, undone and finally bringing down a temple at Gaza.',
+    scripture: ['Judges 13'],
+    summary: 'A childless couple at Zorah are told their son will be a Nazirite from the womb: no wine, no razor, no contact with the dead.',
+  }),
+  event('samson-timnah', 'The riddle at Timnah', -1085, 'conquest-judges', 'battle', ['timnah', 'ashkelon'], {
+    dateLabel: 'c. 1100–1050 BC', dateConfidence: 'estimated',
+    scripture: ['Judges 14–15'],
+    summary: 'A wedding, a riddle about a lion and honey, thirty men stripped at Ashkelon to pay the wager, and a feud that escalates through burnt fields to open war.',
+  }),
+  event('samson-delilah', 'Delilah', -1078, 'conquest-judges', 'battle', ['gath', 'gaza'], {
+    dateLabel: 'c. 1100–1050 BC', dateConfidence: 'estimated',
+    scripture: ['Judges 16:4–22'],
+    summary: 'Three lies and then the truth. The one prohibition he had never broken is broken while he sleeps.',
+  }),
+  event('samson', 'The temple at Gaza', -1075, 'conquest-judges', 'battle', ['gaza'], {
+    dateLabel: 'c. 1100–1050 BC', dateConfidence: 'estimated',
+    scripture: ['Judges 16:23–31'],
+    summary: 'Blinded and set to grind at the mill, he asks to be put where he can feel the pillars. The text says he killed more in his death than in his life.',
   }),
   event('ark-captured', 'The ark captured at Ebenezer', -1050, 'conquest-judges', 'battle', ['aphek', 'shiloh', 'ashdod'], {
     dateLabel: 'c. 1050 BC', dateConfidence: 'estimated',
@@ -414,12 +512,22 @@ export const EVENTS = [
     scripture: ['1 Kings 1–3'],
     summary: 'Anointed at Gihon, and asking for wisdom to govern rather than long life or riches.',
   }),
+  event('solomon-judgment', 'The judgment of Solomon', -968, 'united-monarchy', 'kingdom', ['jerusalem'], {
+    dateLabel: 'c. 968 BC', dateConfidence: 'estimated',
+    scripture: ['1 Kings 3:16–28'],
+    summary: 'Two women, one living child, and an order to cut it in half — a ruling that works by making the real mother give the child away.',
+  }),
   event('first-temple', 'The First Temple is built', -966, 'united-monarchy', 'temple', ['temple-mount', 'tyre'], {
     dateLabel: '966–959 BC', dateConfidence: 'estimated',
     scripture: ['1 Kings 6–8'],
     summary: 'Seven years of building, with Phoenician cedar and craftsmen sent by Hiram of Tyre.',
     featured: true,
     note: 'Solomon’s fourth year, dated c. 966 BC, is the hinge on which the internal chronology of 1 Kings 6:1 turns.',
+  }),
+  event('temple-dedication', 'The dedication of the Temple', -959, 'united-monarchy', 'temple', ['temple-mount'], {
+    dateLabel: '959 BC', dateConfidence: 'estimated',
+    scripture: ['1 Kings 8'],
+    summary: 'The ark is carried in, the cloud fills the house, and Solomon prays a dedication that keeps conceding the building cannot contain God.',
   }),
   event('queen-sheba', 'The queen of Sheba visits', -950, 'united-monarchy', 'kingdom', ['sheba', 'jerusalem'], {
     dateLabel: 'c. 950 BC', dateConfidence: 'estimated',
@@ -429,6 +537,17 @@ export const EVENTS = [
   }),
 
   // ------------------------------------------------------ divided kingdom
+  event('solomon-trade', 'Solomon’s fleet and the weight of gold', -946, 'united-monarchy', 'kingdom', ['ezion-geber', 'tyre', 'jerusalem'], {
+    dateLabel: 'c. 946 BC', dateConfidence: 'estimated',
+    scripture: ['1 Kings 9:26–10:29'],
+    summary: 'A fleet at Ezion Geber crewed by Hiram’s sailors, horses out of Egypt, and 666 talents of gold a year. The forced labour that paid for it is what splits the kingdom.',
+    route: ['ezion-geber', 'jerusalem', 'tyre'],
+  }),
+  event('solomon-apostasy', 'Solomon’s foreign wives', -935, 'united-monarchy', 'kingdom', ['jerusalem', 'olives'], {
+    dateLabel: 'c. 935 BC', dateConfidence: 'estimated',
+    scripture: ['1 Kings 11'],
+    summary: 'Shrines built on the hill east of Jerusalem for the gods of his treaty marriages. The verdict is that his heart was not wholly true, and the kingdom is promised away.',
+  }),
   event('division', 'The kingdom divides', -931, 'divided-kingdom', 'kingdom', ['shechem', 'jerusalem', 'dan', 'bethel'], {
     dateLabel: '931 BC', dateConfidence: 'estimated',
     scripture: ['1 Kings 12'],
@@ -487,12 +606,27 @@ export const EVENTS = [
     summary: 'The house of Ahab is destroyed, Jezebel thrown from a window, and Baal worship purged.',
     anchor: 'The Black Obelisk of Shalmaneser III shows Jehu, or his envoy, bowing in tribute — the only likely contemporary image of an Israelite king.',
   }),
-  event('jonah', 'Jonah sent to Nineveh', -780, 'divided-kingdom', 'prophet', ['joppa', 'tarshish', 'nineveh'], {
+  event('jonah', 'Jonah flees toward Tarshish', -780, 'divided-kingdom', 'prophet', ['joppa', 'tarshish'], {
     dateLabel: 'c. 780 BC', dateConfidence: 'traditional',
-    scripture: ['Jonah 1–4'],
-    summary: 'A prophet flees toward Tarshish, is swallowed, relents, and resents the mercy shown.',
+    scripture: ['Jonah 1'],
+    summary: 'Told to go north-east to Nineveh, he books passage as far west as a ship can go, and sleeps through the storm he causes.',
     route: ['joppa', 'tarshish'],
     note: 'Jonah son of Amittai is placed in Jeroboam II’s reign (2 Kings 14:25), but many scholars read the book as a later didactic story rather than a report. Tarshish is unidentified; the point is that it is as far from Nineveh as a ship could go.',
+  }),
+  event('jonah-fish', 'Three days in the fish', -780, 'divided-kingdom', 'miracle', ['joppa'], {
+    dateLabel: 'c. 780 BC', dateConfidence: 'traditional',
+    scripture: ['Jonah 2'],
+    summary: 'A prayer from inside the fish, quoting the psalms almost throughout, and a deliverance he has done nothing to deserve.',
+  }),
+  event('jonah-nineveh', 'Nineveh repents', -779, 'divided-kingdom', 'prophet', ['nineveh'], {
+    dateLabel: 'c. 779 BC', dateConfidence: 'traditional',
+    scripture: ['Jonah 3'],
+    summary: 'Five words of Hebrew, the shortest sermon in the Bible, and the whole city turns — including, the text notes drily, the animals.',
+  }),
+  event('jonah-plant', 'The plant and the worm', -778, 'divided-kingdom', 'prophet', ['nineveh'], {
+    dateLabel: 'c. 778 BC', dateConfidence: 'traditional',
+    scripture: ['Jonah 4'],
+    summary: 'He is angrier about a dead plant than about a spared city, and the book ends on a question nobody answers.',
   }),
   event('amos-hosea', 'Amos and Hosea preach in the north', -750, 'divided-kingdom', 'prophet', ['bethel', 'samaria'], {
     dateLabel: 'c. 760–725 BC', dateConfidence: 'estimated',
@@ -659,6 +793,11 @@ export const EVENTS = [
     scripture: ['Ezra 7–10', 'Nehemiah 8'],
     summary: 'A priest and scribe arrives from Babylon and reads the law aloud to the assembly.',
   }),
+  event('nehemiah-news', 'News from Jerusalem', -446, 'exile-return', 'kingdom', ['susa'], {
+    dateLabel: '446 BC', dateConfidence: 'anchored',
+    scripture: ['Nehemiah 1–2'],
+    summary: 'The king’s cupbearer hears the walls are still broken, and lets it show on his face — a dangerous thing to do in front of a Persian king.',
+  }),
   event('nehemiah', 'Nehemiah rebuilds the walls', -445, 'exile-return', 'kingdom', ['susa', 'jerusalem'], {
     dateLabel: '445 BC', dateConfidence: 'anchored',
     scripture: ['Nehemiah 1–6'],
@@ -667,6 +806,22 @@ export const EVENTS = [
   }),
 
   // ------------------------------------------------- between the testaments
+  event('nehemiah-opposition', 'Sanballat and the opposition', -445, 'exile-return', 'kingdom', ['samaria', 'jerusalem'], {
+    dateLabel: '445 BC', dateConfidence: 'anchored',
+    scripture: ['Nehemiah 4', 'Nehemiah 6'],
+    summary: 'Ridicule, then threats, then four invitations to a meeting on the plain of Ono. The builders work with one hand and hold a weapon in the other.',
+    anchor: 'Sanballat is named as governor of Samaria in the Elephantine papyri, an Aramaic archive from a Jewish garrison in Egypt.',
+  }),
+  event('nehemiah-reading', 'The law read at the Water Gate', -444, 'exile-return', 'covenant', ['jerusalem'], {
+    dateLabel: '444 BC', dateConfidence: 'anchored',
+    scripture: ['Nehemiah 8'],
+    summary: 'Ezra reads from daybreak to noon while Levites move through the crowd explaining it. The people weep, and are told to stop and eat.',
+  }),
+  event('nehemiah-reforms', 'Nehemiah’s second term', -432, 'exile-return', 'kingdom', ['jerusalem'], {
+    dateLabel: 'c. 432 BC', dateConfidence: 'estimated',
+    scripture: ['Nehemiah 13'],
+    summary: 'He returns to find the temple storerooms let out to a rival, the Levites gone back to their fields and the sabbath ignored, and loses his temper about all of it.',
+  }),
   event('alexander', 'Alexander takes the Levant', -332, 'second-temple', 'kingdom', ['tyre', 'jerusalem', 'alexandria'], {
     dateLabel: '332 BC', dateConfidence: 'anchored',
     scripture: ['Daniel 8 (cf.)'],
