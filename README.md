@@ -4,7 +4,25 @@ An interactive timeline and historical map of events described in the Bible, fro
 Genesis through Revelation — including the period between the testaments, because the
 New Testament opens in a world that period created.
 
-**132 events · 141 places · 35 mapped routes**
+**138 events · 141 places · 35 mapped routes · 15 curated threads**
+
+## Lives and threads
+
+An era answers *when*. An event type answers *what kind*. A theme answers *whose story
+is this* — it gathers one life, or one long argument, so the timeline can be read as that
+story instead of the whole sweep.
+
+Twelve lives — Noah, Abraham, Jacob, Joseph, Moses, Joshua, David, Solomon, Elijah and
+Elisha, Jesus, Peter, Paul — and three threads that cut across eras: **The Temple** (a
+tent, two buildings and a ruin), **Exile and return**, and **The covenants**.
+
+Noah is the instructive one. His seven events carry no dates at all, and no location
+until the ark grounds on the mountains of Ararat — so his life reads as a sequence
+without a chronology, which is exactly what Genesis gives.
+
+Themes are curations rather than categories: an event can sit in several, and plenty sit
+in none. Event ids are validated on load, so a typo fails loudly instead of quietly
+shortening someone's life.
 
 ## The idea
 

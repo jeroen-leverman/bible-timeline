@@ -4,6 +4,7 @@ import './style.css'
 import { ERAS, ERA_BY_ID, CATEGORIES, CATEGORY_BY_ID } from './data/eras.js'
 import { PLACES, PLACE_BY_ID, CERTAINTY_LABEL } from './data/places.js'
 import { EVENTS, EVENT_BY_ID, DATE_CONFIDENCE } from './data/events.js'
+import { THEMES, THEME_BY_ID, THEME_EVENT_SETS, THEME_KIND_LABEL } from './data/themes.js'
 
 const ICONS = {
   compass: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"/></svg>',
@@ -46,6 +47,12 @@ app.innerHTML = `
         <section class="filter-section">
           <div class="section-heading"><h2>Historical era</h2><button class="text-button" id="clear-era">All eras</button></div>
           <div class="era-list" id="era-list"></div>
+        </section>
+
+        <section class="filter-section">
+          <div class="section-heading"><h2>Lives &amp; threads</h2><button class="text-button" id="clear-theme">Clear</button></div>
+          <div class="theme-list" id="theme-list"></div>
+          <div class="theme-blurb" id="theme-blurb" hidden></div>
         </section>
 
         <section class="filter-section">
@@ -114,6 +121,7 @@ app.innerHTML = `
 
 const state = {
   selectedEra: null,
+  selectedTheme: null,
   selectedCategories: new Set(CATEGORIES.map(({ id }) => id)),
   selectedEvent: (EVENTS.find((item) => item.featured) || EVENTS[0]).id,
   query: '',
@@ -202,6 +210,7 @@ function filteredEvents() {
   const query = state.query.trim().toLowerCase()
   return EVENTS.filter((item) => {
     if (state.selectedEra && item.era !== state.selectedEra) return false
+    if (state.selectedTheme && !THEME_EVENT_SETS[state.selectedTheme].has(item.id)) return false
     if (!state.selectedCategories.has(item.category)) return false
     if (!query) return true
     const placeNames = item.places.map((id) => PLACE_BY_ID[id]?.name || '').join(' ')
@@ -224,11 +233,38 @@ function renderEraList() {
   container.querySelectorAll('.era-option').forEach((button) => {
     button.addEventListener('click', () => {
       state.selectedEra = state.selectedEra === button.dataset.era ? null : button.dataset.era
+      if (state.selectedEra) state.selectedTheme = null
       ensureSelectedEvent()
       render()
       fitFilteredEvents()
     })
   })
+}
+
+function renderThemes() {
+  const container = document.querySelector('#theme-list')
+  container.innerHTML = THEMES.map((item) => {
+    const count = item.events.length
+    return `<button class="theme-option ${state.selectedTheme === item.id ? 'active' : ''}" data-theme="${item.id}">
+      <span class="theme-kind">${THEME_KIND_LABEL[item.kind]}</span>
+      <span><strong>${item.name}</strong><small>${item.subtitle}</small></span><b>${count}</b>
+    </button>`
+  }).join('')
+
+  container.querySelectorAll('.theme-option').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.selectedTheme = state.selectedTheme === button.dataset.theme ? null : button.dataset.theme
+      if (state.selectedTheme) state.selectedEra = null
+      ensureSelectedEvent()
+      render()
+      fitFilteredEvents()
+    })
+  })
+
+  const blurb = document.querySelector('#theme-blurb')
+  const active = state.selectedTheme && THEME_BY_ID[state.selectedTheme]
+  blurb.hidden = !active
+  if (active) blurb.innerHTML = `<p>${active.blurb}</p>`
 }
 
 function renderCategories() {
@@ -424,6 +460,7 @@ function renderStatus() {
 
 function render() {
   renderEraList()
+  renderThemes()
   renderCategories()
   renderEventRail()
   renderEventCard()
@@ -491,6 +528,12 @@ document.querySelector('#toggle-places').addEventListener('click', (event) => {
 })
 document.querySelector('#clear-era').addEventListener('click', () => {
   state.selectedEra = null
+  ensureSelectedEvent()
+  render()
+  fitFilteredEvents()
+})
+document.querySelector('#clear-theme').addEventListener('click', () => {
+  state.selectedTheme = null
   ensureSelectedEvent()
   render()
   fitFilteredEvents()

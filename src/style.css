@@ -80,6 +80,22 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
 .era-option strong { font-family: 'EB Garamond', Georgia, serif; font-size: 13px; font-weight: 600; }
 .era-option small { margin-top: 1px; color: #8a948e; font-size: 8px; }
 .era-option b { display: grid; width: 20px; height: 20px; place-items: center; color: #829087; background: rgba(31,54,44,.055); border-radius: 50%; font-size: 8px; }
+
+/* Lives & threads — same affordance as the era list, with a kind marker instead of a
+   colour dot, since a theme cuts across eras rather than belonging to one. */
+.theme-option { position: relative; width: 100%; display: grid; grid-template-columns: 30px 1fr auto; align-items: center; gap: 9px; padding: 8px 9px; text-align: left; background: transparent; border: 1px solid transparent; border-radius: 4px; cursor: pointer; transition: .18s ease; }
+.theme-option:hover { background: rgba(25,59,49,.045); }
+.theme-option.active { background: #fffdf7; border-color: rgba(31,54,44,.14); box-shadow: 0 3px 14px rgba(31,54,44,.06); }
+.theme-option.active::before { position: absolute; inset: 5px auto 5px -1px; width: 2px; content: ''; background: var(--gold); border-radius: 2px; }
+.theme-kind { color: #9aa49d; font-size: 7px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.theme-option.active .theme-kind { color: var(--gold); }
+.theme-option strong, .theme-option small { display: block; }
+.theme-option strong { font-family: 'EB Garamond', Georgia, serif; font-size: 13px; font-weight: 600; }
+.theme-option small { margin-top: 1px; color: #8a948e; font-size: 8px; }
+.theme-option b { display: grid; width: 20px; height: 20px; place-items: center; color: #829087; background: rgba(31,54,44,.055); border-radius: 50%; font-size: 8px; }
+.theme-blurb { margin-top: 9px; padding: 10px 11px; color: #6d6758; background: #f4eee0; border-left: 2px solid var(--gold); border-radius: 0 3px 3px 0; }
+.theme-blurb[hidden] { display: none; }
+.theme-blurb p { margin: 0; font-family: 'EB Garamond', Georgia, serif; font-size: 11px; line-height: 1.45; }
 .category-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .category-chip { position: relative; display: flex; align-items: center; gap: 6px; padding: 6px 8px; color: #7b867e; background: transparent; border: 1px solid rgba(31,54,44,.12); border-radius: 99px; font-size: 9px; cursor: pointer; transition: .15s ease; }
 .category-chip input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }

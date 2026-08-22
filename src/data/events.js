@@ -66,11 +66,41 @@ export const EVENTS = [
     scripture: ['Genesis 4'],
     summary: 'The first killing, and the first exile east of Eden.',
   }),
+  event('noah-ark', 'Noah builds the ark', -2360, 'primeval', 'covenant', ['eden'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Genesis 6:9–22'],
+    summary: 'A man found righteous in a corrupt generation is given measurements, a timber, and a hundred and twenty years’ warning.',
+  }),
+  event('noah-enters-ark', 'The ark is shut', -2352, 'primeval', 'migration', ['eden'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Genesis 7:1–16'],
+    summary: 'The animals go in two by two, Noah’s household follows, and the door is closed from outside.',
+  }),
   event('flood', 'The Flood', -2348, 'primeval', 'covenant', ['ararat'], {
     dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
     scripture: ['Genesis 6–9'],
     summary: 'A deluge, an ark, and a covenant marked by a rainbow. The boat comes to rest on “the mountains of Ararat”.',
     note: 'Traditional chronologies put this near 2348 BC. There is no geological horizon corresponding to a global flood, and Mesopotamian flood narratives — Gilgamesh, Atrahasis — are older than Genesis and closely parallel.',
+  }),
+  event('noah-dove', 'The raven and the dove', -2347, 'primeval', 'migration', ['ararat'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Genesis 8:6–12'],
+    summary: 'A raven goes out and does not return. A dove comes back with an olive leaf, and the third time does not come back at all.',
+  }),
+  event('noah-altar', 'Noah leaves the ark', -2346, 'primeval', 'temple', ['ararat'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Genesis 8:13–22'],
+    summary: 'The ground is dry. Noah builds an altar, and the promise is made never to repeat the destruction.',
+  }),
+  event('noah-covenant', 'The covenant of the rainbow', -2345, 'primeval', 'covenant', ['ararat'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Genesis 9:1–17'],
+    summary: 'A covenant made not with Noah alone but with every living creature, and signed with a bow hung in the cloud.',
+  }),
+  event('noah-vineyard', 'Noah’s vineyard', -2344, 'primeval', 'kingdom', ['ararat'], {
+    dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
+    scripture: ['Genesis 9:18–29'],
+    summary: 'The first vineyard, the first drunkenness, and a curse laid on Canaan that the rest of Genesis will not forget.',
   }),
   event('babel', 'The Tower of Babel', -2200, 'primeval', 'migration', ['shinar'], {
     dateLabel: 'No date given in the text', tickLabel: 'undated', dateConfidence: 'undated',
