@@ -4,7 +4,7 @@ An interactive timeline and historical map of events described in the Bible, fro
 Genesis through Revelation — including the period between the testaments, because the
 New Testament opens in a world that period created.
 
-**203 events · 146 places · 45 mapped routes · 31 curated threads**
+**203 events · 146 places · 45 mapped routes · 31 curated threads · 226 passages · 9 territories**
 
 ## Lives and threads
 
@@ -77,6 +77,42 @@ comes from adding up genealogies; the text supplies no year.
 The stops are named in the text. The lines between them are straight, and are not
 surveyed itineraries. The wilderness route in particular is one reading among several.
 
+## Scripture, photographs and territories
+
+**Every reference opens.** Click a primary text on any event card and the passage
+appears, switchable between the **World English Bible** and the **King James Version**.
+Both are public domain, so the text ships with the site rather than being fetched from
+somebody's free API at read time — it is instant, and it keeps working if that API does
+not. References spanning several chapters show the opening chapter and say so; long
+chapters show the first twenty verses and say that too.
+
+**Places carry a photograph and a summary** from Wikipedia, on the map popup. Licensing
+is the reason this is a build step: Wikipedia prose is CC BY-SA, but image licences vary
+per file and English Wikipedia hosts non-free images that may *not* be reused. Every
+candidate image is checked against its own licence metadata at fetch time and dropped
+unless it is public domain or Creative Commons — six were dropped on the last run — and
+the photographer, licence and file page are rendered beside every image that survives.
+
+**Kingdoms and empires** can be toggled on the map. The territory shown follows whatever
+date the timeline is sitting on, so stepping through events redraws the political map
+underneath them: the United Monarchy, the two kingdoms, Assyria, Babylon, Persia, the
+Seleucids, the Hasmoneans, Herod's kingdom and Rome.
+
+Those outlines are **schematic and say so on screen**. Ancient polities had cores,
+tributary zones and desert margins rather than surveyed frontiers, and a crisp line
+implies a precision that did not exist. They are hand-drawn approximations, not traced
+from any copyrighted map.
+
+## Refreshing the data
+
+```bash
+npm run fetch:verses      # scripture text, resumable — the API rate-limits
+npm run fetch:wikipedia   # extracts, images and licence checks
+```
+
+Both scripts resume: anything already fetched is skipped, so an interrupted run can be
+restarted without redoing the work.
+
 ## Running locally
 
 ```bash
@@ -116,3 +152,9 @@ Built with [Leaflet](https://leafletjs.com/). Basemap tiles by
 [CARTO](https://carto.com/attributions), map data ©
 [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors. Regnal chronology
 broadly follows Thiele.
+
+Scripture text is the World English Bible and the King James Version, both public domain,
+retrieved via [bible-api.com](https://bible-api.com). Place summaries and photographs come
+from [Wikipedia](https://en.wikipedia.org) and Wikimedia Commons, used under CC BY-SA with
+per-image attribution shown in the interface; images under any non-open licence are
+excluded automatically rather than by hand.

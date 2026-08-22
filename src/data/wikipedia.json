@@ -1,0 +1,1761 @@
+{
+ "ur": {
+  "title": "Ziggurat of Ur",
+  "url": "https://en.wikipedia.org/wiki/Ziggurat_of_Ur",
+  "extract": "The Ziggurat (or Great Ziggurat) of Ur (Sumerian: 𒂍𒋼𒅎𒅍 é-temen-ní-gùru \"Etemenniguru\", meaning \"house whose foundation creates terror\") is a Neo-Sumerian ziggurat in what was the city of Ur near Nasiriyah, in present-day Dhi Qar Province, Iraq. The structure was built during the Early Bronze Age (21st century BC) by King Ur-Nammu of the Third Dynasty of Ur.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ziggarat_of_Ur_001.jpg/960px-Ziggarat_of_Ur_001.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Tla2006 at English Wikipedia",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Ziggarat_of_Ur_001.jpg"
+  },
+  "distanceKm": 0
+ },
+ "haran": {
+  "title": "Harran",
+  "url": "https://en.wikipedia.org/wiki/Harran",
+  "extract": "Harran is a municipality and district of Şanlıurfa Province, Turkey. Its area is 904 km2, and its population is 96,072 (2022).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Harran_2015.jpg/960px-Harran_2015.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC0",
+   "artist": "Hamdigumus",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Harran_2015.jpg"
+  },
+  "distanceKm": 0.9
+ },
+ "babylon": {
+  "title": "Babylon",
+  "url": "https://en.wikipedia.org/wiki/Babylon",
+  "extract": "Babylon ( BAB-il-on) was an ancient city located on the lower Euphrates river in southern Mesopotamia, within modern-day Hillah, Iraq, about 85 kilometres (53 miles) south of modern-day Baghdad. Babylon functioned as the main cultural and political centre of the Akkadian-speaking region of Babylonia.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ishtar_Gate.jpg/960px-Ishtar_Gate.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "David Stanley",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Ishtar_Gate.jpg"
+  },
+  "distanceKm": 0.7
+ },
+ "nineveh": {
+  "title": "Nineveh",
+  "url": "https://en.wikipedia.org/wiki/Nineveh",
+  "extract": "Nineveh was an ancient Near Eastern city of Upper Mesopotamia, located in the modern-day city of Mosul in northern Iraq. It is located on the eastern bank of the Tigris River and was the capital and largest city of the Neo-Assyrian Empire, and potentially the wealthiest city in the ancient world.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Nineveh_-_Mashki_Gate.jpg/960px-Nineveh_-_Mashki_Gate.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Omar Siddeeq Yousif",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Nineveh_-_Mashki_Gate.jpg"
+  },
+  "distanceKm": 0
+ },
+ "susa": {
+  "title": "Susa",
+  "url": "https://en.wikipedia.org/wiki/Susa",
+  "extract": "Susa ( SOO-sə) was an ancient city in the lower Zagros Mountains about 250 km (160 mi) east of the Tigris, between the Karkheh and Dez Rivers in Iran. It represents the current city of Shush, located on the site of ancient Susa.",
+  "image": null,
+  "distanceKm": 0.1
+ },
+ "ecbatana": {
+  "title": "Hamadan",
+  "url": "https://en.wikipedia.org/wiki/Hamadan",
+  "extract": "Hamadan is a mountainous city in western Iran. It is located in the Central District of Hamadan County in Hamadan province, serving as the capital of the province, county, and district.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Hamedan_13971219000404636878130198589248_82460_PhotoT.jpg/960px-Hamedan_13971219000404636878130198589248_82460_PhotoT.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 4.0",
+   "artist": "Behzad Alipour",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Hamedan_13971219000404636878130198589248_82460_PhotoT.jpg"
+  },
+  "distanceKm": 0
+ },
+ "persepolis": {
+  "title": "Persepolis",
+  "url": "https://en.wikipedia.org/wiki/Persepolis",
+  "extract": "Persepolis was the ceremonial capital of the Achaemenid Empire (c. 550–330 BC). It is situated in the plains of Marvdasht, encircled by the southern Zagros Mountains, Fars province of Iran.",
+  "image": null,
+  "distanceKm": 0.2
+ },
+ "carchemish": {
+  "title": "Battle of Carchemish",
+  "url": "https://en.wikipedia.org/wiki/Battle_of_Carchemish",
+  "extract": "The Battle of Carchemish was a battle fought around 605 BCE between the armies of Egypt, allied with the remnants of the Neo-Assyrian Empire, against the armies of Babylonia. The forces would clash at Carchemish, an important military crossing and trade city on the banks of the Euphrates River in modern-day Syria.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/The_Battle_of_Carchemish.png/960px-The_Battle_of_Carchemish.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Egisto C.",
+   "filePage": "https://commons.wikimedia.org/wiki/File:The_Battle_of_Carchemish.png"
+  },
+  "distanceKm": 0.4
+ },
+ "ararat": {
+  "title": "Mount Ararat",
+  "url": "https://en.wikipedia.org/wiki/Mount_Ararat",
+  "extract": "Mount Ararat, officially Mount Ağrı, also known as Masis, is a snow- capped and dormant compound volcano in easternmost Turkey. It consists of two major volcanic cones: Greater Ararat and Little Ararat.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Mount_Ararat_and_the_Yerevan_skyline_in_spring_%2850mm%29.jpg/960px-Mount_Ararat_and_the_Yerevan_skyline_in_spring_%2850mm%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 4.0",
+   "artist": "Սէրուժ Ուրիշեան (Serouj Ourishian)",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Mount_Ararat_and_the_Yerevan_skyline_in_spring_(50mm).jpg"
+  },
+  "distanceKm": 0.1
+ },
+ "rameses": {
+  "title": "Pi-Ramesses",
+  "url": "https://en.wikipedia.org/wiki/Pi-Ramesses",
+  "extract": "Pi-Ramesses (; Ancient Egyptian: pr-rꜥ-ms-sw, meaning \"House of Ramesses\") was the new capital built by the Nineteenth Dynasty Pharaoh Ramesses II (1279–1213 BC) at Qantir, near the old site of Avaris. The city had served as a summer palace under Seti I (c.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Kolossalstatue_Qantir.JPG/960px-Kolossalstatue_Qantir.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Iri-en-achti",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Kolossalstatue_Qantir.JPG"
+  },
+  "distanceKm": 0.1
+ },
+ "succoth": {
+  "title": "Pithom",
+  "url": "https://en.wikipedia.org/wiki/Pithom",
+  "extract": "Pithom (Ancient Egyptian: pr-jtm; Biblical Hebrew: פִּתֹם, romanized: Pīṯōm; Koine Greek: Ἡρώπόλις, romanized: Hērṓpólis or Ἡρώωνπόλις Hērṓōnpólis, and Πατούμος Patoúmos) was an ancient city of Egypt. References in the Hebrew Bible and ancient Greek and Roman sources exist for this city, but its exact location remains somewhat uncertain.",
+  "image": null,
+  "distanceKm": 0.8
+ },
+ "pithom": {
+  "title": "Pithom",
+  "url": "https://en.wikipedia.org/wiki/Pithom",
+  "extract": "Pithom (Ancient Egyptian: pr-jtm; Biblical Hebrew: פִּתֹם, romanized: Pīṯōm; Koine Greek: Ἡρώπόλις, romanized: Hērṓpólis or Ἡρώωνπόλις Hērṓōnpólis, and Πατούμος Patoúmos) was an ancient city of Egypt. References in the Hebrew Bible and ancient Greek and Roman sources exist for this city, but its exact location remains somewhat uncertain.",
+  "image": null,
+  "distanceKm": 0.3
+ },
+ "memphis": {
+  "title": "Memphis, Egypt",
+  "url": "https://en.wikipedia.org/wiki/Memphis,_Egypt",
+  "extract": "Memphis (Egyptian Arabic: منف, romanized: Manf, pronounced [mænf]; Bohairic Coptic: ⲙⲉⲙϥⲓ; Greek: Μέμφις), or Men-nefer, was the ancient capital of Inebu-hedj, the first nome of Lower Egypt that was known as mḥw (\"North\"). Its ruins are located in the vicinity of the present-day village of Mit Rahina (Arabic: ميت رهينة), in Badrashin markaz (county), Giza Governorate, Egypt.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Memphis200401.JPG/960px-Memphis200401.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "No machine-readable author provided. Neithsabes assumed (based on copyright claims).",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Memphis200401.JPG"
+  },
+  "distanceKm": 0.7
+ },
+ "thebes-eg": {
+  "title": "Luxor",
+  "url": "https://en.wikipedia.org/wiki/Luxor",
+  "extract": "Luxor is a city in Upper Egypt. Luxor had a population of 284,952 in 2023, with an area of 43.0 km2 (16.6 sq mi) and is the capital of the Luxor Governorate.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/3/35/LuxorHotelsIbnWalidSt.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Roland Unger",
+   "filePage": "https://commons.wikimedia.org/wiki/File:LuxorHotelsIbnWalidSt.jpg"
+  },
+  "distanceKm": 1.2
+ },
+ "alexandria": {
+  "title": "Alexandria",
+  "url": "https://en.wikipedia.org/wiki/Alexandria",
+  "extract": "Alexandria is a major city in Egypt. Lying at the western edge of the Nile River Delta, it extends about 40 km (25 mi) along the country's northern coast.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/San_Stefano_Grand_Plaza.JPG/960px-San_Stefano_Grand_Plaza.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "TheEgyptian",
+   "filePage": "https://commons.wikimedia.org/wiki/File:San_Stefano_Grand_Plaza.JPG"
+  },
+  "distanceKm": 2.5
+ },
+ "elim": {
+  "title": "Elim (place)",
+  "url": "https://en.wikipedia.org/wiki/Elim_(place)",
+  "extract": "Elim (Hebrew: אֵילִם, romanized: ʾĒlīm), according to the Hebrew Bible, was one of the places where the Israelites camped following the Exodus from Egypt. It is referred to in Exodus 15:27 and Numbers 33:9 as a place where \"there were twelve wells of water and seventy date palms,\" and that the Israelites \"camped there near the waters\".",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/d/de/Houghton_TypDr_515.S766.50q_%2814%29_-_camping_in_Elim.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Bernard Salomon",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Houghton_TypDr_515.S766.50q_(14)_-_camping_in_Elim.jpg"
+  },
+  "distanceKm": 11.6
+ },
+ "rephidim": {
+  "title": "Rephidim",
+  "url": "https://en.wikipedia.org/wiki/Rephidim",
+  "extract": "Rephidim or Refidim (Hebrew: רְפִידִים) is one of the places visited by the Israelites in the biblical account of the Exodus from Egypt.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/VictoryOLord.JPG/960px-VictoryOLord.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "John Everett Millais",
+   "filePage": "https://commons.wikimedia.org/wiki/File:VictoryOLord.JPG"
+  },
+  "distanceKm": 9.8
+ },
+ "sinai": {
+  "title": "Mount Sinai",
+  "url": "https://en.wikipedia.org/wiki/Mount_Sinai",
+  "extract": "Mount Sinai, also known as Jabal Musa (Arabic: جَبَل مُوسَى, lit. 'Mountain of Moses'), is a mountain on the Sinai Peninsula of Egypt. It is one of several locations claimed to be the biblical Mount Sinai, the place where, according to the sacred scriptures of the three major Abrahamic religions (Torah, Bible, and Quran), the Hebrew prophet Moses received the Ten Commandments from God.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mount_Sinai_from_the_southwest.jpg/960px-Mount_Sinai_from_the_southwest.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Gerd Eichmann",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Mount_Sinai_from_the_southwest.jpg"
+  },
+  "distanceKm": 0
+ },
+ "kadesh-barnea": {
+  "title": "Tell el-Qudeirat",
+  "url": "https://en.wikipedia.org/wiki/Tell_el-Qudeirat",
+  "extract": "Tell el-Qudeirat is an archaeological site in the Sinai, about 6 km (3.7 mi) southeast of the Egyptian village of Quseima. It is widely considered to be the location of the biblical Kadesh Barnea.",
+  "image": null,
+  "distanceKm": 4.7
+ },
+ "ezion-geber": {
+  "title": "Aqaba",
+  "url": "https://en.wikipedia.org/wiki/Aqaba",
+  "extract": "Aqābaʾ ( AK-ə-bə, US also  AHK-; Arabic: الْعَقَبَة, romanized: al-ʿAqaba, pronounced [ælˈʕæqɑba, ælˈʕæɡæba]) is the only coastal city in Jordan and the largest and most populous city on the Gulf of Aqaba. Situated in southernmost Jordan, Aqaba is the administrative center of the Aqaba Governorate.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/AQABA_2.png/960px-AQABA_2.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Freedom's Falcon",
+   "filePage": "https://commons.wikimedia.org/wiki/File:AQABA_2.png"
+  },
+  "distanceKm": 0.6
+ },
+ "mount-hor": {
+  "title": "Mount Hor",
+  "url": "https://en.wikipedia.org/wiki/Mount_Hor",
+  "extract": "Mount Hor (Hebrew: הֹר הָהָר, romanized: Hōr hāHār) is the name given in the Hebrew Bible to two distinct mountains. One borders the land of Edom in the area south of the Dead Sea, and the other is by the Mediterranean Sea at the Northern border of Israel.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mthor.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Mlynn927",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Mthor.jpeg"
+  },
+  "distanceKm": 0
+ },
+ "jerusalem": {
+  "title": "Jerusalem",
+  "url": "https://en.wikipedia.org/wiki/Jerusalem",
+  "extract": "Jerusalem is a city in the Southern Levant, on a plateau in the Judaean Mountains between the Mediterranean and the Dead Sea. It is one of the oldest cities in the world and is considered a holy city to the three major Abrahamic religions: Judaism, Christianity and Islam.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Temple_Mount_%28Aerial_view%2C_2007%29_07.jpg/960px-Temple_Mount_%28Aerial_view%2C_2007%29_07.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Godot13",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Temple_Mount_(Aerial_view,_2007)_07.jpg"
+  },
+  "distanceKm": 1.6
+ },
+ "temple-mount": {
+  "title": "Solomon's Temple",
+  "url": "https://en.wikipedia.org/wiki/Solomon%27s_Temple",
+  "extract": "Solomon's Temple, also known as the First Temple (Hebrew: בַּיִת רִאשׁוֹן, romanized: Bayyit Rīšōn, lit. 'First Temple'), was a legendary Temple in Jerusalem believed to have existed between the 10th and 6th centuries BCE. Its description is largely based on narratives in the Hebrew Bible, in which it was commissioned by biblical king Solomon, the son of King David. It was reportedly destroyed during the Siege of Jerusalem by Nebuchadnezzar II of the Neo-Babylonian Empire in 586 BCE. According to Josephus, this was 470 years after it was built.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg/960px-Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Francois Vatable",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Francois_Vatable,_reconstructie_van_de_tempel_van_Salomo_(detail).jpg"
+  },
+  "distanceKm": 0
+ },
+ "bethlehem": {
+  "title": "Bethlehem",
+  "url": "https://en.wikipedia.org/wiki/Bethlehem",
+  "extract": "Bethlehem is a city in the West Bank, Palestine, located about ten kilometres (six miles) south of Jerusalem, and the capital of the Bethlehem Governorate. It had a population of 28,591 people, as of 2017.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Church_of_the_Nativity_%287703592746%29.jpg/960px-Church_of_the_Nativity_%287703592746%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 2.0",
+   "artist": "Neil Ward",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Church_of_the_Nativity_(7703592746).jpg"
+  },
+  "distanceKm": 0.4
+ },
+ "hebron": {
+  "title": "Hebron",
+  "url": "https://en.wikipedia.org/wiki/Hebron",
+  "extract": "Hebron is a city in the southern West Bank, Palestine, and the capital of the Hebron Governorate, which is the largest in the West Bank. It is located 30 kilometers (19 mi) south of Jerusalem.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/BTS_Hebron_Tour_280215_24.jpg/960px-BTS_Hebron_Tour_280215_24.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Oren Rozen",
+   "filePage": "https://commons.wikimedia.org/wiki/File:BTS_Hebron_Tour_280215_24.jpg"
+  },
+  "distanceKm": 0.5
+ },
+ "beersheba": {
+  "title": "Beersheba",
+  "url": "https://en.wikipedia.org/wiki/Beersheba",
+  "extract": "Beersheba ( beer-SHEE-bə), officially Be'er-Sheva ( bair-SHEV-ə), is the largest city in the Negev desert of southern Israel. Often referred to as the \"Capital of the Negev\", it is the centre of the fourth-most populous metropolitan area in Israel, the eighth-most populous Israeli city with a population of 223,587, and the second-largest city in the area (after Jerusalem), with a total area of 117,500 dunams (117.5 square kilometres).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Beersheba_City_Hall_6.jpg/960px-Beersheba_City_Hall_6.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 3.0",
+   "artist": "BASWIM",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Beersheba_City_Hall_6.jpg"
+  },
+  "distanceKm": 0.4
+ },
+ "gerar": {
+  "title": "Tel Haror",
+  "url": "https://en.wikipedia.org/wiki/Tel_Haror",
+  "extract": "Tel Haror (also Tel Heror: Hebrew name) or Tell Abu Hureyra (Arabic name; also spelled Hureira and Hareira), is an archaeological site in the western Negev Desert, Israel, northwest of Beersheba, about 20 km east of the Mediterranean Sea, situated on the north bank of Wadi Gerar, a wadi known in Arabic as Wadi esh-Sheri'a. During the Middle Bronze Age II it was one of the largest urban centres in the area, occupying about 40 acres.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Gerar.jpg/960px-Gerar.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Y-barton",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Gerar.jpg"
+  },
+  "distanceKm": 2.2
+ },
+ "bethel": {
+  "title": "Beitin",
+  "url": "https://en.wikipedia.org/wiki/Beitin",
+  "extract": "Beitin (Arabic: بيتين, romanized: Baytīn) is a Palestinian village in the Ramallah and al-Bireh Governorate in the central West Bank, located 5 kilometers (3.1 mi) northeast of Ramallah along the Ramallah-Nablus road. The Palestinian village of Dura al-Qar' and Ein Yabrud lie to the north, Rammun to the east, Deir Dibwan to the southeast and al-Bireh to the southwest.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/COLOR_PHOTO_FROM_THE_LATE_19TH_CENTURY_TAKEN_BY_FRENCH_PHOTOGRAPHER%2C_BONFILS%2C_DEPICTING_THE_BET_EL_AREA_NEAR_JERUSALEM._%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%A6%D7%91%D7%A2_%D7%9E%D7%A1%D7%95%D7%A3_%D7%94%D7%9E%D7%90%D7%94_%D7%94_19_%D7%A4%D7%A8%D7%99_%D7%9E%D7%A6%D7%9C%D7%9E%D7%AA%D7%95_%D7%A9%D7%9C_%D7%94%D7%A6%D7%9C%D7%9D_%D7%94%D7%A6%D7%A8%D7%A4%D7%AA%D7%99_%D7%91%D7%95%D7%A0%D7%A4.jpg/960px-thumbnail.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Félix Bonfils",
+   "filePage": "https://commons.wikimedia.org/wiki/File:COLOR_PHOTO_FROM_THE_LATE_19TH_CENTURY_TAKEN_BY_FRENCH_PHOTOGRAPHER,_BONFILS,_DEPICTING_THE_BET_EL_AREA_NEAR_JERUSALEM._%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%A6%D7%91%D7%A2_%D7%9E%D7%A1%D7%95%D7%A3_%D7%94%D7%9E%D7%90%D7%94_%D7%94_19_%D7%A4%D7%A8%D7%99_%D7%9E%D7%A6%D7%9C%D7%9E%D7%AA%D7%95_%D7%A9%D7%9C_%D7%94%D7%A6%D7%9C%D7%9D_%D7%94%D7%A6%D7%A8%D7%A4%D7%AA%D7%99_%D7%91%D7%95%D7%A0%D7%A4.jpg"
+  },
+  "distanceKm": 0.5
+ },
+ "ai": {
+  "title": "Ai (Canaan)",
+  "url": "https://en.wikipedia.org/wiki/Ai_(Canaan)",
+  "extract": "The Ai (Hebrew: הָעַי, romanized: hāʿAy, lit. 'the heap (of ruins)'; Douay–Rheims: Hai) was a city in Canaan, mentioned in the Hebrew Bible. According to the Book of Joshua, it was conquered by the Israelites, headed by Joshua, during their conquest of Canaan.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/049.Joshua_Burns_the_Town_of_Ai.jpg/960px-049.Joshua_Burns_the_Town_of_Ai.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Gustave Doré",
+   "filePage": "https://commons.wikimedia.org/wiki/File:049.Joshua_Burns_the_Town_of_Ai.jpg"
+  },
+  "distanceKm": 0
+ },
+ "shechem": {
+  "title": "Shechem",
+  "url": "https://en.wikipedia.org/wiki/Shechem",
+  "extract": "Shechem ( shə-KEM; Biblical Hebrew: שְׁכֶם, romanized: Šəḵem, Biblical pronunciation: [ʃəˈxɛm]; Samaritan Hebrew: ࠔࠬࠥࠊࠝࠌ, romanized: Šăkēm), also spelled Sichem ( sik-KEM; in the Septuagint, Koine Greek: Συχέμ, romanized: Sykhém) and other variants, was an ancient city in the Southern Levant. Described in ancient Egyptian inscriptions from the 19th century BC as a part of Retjenu, it is also recorded as a Canaanite city in the 14th century BC Amarna letters.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Tell_Balata.jpg/960px-Tell_Balata.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "TrickyH",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Tell_Balata.jpg"
+  },
+  "distanceKm": 0.1
+ },
+ "gerizim": {
+  "title": "Mount Gerizim Temple",
+  "url": "https://en.wikipedia.org/wiki/Mount_Gerizim_Temple",
+  "extract": "The Mount Gerizim Temple was an ancient Samaritan center of worship located on Mount Gerizim originally constructed in the mid-5th century BCE, reconstructed in the early 2nd century BCE, and destroyed later in that same century. The temple is attested in several historical sources, both literary and epigraphical, including references in 2 Maccabees from the second century BCE and two Greek inscriptions found on the island of Delos, also dating to the same period, which mention a sanctuary on the mountain.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Archaeological_site_Mount_Gerizim_IMG_2176.JPG/960px-Archaeological_site_Mount_Gerizim_IMG_2176.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Deror_avi",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Archaeological_site_Mount_Gerizim_IMG_2176.JPG"
+  },
+  "distanceKm": 0
+ },
+ "ebal": {
+  "title": "Mount Ebal",
+  "url": "https://en.wikipedia.org/wiki/Mount_Ebal",
+  "extract": "Mount Ebal (Hebrew: הַר עֵיבָל, romanized: Har ʿĒḇāl; Arabic: جَبَل عَيْبال, romanized: Jabal ʿAybāl) is one of the two mountains near the city of Nablus (biblical Shechem) in the West Bank, and forms the northern side of the valley in which Nablus is situated, the southern side being formed by Mount Gerizim. The mountain is one of the highest peaks in the West Bank and rises to 935 m (3,068 ft) above sea level, some 60 m (200 ft) higher than Mount Gerizim.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mount_ebal%2C_near_nablus_4.jpg/960px-Mount_ebal%2C_near_nablus_4.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Someone35",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Mount_ebal,_near_nablus_4.jpg"
+  },
+  "distanceKm": 0.9
+ },
+ "gibeon": {
+  "title": "Gibeon (ancient city)",
+  "url": "https://en.wikipedia.org/wiki/Gibeon_(ancient_city)",
+  "extract": "Gibeon (Hebrew: גִּבְעוֹן, romanized: Giḇəʻōn; Ancient Greek: Γαβαών, romanized: Gabaōn) was a Canaanite and later an Israelite city, which was located north of Jerusalem. According to Joshua 11:19, the pre-Israelite-conquest inhabitants, the Gibeonites, were Hivites; according to 2 Samuel 21:2, they were Amorites, there can be also expected that they were a mingled people, since the city of Jerusalem (whose king discovered the alliance in the narrative of the book of Joshua Joshua 10:1) has her nativity disclosed in Ezekiel 16:3.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Gibeon.png/960px-Gibeon.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Natritmeyer",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Gibeon.png"
+  },
+  "distanceKm": 0.2
+ },
+ "gibeah": {
+  "title": "Royal Palace, Tell el-Ful",
+  "url": "https://en.wikipedia.org/wiki/Royal_Palace,_Tell_el-Ful",
+  "extract": "Royal Palace at Tell el-ful is an abandoned structure near Beit Hanina, atop a hill known as Tell el-Ful (Hill of Beans, Hebrew: גבעת שאול, Givat Shaul, lit. Hill of Saul).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/RoyalPalaceHusseinTellElFulDec032022_03.jpg/960px-RoyalPalaceHusseinTellElFulDec032022_03.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר",
+   "filePage": "https://commons.wikimedia.org/wiki/File:RoyalPalaceHusseinTellElFulDec032022_03.jpg"
+  },
+  "distanceKm": 0
+ },
+ "ramah": {
+  "title": "Ramah in Benjamin",
+  "url": "https://en.wikipedia.org/wiki/Ramah_in_Benjamin",
+  "extract": "Ramah (from Hebrew: \"height\")  was, according to the Hebrew Bible, a city in ancient Israel in the land allocated to the tribe of Benjamin. It was located near Gibeon and Mizpah to the West, Gibeah to the South, and Geba to the East.",
+  "image": null,
+  "distanceKm": 0.2
+ },
+ "lachish": {
+  "title": "Tel Lachish",
+  "url": "https://en.wikipedia.org/wiki/Tel_Lachish",
+  "extract": "Lachish (Hebrew: לכיש, romanized: Lāḵîš; Koine Greek: Λαχίς; Latin: Lachis) was an ancient Canaanite and later Israelite city in the Shephelah (\"lowlands\") region of Canaan on the south bank of the Lakhish River. The current tell by that name, known as Tel Lachish (Hebrew: תל לכיש) or Tell el-Duweir (تل الدوير), has been identified with Lachish.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/LachishFrontGate.jpg/960px-LachishFrontGate.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Wilson44691",
+   "filePage": "https://commons.wikimedia.org/wiki/File:LachishFrontGate.jpg"
+  },
+  "distanceKm": 0
+ },
+ "elah": {
+  "title": "Valley of Elah",
+  "url": "https://en.wikipedia.org/wiki/Valley_of_Elah",
+  "extract": "The Valley of Elah, Ella Valley (\"Valley of the terebinth\"; from the Hebrew: עמק האלה, romanized: Emeq HaElah), or Wadi es-Sunt (Arabic: وادي السنط), is a long, shallow valley in the Shephelah area of Israel. It is best known from the Hebrew Bible incident where David defeated Goliath (1 Samuel 17:2 and 19).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Valley_of_Elah_from_Tel_Azeka.jpg/960px-Valley_of_Elah_from_Tel_Azeka.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC0",
+   "artist": "Wilson44691",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Valley_of_Elah_from_Tel_Azeka.jpg"
+  },
+  "distanceKm": 1.7
+ },
+ "adullam": {
+  "title": "Adullam",
+  "url": "https://en.wikipedia.org/wiki/Adullam",
+  "extract": "Adullam (Hebrew: עֲדֻלָּם, romanized: ʿĂḏullām, Koine Greek: Οδολλάμ) is an ancient ruin once numbered among the thirty-six cities of Canaan whose kings \"Joshua and the children of Israel smote\" (Joshua 12:7–24). After that, it fell as an inheritance to the tribe of Judah and was included in the northern division of the Shephelah \"lowland\" cities of the land of Judah (Joshua 15:35).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Hill_of_Adullam%2C_Covered_in_Pines.jpg/960px-Hill_of_Adullam%2C_Covered_in_Pines.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Davidbena",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Hill_of_Adullam,_Covered_in_Pines.jpg"
+  },
+  "distanceKm": 2.1
+ },
+ "en-gedi": {
+  "title": "Ein Gedi (archaeological site)",
+  "url": "https://en.wikipedia.org/wiki/Ein_Gedi_(archaeological_site)",
+  "extract": "Ein Gedi (Hebrew: עין גדי) was an ancient settlement located in the Judaean Desert, along the western shore of the Dead Sea. In antiquity, it was an important Jewish settlement.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Ein-Gedi-synagogue-839.jpg/960px-Ein-Gedi-synagogue-839.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 4.0",
+   "artist": "Bukvoed",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Ein-Gedi-synagogue-839.jpg"
+  },
+  "distanceKm": 0
+ },
+ "qumran": {
+  "title": "Qumran",
+  "url": "https://en.wikipedia.org/wiki/Qumran",
+  "extract": "Qumran (; Hebrew: קומראן; Arabic: خربة قمران, romanized: Khirbet Qumrān) is an archaeological site in the West Bank managed by Israel's Qumran National Park. It is located on a dry marl plateau about 1.5 km (1 mi) from the northwestern shore of the Dead Sea, about 10 km (6 mi) south of the historic city of Jericho, and adjacent to the modern Israeli settlement and kibbutz of Kalya.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Kumeran4.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "CC BY-SA 2.5",
+   "artist": "Tamarah",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Kumeran4.jpg"
+  },
+  "distanceKm": 0
+ },
+ "masada": {
+  "title": "Siege of Masada",
+  "url": "https://en.wikipedia.org/wiki/Siege_of_Masada",
+  "extract": "The hilltop fortress of Masada, in present-day Israel, was successfully besieged and taken by Roman imperial forces between 72 and 73 AD, during the final period of the First Jewish–Roman War. At the time, the fortress was held by members of the Sicarii rebel group.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Israel-2013-Aerial_21-Masada.jpg/960px-Israel-2013-Aerial_21-Masada.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Godot13",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Israel-2013-Aerial_21-Masada.jpg"
+  },
+  "distanceKm": 0
+ },
+ "bethany": {
+  "title": "Bethany",
+  "url": "https://en.wikipedia.org/wiki/Bethany",
+  "extract": "Bethany (Ancient Greek: Βηθανία, Syriac: ܒܝܬ ܥܢܝܐ Bēṯ ʿAnyā), locally called in Arabic al-Eizariya or el-Aizariya (Arabic: العيزرية, \"[place] of Lazarus\"), is a Palestinian town in the Jerusalem Governorate of Palestine, bordering East Jerusalem, in the West Bank. The name al-Eizariya refers to the New Testament figure Lazarus of Bethany, who according to the Gospel of John, was raised from the dead by Jesus in the town.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/%D7%94%D7%A0%D7%95%D7%A3_%D7%9C%D7%9E%D7%AA%D7%97%D7%9D_%D7%90%D7%95%D7%92%D7%95%D7%A1%D7%98%D7%94_%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94.jpg/960px-%D7%94%D7%A0%D7%95%D7%A3_%D7%9C%D7%9E%D7%AA%D7%97%D7%9D_%D7%90%D7%95%D7%92%D7%95%D7%A1%D7%98%D7%94_%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Tomer hu",
+   "filePage": "https://commons.wikimedia.org/wiki/File:%D7%94%D7%A0%D7%95%D7%A3_%D7%9C%D7%9E%D7%AA%D7%97%D7%9D_%D7%90%D7%95%D7%92%D7%95%D7%A1%D7%98%D7%94_%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94.jpg"
+  },
+  "distanceKm": 0.3
+ },
+ "olives": {
+  "title": "Mount of Olives",
+  "url": "https://en.wikipedia.org/wiki/Mount_of_Olives",
+  "extract": "The Mount of Olives or Mount Olivet (Hebrew: הַר הַזֵּיתִים, romanized: Har ha-Zeitim; Arabic: جبل الزيتون, romanized: Jabal az-Zaytūn; both lit. 'Mount of Olives'; in Arabic also الطور, Aṭ-Ṭūr, 'the Mountain') is a mountain ridge in East Jerusalem, east of and adjacent to Jerusalem's Old City.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/2013-Aerial-Mount_of_Olives.jpg/960px-2013-Aerial-Mount_of_Olives.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Godot13",
+   "filePage": "https://commons.wikimedia.org/wiki/File:2013-Aerial-Mount_of_Olives.jpg"
+  },
+  "distanceKm": 0.2
+ },
+ "gethsemane": {
+  "title": "Gethsemane",
+  "url": "https://en.wikipedia.org/wiki/Gethsemane",
+  "extract": "Gethsemane ( gheth-SEM-ə-nee) is a garden as well as a courtyard at the foot of the Mount of Olives in East Jerusalem, where, according to the four Gospels of the New Testament, Jesus Christ underwent the Agony in the Garden and was arrested before his crucifixion. The garden is a place of great resonance in Christianity.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Jerusalem_Gethsemane_tango7174.jpg/960px-Jerusalem_Gethsemane_tango7174.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Tango7174",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Jerusalem_Gethsemane_tango7174.jpg"
+  },
+  "distanceKm": 0
+ },
+ "golgotha": {
+  "title": "Calvary",
+  "url": "https://en.wikipedia.org/wiki/Calvary",
+  "extract": "Calvary (Latin: Calvariae, or Calvariae locus) or Golgotha (Biblical Greek: Γολγοθᾶ), derived from Golgolta (Jewish Palestinian Aramaic: גולגולתא), was a site immediately outside Roman Jerusalem's walls where, according to Christianity's four canonical gospels, Jesus was crucified.\nSince at least the early medieval period, it has been a destination for pilgrimage.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Golgotha_%28Church_of_the_Holy_Sepulchre%29.jpg/960px-Golgotha_%28Church_of_the_Holy_Sepulchre%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 2.0",
+   "artist": "Иерей Максим Массалитин\n\n\nCamera location31° 46′ 42.5″ N, 35° 13′ 45.92″ E View this and other nearby images on: OpenStreetMap 31.778471;   35.229421",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Golgotha_(Church_of_the_Holy_Sepulchre).jpg"
+  },
+  "distanceKm": 0
+ },
+ "emmaus": {
+  "title": "Emmaus",
+  "url": "https://en.wikipedia.org/wiki/Emmaus",
+  "extract": "Emmaus ( im-AY-əs; Koine Greek: Ἐμμαούς, romanized: Emmaoús; Latin: Emmaus; Arabic: عمواس, romanized: ʿImwās) is a town mentioned in the Gospel of Luke of the New Testament. Luke reports that Jesus appeared, after his death and resurrection, before two of his disciples while they were walking on the road to Emmaus.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Emmaus_Nicopolis_basilica.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Emmaus",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Emmaus_Nicopolis_basilica.JPG"
+  },
+  "distanceKm": 0
+ },
+ "jericho": {
+  "title": "Fall of Jericho",
+  "url": "https://en.wikipedia.org/wiki/Fall_of_Jericho",
+  "extract": "The fall of Jericho, as described in the Book of Joshua, was the first military engagement fought by the Israelites in the course of the conquest of Canaan. According to Joshua 6:1–27, the walls of Jericho fell after the Israelites marched around the city walls once a day for six days, seven times on the seventh day, with the priests blowing their horns daily and the people shouting on the last day.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/1/19/JSC_the_battle_of_Jericho.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": null,
+   "filePage": "https://commons.wikimedia.org/wiki/File:JSC_the_battle_of_Jericho.png"
+  },
+  "distanceKm": 0
+ },
+ "jordan-crossing": {
+  "title": "Al-Maghtas",
+  "url": "https://en.wikipedia.org/wiki/Al-Maghtas",
+  "extract": "Al-Maghtas (Arabic: المغطس, romanized: al-Maghṭas, lit. 'the Baptism' or 'the Immersion'), officially known as Baptism Site \"Bethany Beyond the Jordan\", is an archaeological World Heritage Site in Jordan, on the east bank of the Jordan River, reputed to be the location of the Baptism of Jesus by John the Baptist and venerated as such since at least the Byzantine period. The place has also been referred to as Bethabara (Hebrew: בית עברה) and historically Bethany (בית עניה) or Bethany Beyond the Jordan (see below).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Bethany_%285%29.JPG/960px-Bethany_%285%29.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 2.5",
+   "artist": "Producer (talk)",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Bethany_(5).JPG"
+  },
+  "distanceKm": 0.5
+ },
+ "nebo": {
+  "title": "Mount Nebo",
+  "url": "https://en.wikipedia.org/wiki/Mount_Nebo",
+  "extract": "Mount Nebo (Arabic: جَبَل نِيبُو, romanized: Jabal Nībū; Hebrew: הַר נְבוֹ, romanized: Har Nəḇō) is an elevated ridge located in Jordan, approximately 700 metres (2,300 ft) above sea level. Part of the Abarim mountain range, Mount Nebo is mentioned in the Bible as the place where Moses was granted a view of the Promised Land before his death.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Mount_Nebo_BW_6.JPG/960px-Mount_Nebo_BW_6.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 3.0",
+   "artist": "Berthold Werner",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Mount_Nebo_BW_6.JPG"
+  },
+  "distanceKm": 0.2
+ },
+ "penuel": {
+  "title": "Penuel",
+  "url": "https://en.wikipedia.org/wiki/Penuel",
+  "extract": "Penuel (Biblical Hebrew: פְּנוּאֵל, romanized: Pənuʾēl) is a place described in the Hebrew Bible as being not far from Sukkot on the east of the Jordan River, south of the Zarqa in Jordan.\nPenuel is mentioned in the Book of Genesis as the site of Jacob's struggle with the angel.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Lutte_de_Jacob_avec_l%27Ange.jpg/960px-Lutte_de_Jacob_avec_l%27Ange.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": null,
+   "filePage": "https://commons.wikimedia.org/wiki/File:Lutte_de_Jacob_avec_l%27Ange.jpg"
+  },
+  "distanceKm": 2
+ },
+ "mahanaim": {
+  "title": "Tulul adh-Dhahab",
+  "url": "https://en.wikipedia.org/wiki/Tulul_adh-Dhahab",
+  "extract": "The Tulul al-Dhahab (Arabic: تَّلَّيْن الذهب, romanized: Tullayn al-ḏahab, lit. 'the twin hills of gold'; Levantine Arabic: تلول الذهب, romanized: Təlūl əḏ-ḏahab) is an archaeological site in Jordan. The site features two neighboring tells, separated by the Zarqa River (the biblical River Jabbok), an affluent of the Jordan River.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Tulul_adh-Dhahab_in_spring.jpg/960px-Tulul_adh-Dhahab_in_spring.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "E. Rehfeld",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Tulul_adh-Dhahab_in_spring.jpg"
+  },
+  "distanceKm": 4.1
+ },
+ "rabbah": {
+  "title": "Amman",
+  "url": "https://en.wikipedia.org/wiki/Amman",
+  "extract": "Amman is the capital and the largest city of Jordan, and the country's economic, political, and cultural center. With a population of five million as of 2024, Amman is Jordan's primate city and is the largest city in the Levant region, the seventh-largest city in the Arab world, and the eighth-largest metropolitan area in the Middle East.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/New_Abdali_2024.png/960px-New_Abdali_2024.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Ramzik1999",
+   "filePage": "https://commons.wikimedia.org/wiki/File:New_Abdali_2024.png"
+  },
+  "distanceKm": 2.1
+ },
+ "machaerus": {
+  "title": "Machaerus",
+  "url": "https://en.wikipedia.org/wiki/Machaerus",
+  "extract": "Machaerus (Μαχαιροῦς, from Ancient Greek: μάχαιρα, lit. 'makhaira' [a sword]; Hebrew: מכוור; Arabic: قلعة مكاور, romanized: Qala'at Mukawir, lit. 'Mukawir Castle') was a Hasmonean hilltop palace and desert fortress, rebuilt by Herod and now in ruins, in the village of Mukawir in modern-day Jordan. The site is located 25 km (16 mi) southeast of the mouth of the Jordan River overlooking the Dead Sea.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Machaerus_Panorama.jpg/960px-Machaerus_Panorama.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": null,
+   "filePage": "https://commons.wikimedia.org/wiki/File:Machaerus_Panorama.jpg"
+  },
+  "distanceKm": 0.1
+ },
+ "beth-shan": {
+  "title": "Beit She'an",
+  "url": "https://en.wikipedia.org/wiki/Beit_She%27an",
+  "extract": "Beit She'an (Hebrew: בֵּית שְׁאָן ), also known as Beisan (Arabic: بيسان ), or Beth-shean, is a city in the Northern District of Israel. The town lies at the Beit She'an Valley about 120 m (394 feet) below sea level.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Beit_shean.jpg/960px-Beit_shean.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Omer berner",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Beit_shean.jpg"
+  },
+  "distanceKm": 0.5
+ },
+ "abel-meholah": {
+  "title": "Shadmot Mehola",
+  "url": "https://en.wikipedia.org/wiki/Shadmot_Mehola",
+  "extract": "Shadmot Mehola (Hebrew: שַׁדְמוֹת מְחוֹלָה, lit. 'Mehola Fields') is an Israeli settlement in the West Bank, organized as a national-religious moshav shitufi. Located in the Beit She'an Valley, it falls under the jurisdiction of Bik'at HaYarden Regional Council.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Shadmot_Mehola.jpg/960px-Shadmot_Mehola.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "אסף.צ",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Shadmot_Mehola.jpg"
+  },
+  "distanceKm": 0.4
+ },
+ "gilboa": {
+  "title": "Mount Gilboa",
+  "url": "https://en.wikipedia.org/wiki/Mount_Gilboa",
+  "extract": "Mount Gilboa (Hebrew: הַר הַגִּלְבֹּעַ, romanized: Har hagGīlbōaʿ‍; Arabic: جبل جلبوع Jabal Jalbūʿ or جبل فقوعة Jabal Fuqqāʿa), sometimes referred to as the Mountains of Gilboa, is the name for a mountain range in Israel. It overlooks the Harod Valley (the eastern part of the larger Jezreel Valley) to the north, and the Jordan Valley and Hills to the southeast and to the west, respectively.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Gilboa_096.jpg/960px-Gilboa_096.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Beivushtang at en.wikipedia",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Gilboa_096.jpg"
+  },
+  "distanceKm": 7.5
+ },
+ "megiddo": {
+  "title": "Tel Megiddo",
+  "url": "https://en.wikipedia.org/wiki/Tel_Megiddo",
+  "extract": "Tel Megiddo (from Hebrew: תל מגידו; Arabic: تل المتسلم, Tell el-Muteselim) is the site of the ancient city of Megiddo (; Hebrew: מגידו; Greek: Μεγιδδώ), the remains of which form a tell or archaeological mound, situated in northern Israel at the western edge of the Jezreel Valley. During the Bronze Age, Megiddo was an important Canaanite city-state, and in the Iron Age, it became a royal city in the Kingdom of Israel.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/TEL_MEGIDO_AERIAL_C.JPG/960px-TEL_MEGIDO_AERIAL_C.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "AVRAMGR",
+   "filePage": "https://commons.wikimedia.org/wiki/File:TEL_MEGIDO_AERIAL_C.JPG"
+  },
+  "distanceKm": 0.1
+ },
+ "carmel": {
+  "title": "Mount Carmel",
+  "url": "https://en.wikipedia.org/wiki/Mount_Carmel",
+  "extract": "Mount Carmel (Hebrew: הַר הַכַּרְמֶל, romanized: Har haKarmel; Arabic: جبل الكرمل, romanized: Jabal al-Karmil), also known in Arabic as Mount Mar Elias (Arabic: جبل مار إلياس, romanized: Jabal Mār Ilyās, lit. 'Mount Saint Elias/Elijah'; Hebrew: הַר הַקָּדוֹשׁ אֵלִיָּהוּ, romanized: Har haQadosh Eliyahu), is a coastal mountain range in Palestine stretching from the Mediterranean Sea towards the southeast. The range is a UNESCO biosphere reserve.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Caiobadner_-_mount_carmel.JPG/960px-Caiobadner_-_mount_carmel.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Chadner",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Caiobadner_-_mount_carmel.JPG"
+  },
+  "distanceKm": 0
+ },
+ "samaria": {
+  "title": "Sebastia, Nablus",
+  "url": "https://en.wikipedia.org/wiki/Sebastia,_Nablus",
+  "extract": "Sebastia (Arabic: سبسطية, Sabastiyah; Greek: Σεβαστή, Σεβάστεια, romanized: Sevasti, Sevasteia; Hebrew: סבסטיה, Sebastiya; Latin: Sebaste) is a Palestinian village of about 3,205 inhabitants, located in the Nablus Governorate of the State of Palestine, some 12 kilometers northwest of the city of Nablus.\nSebastia is believed to be one of the oldest continuously inhabited places in the West Bank.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sabastia7856_d55.JPG/960px-Sabastia7856_d55.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "יעקב",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Sabastia7856_d55.JPG"
+  },
+  "distanceKm": 0.4
+ },
+ "sychar": {
+  "title": "Shechem",
+  "url": "https://en.wikipedia.org/wiki/Shechem",
+  "extract": "Shechem ( shə-KEM; Biblical Hebrew: שְׁכֶם, romanized: Šəḵem, Biblical pronunciation: [ʃəˈxɛm]; Samaritan Hebrew: ࠔࠬࠥࠊࠝࠌ, romanized: Šăkēm), also spelled Sichem ( sik-KEM; in the Septuagint, Koine Greek: Συχέμ, romanized: Sykhém) and other variants, was an ancient city in the Southern Levant. Described in ancient Egyptian inscriptions from the 19th century BC as a part of Retjenu, it is also recorded as a Canaanite city in the 14th century BC Amarna letters.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Tell_Balata.jpg/960px-Tell_Balata.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "TrickyH",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Tell_Balata.jpg"
+  },
+  "distanceKm": 0.4
+ },
+ "dothan": {
+  "title": "Tel Dothan",
+  "url": "https://en.wikipedia.org/wiki/Tel_Dothan",
+  "extract": "Dothan (Hebrew: דֹתָן) (also Dotan) is a location mentioned twice in the Hebrew Bible. It has been identified with Tell Dothan (Arabic: تل دوثان), also known as Tell al-Hafireh, located adjacent to the Palestinian town of Bir al-Basha, and ten kilometers (driving distance) southwest of Jenin in the West Bank, near Dotan Junction of Route 60.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tel_Dotan3.jpg/960px-Tel_Dotan3.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Netanel h",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Tel_Dotan3.jpg"
+  },
+  "distanceKm": 4.6
+ },
+ "hazor": {
+  "title": "Tel Hazor",
+  "url": "https://en.wikipedia.org/wiki/Tel_Hazor",
+  "extract": "Tel Hazor (Hebrew: תל חצור, romanized: Tel Ḥāṣor), translated in LXX as Hasōr (Ancient Greek: Άσώρ), and in Arabic Tell Waqqas or Tell Qedah el-Gul (Arabic: تل القدح, romanized: Tell el-Qedah), is an archaeological tell at the site of ancient Hazor, located in the Upper Galilee, north of the Sea of Galilee, in the northern Korazim Plateau. From the Middle Bronze Age (around 1750 BCE) to the Iron Age (ninth century BCE), Hazor was the largest fortified city in the region and one of the most important in the Fertile Crescent.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Hatzor-HouseofPillars.jpg/960px-Hatzor-HouseofPillars.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 2.0",
+   "artist": "The Neolithic ram",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Hatzor-HouseofPillars.jpg"
+  },
+  "distanceKm": 0.2
+ },
+ "dan": {
+  "title": "Dan (ancient city)",
+  "url": "https://en.wikipedia.org/wiki/Dan_(ancient_city)",
+  "extract": "Dan (Biblical Hebrew: דָּן), and older name Laish, is an ancient city mentioned in the Hebrew Bible, described as the northernmost city of the Kingdom of Israel, and belonging to the tribe of Dan, its namesake. It was later the site of a royal sanctuary built by Jeroboam.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Tel_Dan_Canaanite_Gate_1.jpg/960px-Tel_Dan_Canaanite_Gate_1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Hanay",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Tel_Dan_Canaanite_Gate_1.jpg"
+  },
+  "distanceKm": 0
+ },
+ "hermon": {
+  "title": "Mount Hermon",
+  "url": "https://en.wikipedia.org/wiki/Mount_Hermon",
+  "extract": "Mount Hermon () is a mountain cluster constituting the southern end of the Anti-Lebanon Mountains. Its summit straddles the border between Syria and Lebanon and at the elevation of 2,814 m (9,232 ft), is the highest point in Syria and the Israeli-occupied Golan Heights.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Hermonsnow.jpg/960px-Hermonsnow.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Almog",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Hermonsnow.jpg"
+  },
+  "distanceKm": 0
+ },
+ "caesarea-philippi": {
+  "title": "Banias",
+  "url": "https://en.wikipedia.org/wiki/Banias",
+  "extract": "Banias (Arabic: بانياس الحولة, romanized: Bāniyās al-Ḥūlah; Modern Hebrew: בניאס; Judeo-Aramaic, Medieval Hebrew: פמייס, etc.; Ancient Greek: Πανεάς), also spelled Banyas, is a site in the Israeli-occupied Golan Heights, Syria near a natural spring, once associated with the Greek god Pan. It had been inhabited for 2,000 years, until its Syrian population fled and their homes were destroyed by Israel following the 1967 Six-Day War.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Banias_Spring_Cliff_Pan%27s_Cave.JPG/960px-Banias_Spring_Cliff_Pan%27s_Cave.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "gugganij",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Banias_Spring_Cliff_Pan%27s_Cave.JPG"
+  },
+  "distanceKm": 0.1
+ },
+ "nazareth": {
+  "title": "Nazareth",
+  "url": "https://en.wikipedia.org/wiki/Nazareth",
+  "extract": "Nazareth is the largest city in the Northern District of Israel. In 2024 its population was 75,704.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nazareth_Panorama_Dafna_Tal_IMOT_%2814532097313%29.jpg/960px-Nazareth_Panorama_Dafna_Tal_IMOT_%2814532097313%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 2.0",
+   "artist": "Israel_photo_gallery",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Nazareth_Panorama_Dafna_Tal_IMOT_(14532097313).jpg"
+  },
+  "distanceKm": 0.3
+ },
+ "capernaum": {
+  "title": "Capernaum",
+  "url": "https://en.wikipedia.org/wiki/Capernaum",
+  "extract": "Capernaum ( kə-PUR-nay-əm, -⁠nee-əm; Hebrew: כְּפַר נַחוּם, romanized: Kfar Naḥum, lit. 'Nahum's village'; Arabic: كَفْرْ نَاحُومْ, romanized: Kafr Nāḥūm) was a fishing village established during the time of the Hasmoneans in Israel, located on the northern shore of the Sea of Galilee. It had a population of about 1,500 in the 1st century AD. Archaeological excavations have revealed two ancient synagogues built successively at the same spot.",
+  "image": null,
+  "distanceKm": 0
+ },
+ "magdala": {
+  "title": "Magdala",
+  "url": "https://en.wikipedia.org/wiki/Magdala",
+  "extract": "Magdala (Aramaic: מגדלא, romanized: Magdalā, lit. 'Tower'; Hebrew: מִגְדָּל, romanized: Migdál; Ancient Greek: Μαγδαλά, romanized: Magdalá) was an ancient Jewish city on the shore of the Sea of Galilee, 5 km (3 miles) north of Tiberias. In the Babylonian Talmud it is known as Magdala Nunayya (Aramaic: מגדלא נוניה, lit. 'Tower of the Fishes'), and which some historical geographers think may refer to Tarichaea (lit. 'the place of processing fish').",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/%D7%9E%D7%92%D7%93%D7%9C%D7%90_%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%90%D7%95%D7%99%D7%A8.JPG/960px-%D7%9E%D7%92%D7%93%D7%9C%D7%90_%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%90%D7%95%D7%99%D7%A8.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "AVRAM GRAICER",
+   "filePage": "https://commons.wikimedia.org/wiki/File:%D7%9E%D7%92%D7%93%D7%9C%D7%90_%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%90%D7%95%D7%99%D7%A8.JPG"
+  },
+  "distanceKm": 0.1
+ },
+ "tiberias": {
+  "title": "Tiberias",
+  "url": "https://en.wikipedia.org/wiki/Tiberias",
+  "extract": "Tiberias ( ty-BEER-ee-əs; Hebrew: טְבֶרְיָה, ; Arabic: طَبَرِيَّا, romanized: Ṭabariyyā) is a city on the western shore of the Sea of Galilee in northern Israel. A major Jewish center during Late Antiquity, it has been considered since the 18th century one of Judaism's Four Holy Cities, along with Jerusalem, Hebron, and Safed.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/92250_tiberias_PikiWiki_Israel.jpg/960px-92250_tiberias_PikiWiki_Israel.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 2.5",
+   "artist": "דוידי ורדי",
+   "filePage": "https://commons.wikimedia.org/wiki/File:92250_tiberias_PikiWiki_Israel.jpg"
+  },
+  "distanceKm": 0.3
+ },
+ "galilee-sea": {
+  "title": "Sea of Galilee",
+  "url": "https://en.wikipedia.org/wiki/Sea_of_Galilee",
+  "extract": "The Sea of Galilee, also called Lake Tiberias (Arabic: بُحَيْرَة طَبَرِيَّا, romanized: Buḥayrat Ṭabariyyā ; Jewish Palestinian Aramaic: יַמּא דְּטְבַרְיָא, romanized: Yammā də-Ṭvaryā), Genezareth Lake (Jewish Palestinian Aramaic: גִּנֵּיסַר, romanized: Ginneysar) or Kinneret (Hebrew: יָם כִּנֶּרֶת, romanized: Yam Kinéret), is a freshwater lake in northeast Israel. It is the lowest freshwater lake on Earth and the second-lowest lake in the world (after the Dead Sea, a salt lake), with its elevation fluctuating between 215 and 209 metres (705 and 686 ft) below sea level (depending on rainfall).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Kinneret_cropped.jpg/960px-Kinneret_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 2.0",
+   "artist": "Zachi Evenor and User:MathKnight",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Kinneret_cropped.jpg"
+  },
+  "distanceKm": 3.8
+ },
+ "gadara": {
+  "title": "Umm Qais",
+  "url": "https://en.wikipedia.org/wiki/Umm_Qais",
+  "extract": "Umm Qais (Arabic: أم قيس, lit. 'Mother of Qais'), also known as Qays, is a town in northern Jordan principally known for its proximity to the ruins of the ancient Gadara. It is the largest city in the Bani Kinanah Department and Irbid Governorate in the extreme northwest of the country, near Jordan's borders with Israel and Syria.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Modern_Umm_Qais%2C_Jordan.jpg/960px-Modern_Umm_Qais%2C_Jordan.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Daniel Case",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Modern_Umm_Qais,_Jordan.jpg"
+  },
+  "distanceKm": 0.3
+ },
+ "joppa": {
+  "title": "Jaffa",
+  "url": "https://en.wikipedia.org/wiki/Jaffa",
+  "extract": "Jaffa (Hebrew: יָפוֹ, romanised: Yāfō, pronounced [jaˈfo] ; Arabic: يَافَا, romanised: Yāfā, pronounced [ˈjaːfaː]), also called Japho, Joppa or Joppe in English, is an ancient Levantine port city which is part of Tel Aviv-Yafo, Israel, located in its southern part. The city sits atop a naturally elevated outcrop on the Mediterranean coastline.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg/960px-ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Godot13",
+   "filePage": "https://commons.wikimedia.org/wiki/File:ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg"
+  },
+  "distanceKm": 0.4
+ },
+ "lydda": {
+  "title": "Lod",
+  "url": "https://en.wikipedia.org/wiki/Lod",
+  "extract": "Lod (Hebrew: לוד, fully vocalized: לֹד), also known as Lydda (Ancient Greek: Λύδδα) and Lidd (Arabic: اللِّدّ, romanized: al-Lidd, or اللُّدّ, al-Ludd), is a city 15 km (9+1⁄2 mi) southeast of Tel Aviv and 40 km (25 mi) northwest of Jerusalem in the Central District of Israel. It is situated between the lower Shephelah on the east and the coastal plain on the west.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/LodJune132022_01.jpg/960px-LodJune132022_01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר",
+   "filePage": "https://commons.wikimedia.org/wiki/File:LodJune132022_01.jpg"
+  },
+  "distanceKm": 0.3
+ },
+ "caesarea": {
+  "title": "Caesarea Maritima",
+  "url": "https://en.wikipedia.org/wiki/Caesarea_Maritima",
+  "extract": "Caesarea (), also Caesarea Maritima, Caesarea Palaestinae or Caesarea Stratonis, was an ancient and medieval port city on the coast of the eastern Mediterranean, and later a small fishing village. It was the capital of Roman Judaea, Syria Palaestina and Palaestina Prima, successively, for a period of c.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Caesarea.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "The original uploader was אסף.צ at Hebrew Wikipedia.",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Caesarea.JPG"
+  },
+  "distanceKm": 0
+ },
+ "gaza": {
+  "title": "Gaza City",
+  "url": "https://en.wikipedia.org/wiki/Gaza_City",
+  "extract": "Gaza City, often simply called Gaza, is a city in the Gaza Strip, Palestine, and the capital of the Gaza Governorate. Located on the Mediterranean coast, 76.6 kilometres (47.6 mi) southwest of Jerusalem, it was home to Palestine's only port.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Images_of_war_23-25_from_Gaza%2C_by_Jaber_Badwen%2C_IMG_6315.jpg/960px-Images_of_war_23-25_from_Gaza%2C_by_Jaber_Badwen%2C_IMG_6315.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Jaber Jehad Badwan",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Images_of_war_23-25_from_Gaza,_by_Jaber_Badwen,_IMG_6315.jpg"
+  },
+  "distanceKm": 0.9
+ },
+ "ashkelon": {
+  "title": "Ascalon",
+  "url": "https://en.wikipedia.org/wiki/Ascalon",
+  "extract": "Ascalon or Ashkelon was an ancient Near East port city on the Mediterranean coast of the southern Levant of high historical and archaeological significance. Its remains are located in the archaeological site of Tel Ashkelon, within the city limits of the modern Israeli city of Ashkelon.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/71-7100-100_-_%D7%AA%D7%9C_%D7%90%D7%A9%D7%A7%D7%9C%D7%95%D7%9F_-_%D7%A9%D7%A8%D7%99%D7%93%D7%99_%D7%9B%D7%A0%D7%A1%D7%99%D7%99%D7%AA_%D7%A1%D7%A0%D7%98%D7%94_%D7%9E%D7%A8%D7%99%D7%94_%D7%95%D7%99%D7%A8%D7%99%D7%93%D7%99%D7%A1_-_%D7%9C%D7%A8%D7%99%D7%A1%D7%94_%D7%A1%D7%A7%D7%9C%D7%90%D7%A8_%D7%92%D7%99%D7%9C%D7%A8_%283%29.jpg/960px-71-7100-100_-_%D7%AA%D7%9C_%D7%90%D7%A9%D7%A7%D7%9C%D7%95%D7%9F_-_%D7%A9%D7%A8%D7%99%D7%93%D7%99_%D7%9B%D7%A0%D7%A1%D7%99%D7%99%D7%AA_%D7%A1%D7%A0%D7%98%D7%94_%D7%9E%D7%A8%D7%99%D7%94_%D7%95%D7%99%D7%A8%D7%99%D7%93%D7%99%D7%A1_-_%D7%9C%D7%A8%D7%99%D7%A1%D7%94_%D7%A1%D7%A7%D7%9C%D7%90%D7%A8_%D7%92%D7%99%D7%9C%D7%A8_%283%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Larisa sklar giller",
+   "filePage": "https://commons.wikimedia.org/wiki/File:71-7100-100_-_%D7%AA%D7%9C_%D7%90%D7%A9%D7%A7%D7%9C%D7%95%D7%9F_-_%D7%A9%D7%A8%D7%99%D7%93%D7%99_%D7%9B%D7%A0%D7%A1%D7%99%D7%99%D7%AA_%D7%A1%D7%A0%D7%98%D7%94_%D7%9E%D7%A8%D7%99%D7%94_%D7%95%D7%99%D7%A8%D7%99%D7%93%D7%99%D7%A1_-_%D7%9C%D7%A8%D7%99%D7%A1%D7%94_%D7%A1%D7%A7%D7%9C%D7%90%D7%A8_%D7%92%D7%99%D7%9C%D7%A8_(3).jpg"
+  },
+  "distanceKm": 0.6
+ },
+ "ashdod": {
+  "title": "Ashdod",
+  "url": "https://en.wikipedia.org/wiki/Ashdod",
+  "extract": "Ashdod (Hebrew: אַשְׁדּוֹד, romanized: ʾašdōḏ, pronounced [ʔaʃˈdod] ; Arabic: أسدود, romanized: ʾasdūd, pronounced [ʔasˈduːd], or إسدود, ʾisdūd [ʔɪsˈduːd]; Philistine: 𐤀𐤔𐤃𐤃‎, romanized: *ʾašdūd) is the sixth-largest city in Israel. Located in the country's Southern District, it lies on the Mediterranean coast 32 kilometres (20 miles) south of Tel Aviv and 20 km (12 mi) north of Ashkelon.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/%D7%A4%D7%90%D7%A8%D7%A7_%D7%95%D7%90%D7%92%D7%9D_%D7%94%D7%9E%D7%A8%D7%99%D7%A0%D7%94_%D7%9C%D7%A7%D7%A8%D7%90%D7%AA_%D7%A1%D7%95%D7%A3_%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA_%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94%2C_%D7%9E%D7%A8%D7%A5_2024.jpg_03.jpg/960px-%D7%A4%D7%90%D7%A8%D7%A7_%D7%95%D7%90%D7%92%D7%9D_%D7%94%D7%9E%D7%A8%D7%99%D7%A0%D7%94_%D7%9C%D7%A7%D7%A8%D7%90%D7%AA_%D7%A1%D7%95%D7%A3_%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA_%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94%2C_%D7%9E%D7%A8%D7%A5_2024.jpg_03.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "מקף־עברי",
+   "filePage": "https://commons.wikimedia.org/wiki/File:%D7%A4%D7%90%D7%A8%D7%A7_%D7%95%D7%90%D7%92%D7%9D_%D7%94%D7%9E%D7%A8%D7%99%D7%A0%D7%94_%D7%9C%D7%A7%D7%A8%D7%90%D7%AA_%D7%A1%D7%95%D7%A3_%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA_%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94,_%D7%9E%D7%A8%D7%A5_2024.jpg_03.jpg"
+  },
+  "distanceKm": 0
+ },
+ "ekron": {
+  "title": "Revadim",
+  "url": "https://en.wikipedia.org/wiki/Revadim",
+  "extract": "Revadim (Hebrew: רְבָדִים, lit. \"terraces\") is a kibbutz in southern Israel.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/PikiWiki_Israel_5618_phillistine_house_in_revadim.jpg/960px-PikiWiki_Israel_5618_phillistine_house_in_revadim.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 2.5",
+   "artist": "אבישי טייכר",
+   "filePage": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_5618_phillistine_house_in_revadim.jpg"
+  },
+  "distanceKm": 3.3
+ },
+ "zorah": {
+  "title": "Tzora",
+  "url": "https://en.wikipedia.org/wiki/Tzora",
+  "extract": "Tzora (Hebrew: צרעה, lit. 'Zorah') is a kibbutz in central Israel. Located about 20 km from Jerusalem, near the city of Beit Shemesh, it falls under the jurisdiction of Mateh Yehuda Regional Council.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Sur%27ah_009.jpg/960px-Sur%27ah_009.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Davidbena",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Sur%27ah_009.jpg"
+  },
+  "distanceKm": 1.2
+ },
+ "timnah": {
+  "title": "Timnah",
+  "url": "https://en.wikipedia.org/wiki/Timnah",
+  "extract": "Timnath or Timnah was a Philistine city in Canaan that is mentioned in the Hebrew Bible in Judges 14 and in connection with Samson. Modern archaeologists identify the ancient site with a tell lying on a flat, alluvial plain, located in the Sorek Valley ca.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Tel_batash.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Haggibar at Hebrew Wikipedia",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Tel_batash.JPG"
+  },
+  "distanceKm": 1.2
+ },
+ "gath": {
+  "title": "Gath (city)",
+  "url": "https://en.wikipedia.org/wiki/Gath_(city)",
+  "extract": "Gath or Gat (Hebrew: גַּת, romanized: Gaṯ, lit. 'wine press'; Latin: Geth, Philistine: 𐤂𐤕 *Gīt) was one of the five cities of the Philistine pentapolis during the Iron Age. It was located in northeastern Philistia, close to the border with Judah.",
+  "image": null,
+  "distanceKm": 0
+ },
+ "damascus": {
+  "title": "Damascus",
+  "url": "https://en.wikipedia.org/wiki/Damascus",
+  "extract": "Damascus is the capital and largest city of Syria. It is the oldest capital city in the world.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Damascus%2C_Syria%2C_Panoramic_view_of_Damascus.jpg/960px-Damascus%2C_Syria%2C_Panoramic_view_of_Damascus.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 4.0",
+   "artist": "Vyacheslav Argenberg",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Damascus,_Syria,_Panoramic_view_of_Damascus.jpg"
+  },
+  "distanceKm": 3.1
+ },
+ "riblah": {
+  "title": "Riblah",
+  "url": "https://en.wikipedia.org/wiki/Riblah",
+  "extract": "The ancient town of Riblah, today a tell covered by a cemetery not far from the town of Ribleh on the Syrian side of the border with Lebanon, was in biblical times located on the northern frontier of the land of Canaan. The site lies on the eastern bank of the Orontes River, in a wide and fertile plain, 35 miles north-east of Baalbek and 10 or 12 miles south of the artificial Lake Homs created by the Romans.",
+  "image": null,
+  "distanceKm": 2.6
+ },
+ "tyre": {
+  "title": "Tyre, Lebanon",
+  "url": "https://en.wikipedia.org/wiki/Tyre,_Lebanon",
+  "extract": "Tyre is a city in Lebanon, and one of the oldest continuously inhabited cities in the world. It was one of the earliest Phoenician metropolises and the legendary birthplace of Europa, her brothers Cadmus and Phoenix, and Carthage's founder Dido (Elissa).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/SubmergedEgyptianHarbour_TyreSour_Lebanon_RomanDeckert04112019.jpg/960px-SubmergedEgyptianHarbour_TyreSour_Lebanon_RomanDeckert04112019.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "RomanDeckert",
+   "filePage": "https://commons.wikimedia.org/wiki/File:SubmergedEgyptianHarbour_TyreSour_Lebanon_RomanDeckert04112019.jpg"
+  },
+  "distanceKm": 0.7
+ },
+ "sidon": {
+  "title": "Sidon",
+  "url": "https://en.wikipedia.org/wiki/Sidon",
+  "extract": "Sidon ( SY-dən), or Saida ( SY-də, SAH-id-ə; Arabic: صيدا, romanized: Ṣaydā), is the third-largest city in Lebanon. It is located on the Mediterranean coast in the South Governorate, of which it is the capital.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/View_from_Sidon%27s_Sea_Castle%2C_Sidon%2C_Lebanon.jpg/960px-View_from_Sidon%27s_Sea_Castle%2C_Sidon%2C_Lebanon.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 4.0",
+   "artist": "Vyacheslav Argenberg",
+   "filePage": "https://commons.wikimedia.org/wiki/File:View_from_Sidon%27s_Sea_Castle,_Sidon,_Lebanon.jpg"
+  },
+  "distanceKm": 0
+ },
+ "antioch-syria": {
+  "title": "Antakya",
+  "url": "https://en.wikipedia.org/wiki/Antakya",
+  "extract": "Antakya (Turkish pronunciation: [anˈtakja]), Turkish form of Antioch, is a municipality and the capital district of Hatay Province, Turkey, with an area of 703 km2 (271 sq mi) and a population of around 400,000 people as of 2022. It is in the Hatay Province, which is the southernmost region of Turkey.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Antakya_Views_from_hill_at_SE_in_1990%27s_05.jpg/960px-Antakya_Views_from_hill_at_SE_in_1990%27s_05.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Dosseman",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Antakya_Views_from_hill_at_SE_in_1990%27s_05.jpg"
+  },
+  "distanceKm": 0
+ },
+ "seleucia": {
+  "title": "Seleucia Pieria",
+  "url": "https://en.wikipedia.org/wiki/Seleucia_Pieria",
+  "extract": "Seleucia in Pieria (Greek Σελεύκεια ἐν Πιερίᾳ), also known in English as Seleucia by the Sea, and later named Suedia, was a Hellenistic town, the seaport of Antioch ad Orontes (Syria Prima), the Seleucid capital, modern Antakya (Turkey). The city was built slightly to the north of the estuary of the river Orontes, between small rivers on the western slopes of the Coryphaeus, one of the southern summits of the Amanus Mountains.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Roman_Sarcophagus%2C_Seleucia_Pieria.jpg/960px-Roman_Sarcophagus%2C_Seleucia_Pieria.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Htkava",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Roman_Sarcophagus,_Seleucia_Pieria.jpg"
+  },
+  "distanceKm": 0.8
+ },
+ "tarsus": {
+  "title": "Tarsus, Mersin",
+  "url": "https://en.wikipedia.org/wiki/Tarsus,_Mersin",
+  "extract": "Tarsus (; Hittite: 𒋫𒅈𒊭 Tārša; Greek: Ταρσός Tarsós; Armenian: Տարսոն Tarson; Arabic: طَرسُوس Ṭarsūs) is a municipality and district of Mersin Province, Turkey. Its area is 2,029 km2, and its population is 350,732 (2022).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Old_Town_of_Tarsus%2C_Mersin.jpg/960px-Old_Town_of_Tarsus%2C_Mersin.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "The Mersinli",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Old_Town_of_Tarsus,_Mersin.jpg"
+  },
+  "distanceKm": 0.1
+ },
+ "salamis": {
+  "title": "Salamis, Cyprus",
+  "url": "https://en.wikipedia.org/wiki/Salamis,_Cyprus",
+  "extract": "Salamis (Ancient Greek: Σαλαμίς; Greek: Σαλαμίνα; Turkish: Salamis) was an ancient Greek city-state on the east coast of Cyprus, at the mouth of the river Pedieos, 6 km (3.7 mi) north of modern Famagusta. According to tradition, the founder of Salamis was Teucer, son of Telamon, king of the Greek island of Salamis, who could not return home after the Trojan War because he had failed to avenge his brother Ajax.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Gymnasion_und_Therme_aus_S%C3%BCdwest.jpg/960px-Gymnasion_und_Therme_aus_S%C3%BCdwest.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Gerhard Haubold",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Gymnasion_und_Therme_aus_S%C3%BCdwest.jpg"
+  },
+  "distanceKm": 0
+ },
+ "paphos": {
+  "title": "Paphos Archaeological Park",
+  "url": "https://en.wikipedia.org/wiki/Paphos_Archaeological_Park",
+  "extract": "Paphos Archaeological Park (also Kato Pafos Archaeological Park) is in Paphos, southwest Cyprus and contains the major part of its ancient Greek and Roman city. The park, still under excavation, is within the New Paphos section of the coastal city.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Paphos_panorama_-_Cyprus_-_3_May_2015.jpg/960px-Paphos_panorama_-_Cyprus_-_3_May_2015.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 2.0",
+   "artist": "Sergey Galyonkin from Kyiv, Ukraine",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Paphos_panorama_-_Cyprus_-_3_May_2015.jpg"
+  },
+  "distanceKm": 0.3
+ },
+ "perga": {
+  "title": "Perga",
+  "url": "https://en.wikipedia.org/wiki/Perga",
+  "extract": "Perga or Perge (Hittite: Parha, Greek: Πέργη Perge, Turkish: Perge) was originally an ancient Lycian settlement that later became a Greek city in Pamphylia. It was the capital of the Roman province of Pamphylia Secunda, now located in Antalya Province on the southwestern Mediterranean coast of Turkey.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Perge_city_overview.jpg/960px-Perge_city_overview.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Saffron Blaze",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Perge_city_overview.jpg"
+  },
+  "distanceKm": 0
+ },
+ "attalia": {
+  "title": "Antalya",
+  "url": "https://en.wikipedia.org/wiki/Antalya",
+  "extract": "Antalya is one of the largest cities in Turkey and the capital of Antalya Province, the fifth-most populous province. Recognized as the \"capital of tourism\" in Turkey and a pivotal part of the Turkish Riviera, Antalya sits on Anatolia's southwest coast, flanked by the Taurus Mountains.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg/960px-Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Esginmurat",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg"
+  },
+  "distanceKm": 1.4
+ },
+ "antioch-pisidia": {
+  "title": "Antioch of Pisidia",
+  "url": "https://en.wikipedia.org/wiki/Antioch_of_Pisidia",
+  "extract": "Antioch in Pisidia – alternatively Antiochia in Pisidia or Pisidian Antioch (Greek: Ἀντιόχεια τῆς Πισιδίας) and in Roman Empire, Latin: Antiochia Caesareia or Antiochia Colonia Caesarea – was a city in the Turkish Lakes Region, which was at the crossroads of the Mediterranean, Aegean and Central Anatolian regions, and formerly on the border of Pisidia and Phrygia, hence also known as Antiochia in Phrygia. The site lies approximately 1 km northeast of Yalvaç, a modern town in Isparta Province.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Antiocheia_in_Psidia.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Maderibeyza at Turkish Wikipedia",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Antiocheia_in_Psidia.jpg"
+  },
+  "distanceKm": 0.1
+ },
+ "iconium": {
+  "title": "Konya",
+  "url": "https://en.wikipedia.org/wiki/Konya",
+  "extract": "Konya is a major city in central Turkey, on the southwestern edge of the Central Anatolian Plateau, and is the capital of Konya Province. During antiquity and into Seljuk times it was known as Iconium.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Konyaaltincarsi.jpg/960px-Konyaaltincarsi.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 4.0",
+   "artist": "Konya Karatay Belediyesi",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Konyaaltincarsi.jpg"
+  },
+  "distanceKm": 0
+ },
+ "lystra": {
+  "title": "Lystra",
+  "url": "https://en.wikipedia.org/wiki/Lystra",
+  "extract": "Lystra (Ancient Greek: Λύστρα) was a city in central Anatolia, now part of present-day Turkey. It is mentioned six times in the New Testament.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Heinrich_Kiepert._Asia_citerior.Lycaonia.jpg/960px-Heinrich_Kiepert._Asia_citerior.Lycaonia.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Heinrich Kiepert",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Heinrich_Kiepert._Asia_citerior.Lycaonia.jpg"
+  },
+  "distanceKm": 10.1
+ },
+ "derbe": {
+  "title": "Derbe",
+  "url": "https://en.wikipedia.org/wiki/Derbe",
+  "extract": "Derbe or Dervi (Greek: Δέρβη), also called Derveia (Greek: Δέρβεια), was a city of Galatia in Asia Minor, and later of Lycaonia, and still later of Isauria and Cappadocia.  It is mentioned in the Acts of the Apostles at 14:6, 14:20, 16:1 and 20:4.",
+  "image": null,
+  "distanceKm": 7.8
+ },
+ "troas": {
+  "title": "Alexandria Troas",
+  "url": "https://en.wikipedia.org/wiki/Alexandria_Troas",
+  "extract": "Alexandria Troas (\"Alexandria of the Troad\"; Greek: Αλεξάνδρεια Τρωάς; Turkish: Eski Stambul, \"Old Istanbul\") is the site of an ancient Greek city situated on the Aegean Sea near the northern tip of Turkey's western coast, the area known historically as Troad, a little south of Tenedos (modern Bozcaada). It is located southeast of modern Dalyan, a village in the Ezine district of Çanakkale Province.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Troas_Therme_2.JPG/960px-Troas_Therme_2.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Horacio36",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Troas_Therme_2.JPG"
+  },
+  "distanceKm": 0.2
+ },
+ "assos": {
+  "title": "Assos",
+  "url": "https://en.wikipedia.org/wiki/Assos",
+  "extract": "Assos (; Ancient Greek: Ἄσσος, Latin: Assus) was an ancient Greek city near today's Behramkale  (pronounced [behˈɾamkale]) or Behram for short, which most people still call by its ancient name of Assos. It is located on the Aegean coast in the Ayvacık district of Çanakkale province, Turkey.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Assos-Tempel.jpg/960px-Assos-Tempel.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Sonnyhill",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Assos-Tempel.jpg"
+  },
+  "distanceKm": 0.4
+ },
+ "ephesus": {
+  "title": "Ephesus",
+  "url": "https://en.wikipedia.org/wiki/Ephesus",
+  "extract": "Ephesus ( EF-uh-suhs) was an ancient Greek city on the coast of Ionia, in present-day Selçuk in İzmir Province, Turkey. It was built in the 10th century BC on the site of Apasa, a city-state that was also the capital of Arzawa, by Attic and Ionian Greek colonists.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ephesus_Celsus_Library_Fa%C3%A7ade.jpg/960px-Ephesus_Celsus_Library_Fa%C3%A7ade.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Benh LIEU SONG",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Ephesus_Celsus_Library_Fa%C3%A7ade.jpg"
+  },
+  "distanceKm": 0.2
+ },
+ "miletus": {
+  "title": "Miletus",
+  "url": "https://en.wikipedia.org/wiki/Miletus",
+  "extract": "Miletus (Ancient Greek: Μίλητος, romanised: Mílētos) was an influential ancient Greek city on the western coast of Anatolia, near the mouth of the Maeander River in present day Turkey. Renowned in antiquity for its wealth, maritime power, and extensive network of colonies, Miletus was a major center of trade, culture, and innovation from the Bronze Age through the Roman period.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Miletus_-_Ancient_Greek_theatre_02.jpg/960px-Miletus_-_Ancient_Greek_theatre_02.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Bernard Gagnon",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Miletus_-_Ancient_Greek_theatre_02.jpg"
+  },
+  "distanceKm": 0.1
+ },
+ "smyrna": {
+  "title": "İzmir",
+  "url": "https://en.wikipedia.org/wiki/%C4%B0zmir",
+  "extract": "İzmir, often still called in English by its Greek name of  Smyrna, is the third most populous city in Turkey, after Istanbul and Ankara, and the largest metropolitan area on the Aegean Sea. It is on the Aegean coast of Anatolia, and is the capital of İzmir Province.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Cumhuriyet_Square.jpg/960px-Cumhuriyet_Square.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Michael ksk",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Cumhuriyet_Square.jpg"
+  },
+  "distanceKm": 0.7
+ },
+ "pergamum": {
+  "title": "Library of Pergamum",
+  "url": "https://en.wikipedia.org/wiki/Library_of_Pergamum",
+  "extract": "The Library of Pergamum (Greek: Βιβλιοθήκη του Πέργαμον) is an ancient Greek building in Pergamon, Anatolia, today located nearby the modern town of Bergama, in the İzmir Province of western Turkey. It was one of the most important libraries in the ancient world.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Via_Tecta_acropolis_Pergamum_487_detail.jpg/960px-Via_Tecta_acropolis_Pergamum_487_detail.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 2.0",
+   "artist": "QuartierLatin1968",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Via_Tecta_acropolis_Pergamum_487_detail.jpg"
+  },
+  "distanceKm": 0
+ },
+ "thyatira": {
+  "title": "Akhisar Museum",
+  "url": "https://en.wikipedia.org/wiki/Akhisar_Museum",
+  "extract": "Akhisar Museum, is an archaeology and ethnography museum located in Akhisar. Situated next to the Thyatira archaeological site and operating under the Manisa Museum Directorate, the museum was opened to visitors in 2012.",
+  "image": null,
+  "distanceKm": 0.4
+ },
+ "sardis": {
+  "title": "Sardis",
+  "url": "https://en.wikipedia.org/wiki/Sardis",
+  "extract": "Sardis ( SAR-diss) or Sardes ( SAR-deess; Lydian: 𐤮𐤱𐤠𐤭, romanized: Sfar; Ancient Greek: Σάρδεις, romanized: Sárdeis; Old Persian: 𐎿𐎱𐎼𐎭, romanized: Sparda) was an ancient city best known as the capital of the Lydian Empire. After the fall of the Lydian Empire, it became the capital of the Persian satrapy of Lydia and later a major center of Hellenistic and Byzantine culture.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/The_Bath-Gymnasium_complex_at_Sardis%2C_late_2nd_-_early_3rd_century_AD%2C_Sardis%2C_Turkey_%2817098680002%29.jpg/960px-The_Bath-Gymnasium_complex_at_Sardis%2C_late_2nd_-_early_3rd_century_AD%2C_Sardis%2C_Turkey_%2817098680002%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 2.0",
+   "artist": "Carole Raddato from FRANKFURT, Germany",
+   "filePage": "https://commons.wikimedia.org/wiki/File:The_Bath-Gymnasium_complex_at_Sardis,_late_2nd_-_early_3rd_century_AD,_Sardis,_Turkey_(17098680002).jpg"
+  },
+  "distanceKm": 0
+ },
+ "philadelphia": {
+  "title": "Alaşehir",
+  "url": "https://en.wikipedia.org/wiki/Ala%C5%9Fehir",
+  "extract": "Alaşehir (Turkish pronunciation: [aˈɫaʃehiɾ]) is a municipality and district of Manisa Province, Turkey. Its area is 971 km2, and its population is 104,717 (2022).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Biblical_Philadelphia%2C_Ala%C5%9Fehir%2C_Turkey_%28%E2%80%9CSeven_Churches_of_Revelation%E2%80%9D%29_%2851966166907%29.jpg/960px-Biblical_Philadelphia%2C_Ala%C5%9Fehir%2C_Turkey_%28%E2%80%9CSeven_Churches_of_Revelation%E2%80%9D%29_%2851966166907%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 2.0",
+   "artist": "Sharon Hahn Darlin",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Biblical_Philadelphia,_Ala%C5%9Fehir,_Turkey_(%E2%80%9CSeven_Churches_of_Revelation%E2%80%9D)_(51966166907).jpg"
+  },
+  "distanceKm": 0
+ },
+ "laodicea": {
+  "title": "Laodicea on the Lycus",
+  "url": "https://en.wikipedia.org/wiki/Laodicea_on_the_Lycus",
+  "extract": "Laodicea on the Lycus (Greek: Λαοδίκεια πρὸς τοῦ Λύκου Laodikeia pros tou Lykou; Latin: Laodicea ad Lycum, also transliterated as Laodiceia or Laodikeia) (Turkish: Laodikeia or archaically as Lâdik), earlier Diospolis and Rhoas, was a rich ancient Greek city in Asia Minor, now Turkey, on the river Lycus (Çürüksu). It was located in the Hellenistic regions of Caria and Lydia, which later became the Roman Province of Phrygia Pacatiana.",
+  "image": null,
+  "distanceKm": 0
+ },
+ "colossae": {
+  "title": "Colossae",
+  "url": "https://en.wikipedia.org/wiki/Colossae",
+  "extract": "Colossae (; Ancient Greek: Κολοσσαί), sometimes called Colosse, also identified by medieval writers as Chonae (Greek: Χῶναι), was a city in Phrygia, in southern Asia Minor.\nA significant city from the 5th century BC onwards, it was notable for its healing springs and, later, for its veneration of the Archangel Michael.",
+  "image": null,
+  "distanceKm": 0.4
+ },
+ "patmos": {
+  "title": "Patmos",
+  "url": "https://en.wikipedia.org/wiki/Patmos",
+  "extract": "Patmos (Greek: Πάτμος, pronounced [ˈpatmos]) is a Greek island in the Aegean Sea. It is famous as the place where, according to Christian belief, John of Patmos received the vision found in the Book of Revelation of the New Testament, and where the book was written.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Chora-of-Patmos.JPG/960px-Chora-of-Patmos.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 3.0",
+   "artist": "Chris Vlachos",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Chora-of-Patmos.JPG"
+  },
+  "distanceKm": 1.9
+ },
+ "myra": {
+  "title": "Myra",
+  "url": "https://en.wikipedia.org/wiki/Myra",
+  "extract": "Myra (; Ancient Greek: Μύρα, romanized: Mýra) was a city in Lycia in what is today Turkey. The city was probably founded by Lycians, and was located on the river Myros (Ancient Greek: Μύρος; Turkish: Demre Çay), in the fertile alluvial plain between the Massikytos range (Ancient Greek: Μασσικυτός; Turkish: Alaca Dağ) and the Aegean Sea.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Myra_theatre.jpg/960px-Myra_theatre.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Ingo Mehling",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Myra_theatre.jpg"
+  },
+  "distanceKm": 0
+ },
+ "philippi": {
+  "title": "Battle of Philippi",
+  "url": "https://en.wikipedia.org/wiki/Battle_of_Philippi",
+  "extract": "The Battle of Philippi was the final battle in the Liberators' civil war between the forces of Mark Antony and Octavian (of the Second Triumvirate) and the leaders of Julius Caesar's assassination, Brutus and Cassius, in 42 BC, at Philippi in Macedonia. The Second Triumvirate declared the civil war ostensibly to avenge Julius Caesar's assassination in 44 BC, but the underlying cause was a long-brewing conflict between the Optimates and the Populares.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Philippi_location.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "No machine-readable author provided. Marsyas assumed (based on copyright claims).",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Philippi_location.jpg"
+  },
+  "distanceKm": 0.1
+ },
+ "thessalonica": {
+  "title": "Thessaloniki",
+  "url": "https://en.wikipedia.org/wiki/Thessaloniki",
+  "extract": "Thessaloniki (; Greek: Θεσσαλονίκη [θesaloˈnici] ; also known by various spellings and names) is the second-largest city in Greece. It is the largest city of Northern Greece, with slightly over one million inhabitants in its metropolitan area, the capital of the geographic region of Macedonia, the administrative region of Central Macedonia and the Decentralized Administration of Macedonia and Thrace.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Tessaloniki_BW_2017-10-05_18-22-47.jpg/960px-Tessaloniki_BW_2017-10-05_18-22-47.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Berthold Werner",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Tessaloniki_BW_2017-10-05_18-22-47.jpg"
+  },
+  "distanceKm": 0.7
+ },
+ "berea": {
+  "title": "Veria",
+  "url": "https://en.wikipedia.org/wiki/Veria",
+  "extract": "Veria (Greek: Βέροια or Βέρροια, romanized: Véroia or Vérroia; Aromanian: Veria), officially transliterated Veroia, historically also spelled Beroea or Berea, is a city in Central Macedonia, in the geographic region of Macedonia, northern Greece, and the capital of the regional unit of Imathia. It is located 511 kilometres (318 miles) north-northwest of the capital Athens and 73 km (45 mi) west-southwest of Thessaloniki.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Panoramic_view_of_Veria_-_2014.JPG/960px-Panoramic_view_of_Veria_-_2014.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Zisis Tsampalis",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Veria_-_2014.JPG"
+  },
+  "distanceKm": 0.8
+ },
+ "athens": {
+  "title": "Athens",
+  "url": "https://en.wikipedia.org/wiki/Athens",
+  "extract": "Athens is the capital and largest city of Greece. A significant coastal urban area in the Mediterranean, Athens is also the capital of the Attica region and is the southernmost capital on the European mainland.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Athens_Acropolis_at_Daybreak.jpg/960px-Athens_Acropolis_at_Daybreak.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 4.0",
+   "artist": "Andrew Parlette",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Athens_Acropolis_at_Daybreak.jpg"
+  },
+  "distanceKm": 0.1
+ },
+ "corinth": {
+  "title": "Ancient Corinth",
+  "url": "https://en.wikipedia.org/wiki/Ancient_Corinth",
+  "extract": "Corinth ( KORR-inth; Ancient Greek: Κόρινθος Kórinthos; Doric Greek: Ϙόρινθος Qórinthos; Latin: Corinthus) was a city-state (polis) on the Isthmus of Corinth, the narrow stretch of land that joins the Peloponnese peninsula to mainland Greece, roughly halfway between Athens and Sparta. The modern city of Corinth is located approximately 5 kilometres (3.1 mi) northeast of the ancient ruins.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/4/41/Ravel_1008.2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "CNG",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Ravel_1008.2.jpg"
+  },
+  "distanceKm": 0.2
+ },
+ "cenchreae": {
+  "title": "Kechries",
+  "url": "https://en.wikipedia.org/wiki/Kechries",
+  "extract": "Kechries (Greek: Κεχριές, rarely Κεχρεές) is a village in the municipality of Corinth in Corinthia in Greece, part of the community of Xylokeriza. Population 319 (2021).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kenchreai.jpg/960px-Kenchreai.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 2.5",
+   "artist": "Heinz Schmitz",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Kenchreai.jpg"
+  },
+  "distanceKm": 0.2
+ },
+ "nicopolis": {
+  "title": "Nicopolis",
+  "url": "https://en.wikipedia.org/wiki/Nicopolis",
+  "extract": "Nicopolis (Ancient Greek: Νικόπολις, romanized: Nikópolis, lit. 'City of Victory') or Actia Nicopolis was the capital city of the Roman province of Epirus. Its site, near Preveza, Greece, still contains impressive ruins.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Nicopolis_nymphaeum.jpg/960px-Nicopolis_nymphaeum.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 2.5",
+   "artist": "No machine-readable author provided. Marsyas assumed (based on copyright claims).",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Nicopolis_nymphaeum.jpg"
+  },
+  "distanceKm": 0.4
+ },
+ "fair-havens": {
+  "title": "Kaloi Limenes",
+  "url": "https://en.wikipedia.org/wiki/Kaloi_Limenes",
+  "extract": "Kaloi Limenes or Kali Limenes (Greek: Καλοί Λιμένες [kaliˈ liménes]) is a village and port in the Heraklion regional unit, southern Crete, in Greece, located 70km (43.5 miles) south-west of the city of Heraklion.  It has 17 inhabitants (2021).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Spratt_thomas_kaloi_limenes.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Thomas Spratt",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Spratt_thomas_kaloi_limenes.jpg"
+  },
+  "distanceKm": 1.4
+ },
+ "malta": {
+  "title": "Malta (island)",
+  "url": "https://en.wikipedia.org/wiki/Malta_(island)",
+  "extract": "Malta is an island in Southern Europe. It is the largest and most populous of the three major islands that constitute the Maltese Archipelago and the country of Malta.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Malta_ali_2009224_lrg.jpg/960px-Malta_ali_2009224_lrg.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Unknown authorUnknown author",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Malta_ali_2009224_lrg.jpg"
+  },
+  "distanceKm": 9
+ },
+ "syracuse": {
+  "title": "Syracuse, Sicily",
+  "url": "https://en.wikipedia.org/wiki/Syracuse,_Sicily",
+  "extract": "Syracuse is a city and municipality, capital of the free municipal consortium of the same name, located in the autonomous region of Sicily in Southern Italy. As of 2025, with a population of 115,636, it is the fourth most populous city in Sicily, following Palermo, Catania, and Messina.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Ortigia_%28SR%29.jpg/960px-Ortigia_%28SR%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 2.0",
+   "artist": "AndreaCT78",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Ortigia_(SR).jpg"
+  },
+  "distanceKm": 0.7
+ },
+ "puteoli": {
+  "title": "Macellum of Pozzuoli",
+  "url": "https://en.wikipedia.org/wiki/Macellum_of_Pozzuoli",
+  "extract": "The Macellum of Pozzuoli (Italian: Macellum di Pozzuoli) was the macellum or market building of the Roman colony of Puteoli, now the city of Pozzuoli in southern Italy. When first excavated in the 18th century, the discovery of a statue of Serapis led to the building being misidentified as the city's serapeum or Temple of Serapis.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Charles_Lyell_-_Pillars_of_Pozzuoli.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Charles Lyell",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Charles_Lyell_-_Pillars_of_Pozzuoli.jpg"
+  },
+  "distanceKm": 0.1
+ },
+ "rome": {
+  "title": "Rome",
+  "url": "https://en.wikipedia.org/wiki/Rome",
+  "extract": "Rome is the capital city and most populated comune (municipality) of Italy. It is also the administrative centre of the Lazio region and of the Metropolitan City of Rome.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg/960px-Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY 3.0",
+   "artist": "Diliff",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg"
+  },
+  "distanceKm": 1.5
+ },
+ "tarshish": {
+  "title": "Tartessos",
+  "url": "https://en.wikipedia.org/wiki/Tartessos",
+  "extract": "Tartessos (Spanish: Tartesos) is, as defined by archaeological discoveries, a historical civilization settled in the southern Iberian Peninsula from about the late Bronze Age until the 5th century BC. It had a writing system, named as the Southwest script, that includes some 97 inscriptions in an unknown language which is unclassified for lack of data. Tartessos was the first \"entity located in southwestern Iberia to be recognised as a kingdom\".",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Tartessos_500_BCE.jpg/960px-Tartessos_500_BCE.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Lanoyta",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Tartessos_500_BCE.jpg"
+  },
+  "distanceKm": 17.4
+ },
+ "asshur": {
+  "title": "Assur",
+  "url": "https://en.wikipedia.org/wiki/Assur",
+  "extract": "Aššur, also known as Ashur and Qal'at Sherqat, was the capital of the Middle Assyrian Empire for a time, of the Neo-Assyrian Empire (911–609 BC) and a semi-independent state during the Parthian Empire between the 2nd century BC and mid 3rd century AD. The remains of the city lie on the western bank of the Tigris River, north of the confluence with its tributary, the Little Zab, in what is now Iraq, more precisely in the al-Shirqat District of the Saladin Governorate. Assur lies 65 kilometres (40 mi) south of the site of Kalhu (the biblical Calah, Nimrud) and 100 km (60 mi) south of Nineveh.",
+  "image": null,
+  "distanceKm": 0
+ },
+ "eden": {
+  "title": "Garden of Eden",
+  "url": "https://en.wikipedia.org/wiki/Garden_of_Eden",
+  "extract": "The Garden of Eden (/ˈiːdən/ EE-dən; Biblical Hebrew: גַּן־עֵדֶן, romanized: gan-ʿĒḏen; Greek: Εδέμ; Latin: Paradisus), also called Garden of God (גַּן־יְהֹוָה, gan-YHWH and גַן־אֱלֹהִים, gan-Elohim) or the (Terrestrial) Paradise, is the biblical paradise described in Genesis 2–3 and Ezekiel 28 and 31.\nThe location of Eden is described in the Book of Genesis as the source of four tributaries.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg/960px-Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Peter Paul Rubens / Jan Brueghel the Elder",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg"
+  },
+  "distanceKm": 0
+ },
+ "shinar": {
+  "title": "Shinar",
+  "url": "https://en.wikipedia.org/wiki/Shinar",
+  "extract": "Shin‘ar is the name for the southern region of Mesopotamia used by the Hebrew Bible.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Mesopotamia_in_2nd_millennium_BC.svg/960px-Mesopotamia_in_2nd_millennium_BC.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Joeyhewitt",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Mesopotamia_in_2nd_millennium_BC.svg"
+  },
+  "distanceKm": 0
+ },
+ "goshen": {
+  "title": "Land of Goshen",
+  "url": "https://en.wikipedia.org/wiki/Land_of_Goshen",
+  "extract": "The land of Goshen (Hebrew: אֶרֶץ גֹּשֶׁן, ʾEreṣ Gōšen) is mentioned in the Hebrew Bible as the area in Egypt that was allotted to the Hebrews by the Pharaoh during the time of Joseph (Book of Genesis, Genesis 45:9–10). They dwelt in Goshen up until the time of the Exodus, when they left Egypt.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/4/40/Gosen.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "NASA",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Gosen.jpg"
+  },
+  "distanceKm": 0
+ },
+ "red-sea-crossing": {
+  "title": "Parting of the Red Sea",
+  "url": "https://en.wikipedia.org/wiki/Parting_of_the_Red_Sea",
+  "extract": "The Parting of the Red Sea or Crossing of the Red Sea (Hebrew: קריעת ים סוף, romanized: Kriat Yam Suph, lit. \"parting of the sea of reeds\") is an episode in The Exodus, a foundational story in the Hebrew Bible.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/The_Crossing_of_The_Red_Sea.jpg/960px-The_Crossing_of_The_Red_Sea.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Nicolas Poussin",
+   "filePage": "https://commons.wikimedia.org/wiki/File:The_Crossing_of_The_Red_Sea.jpg"
+  },
+  "distanceKm": 0
+ },
+ "marah": {
+  "title": "Marah (Bible)",
+  "url": "https://en.wikipedia.org/wiki/Marah_(Bible)",
+  "extract": "Marah (Hebrew: מָרָה meaning 'bitter') is one of the locations which the Exodus identifies as having been travelled through by the Israelites, during the Exodus.\nThe liberated Israelites set out on their journey in the desert, somewhere in the Sinai Peninsula.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Jollain_The_Water_of_Marah.jpg/960px-Jollain_The_Water_of_Marah.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Gérard Jollain",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Jollain_The_Water_of_Marah.jpg"
+  },
+  "distanceKm": 0
+ },
+ "shiloh": {
+  "title": "Shiloh (biblical city)",
+  "url": "https://en.wikipedia.org/wiki/Shiloh_(biblical_city)",
+  "extract": "Shiloh (; Hebrew: שִׁלֹה, שִׁלוֹ ,שִׁילֹה, שִׁילוֹ, romanized: Šīlō) was an ancient city and sanctuary in ancient Israel now located in the West Bank (i.e. Samaria in the Hebrew Bible).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ancient_Shiloh_IMG_2924.JPG/960px-Ancient_Shiloh_IMG_2924.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Deror Avi",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Ancient_Shiloh_IMG_2924.JPG"
+  },
+  "distanceKm": 0
+ },
+ "mizpah": {
+  "title": "Mizpah in Benjamin",
+  "url": "https://en.wikipedia.org/wiki/Mizpah_in_Benjamin",
+  "extract": "Mitzpah (Hebrew: מִצְפָּה, romanized: miṣpā, lit. 'watchtower, lookout') was a city of the tribe of Benjamin; it is referred to multiple times in the Hebrew Bible.\nTell en-Nasbeh is one of three sites often identified with the Mitzpah of Benjamin, and is located about 12 kilometres (7.5 mi) north of Jerusalem.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tel_a-Nasba.jpg/960px-Tel_a-Nasba.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "דניאל צבי",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Tel_a-Nasba.jpg"
+  },
+  "distanceKm": 0
+ },
+ "ziklag": {
+  "title": "Ziklag",
+  "url": "https://en.wikipedia.org/wiki/Ziklag",
+  "extract": "Ziklag (Hebrew: צִקְלַג, romanized: Ṣiqlaḡ) is the biblical name of a town in the Negev region in the southwest of what was the Kingdom of Judah. It was a provincial town in the Philistine kingdom of Gath when Achish was king.",
+  "image": null,
+  "distanceKm": 0
+ },
+ "gilgal": {
+  "title": "Gilgal",
+  "url": "https://en.wikipedia.org/wiki/Gilgal",
+  "extract": "Gilgal (Hebrew: גִּלְגָּל Gilgāl), also known as Galgala or Galgalatokai of the 12 Stones (Ancient Greek: Γαλαγα or Γαλγαλατοκαι Δωδεκαλίθων, Dōdekalithōn), is the name of one or more places in the Hebrew Bible. Gilgal is mentioned 39 times, in particular in the Book of Joshua, as the place where the Israelites camped after crossing the Jordan River (Joshua 4:19 – 5:12).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Gilgal_from_Bible.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "Rgrobman",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Gilgal_from_Bible.jpg"
+  },
+  "distanceKm": 0
+ },
+ "moab-plains": {
+  "title": "Moab",
+  "url": "https://en.wikipedia.org/wiki/Moab",
+  "extract": "Moab () was an ancient Levantine kingdom whose territory is today located in southern Jordan. The land is mountainous and lies alongside much of the eastern shore of the Dead Sea.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Kingdoms_around_Israel_830_map.svg/960px-Kingdoms_around_Israel_830_map.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Kingdoms_of_Israel_and_Judah_map_830.svg: *Oldtidens_Israel_&amp;_Judea.svg: FinnWikiNo\nderivative work: Richardprins (talk)\nderivative work: Richardprins (talk)",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Kingdoms_around_Israel_830_map.svg"
+  },
+  "distanceKm": 0
+ },
+ "sodom": {
+  "title": "Sodom and Gomorrah",
+  "url": "https://en.wikipedia.org/wiki/Sodom_and_Gomorrah",
+  "extract": "In the Abrahamic religions, Sodom and Gomorrah () were two cities destroyed by God for their wickedness. Their story parallels the Genesis flood narrative in its theme of God's anger provoked by man's sin (see Genesis 19:1–28).",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/John_Martin_-_Sodom_and_Gomorrah.jpg/960px-John_Martin_-_Sodom_and_Gomorrah.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "John Martin",
+   "filePage": "https://commons.wikimedia.org/wiki/File:John_Martin_-_Sodom_and_Gomorrah.jpg"
+  },
+  "distanceKm": 0
+ },
+ "jabesh-gilead": {
+  "title": "Jabesh-Gilead",
+  "url": "https://en.wikipedia.org/wiki/Jabesh-Gilead",
+  "extract": "Jabesh-Gilead (Hebrew: יָבֵשׁ גִּלְעָד Yāḇēš Gilʿāḏ), sometimes shortened to Jabesh, was an ancient Israelite town in Gilead, in northwest Jordan. Jabesh is mentioned several times in the Hebrew Bible primarily in connection with King Saul's battles against the Ammonites and Philistines.",
+  "image": null,
+  "distanceKm": 0
+ },
+ "petra": {
+  "title": "Petra",
+  "url": "https://en.wikipedia.org/wiki/Petra",
+  "extract": "Petra (Arabic: ٱلْبَتْراء‎, romanized: Al-Batrāʾ; Ancient Greek: Πέτρα, lit. 'Rock'), originally known to its inhabitants as Raqmu (Nabataean Aramaic: 𐢛𐢚𐢒‎ or 𐢛𐢚𐢓𐢈‎, *Raqēmō), is an ancient city and archaeological site in southern Jordan. Famous for its rock-cut architecture and water conduit systems, Petra is also called the \"Rose City\" because of the colour of the sandstone from which it is carved.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Al_Deir_Petra.JPG/960px-Al_Deir_Petra.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "Azurfrog",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Al_Deir_Petra.JPG"
+  },
+  "distanceKm": 0
+ },
+ "jezreel": {
+  "title": "Tel Jezreel",
+  "url": "https://en.wikipedia.org/wiki/Tel_Jezreel",
+  "extract": "Tel Jezreel is an archaeological site in the eastern Jezreel Valley (Harod Valley) in northern Israel.",
+  "image": null,
+  "distanceKm": 0
+ },
+ "endor": {
+  "title": "Endor (village)",
+  "url": "https://en.wikipedia.org/wiki/Endor_(village)",
+  "extract": "Endor (Biblical Hebrew: עֵין־דֹּר/עֵין דּוֹר, romanized: ʿĒn-Dor or עֵין־דֹּאר) was listed in the Book of Joshua (Joshua 17:11) as one of the Canaanite cities the Israelites failed to dispossess, neither the city nor its dependencies. It was located between the Hill of Moreh and Mount Tabor in the Jezreel Valley.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/6/66/Ancient_Galilee.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "William R. Shepherd (1871–1934)",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Ancient_Galilee.jpg"
+  },
+  "distanceKm": 0
+ },
+ "cana": {
+  "title": "Cana",
+  "url": "https://en.wikipedia.org/wiki/Cana",
+  "extract": "Cana of Galilee (Ancient Greek: Κανὰ τῆς Γαλιλαίας, romanized: Kana tēs Galilaias) is the location of the Wedding at Cana, at which the miracle of turning water into wine took place in the Gospel of John.\nThe location is disputed, with the four primary locations being  Kafr Kanna, Khirbet Qana and Reineh in Lower Galilee, and Qana in Upper Galilee in Lebanon.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Cana_of_Galilee._90.Holy_land_photographed._Daniel_B._Shepp._1894-1.jpg/960px-Cana_of_Galilee._90.Holy_land_photographed._Daniel_B._Shepp._1894-1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Daniel B. Shepp",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Cana_of_Galilee._90.Holy_land_photographed._Daniel_B._Shepp._1894-1.jpg"
+  },
+  "distanceKm": 0
+ },
+ "nain": {
+  "title": "Nein",
+  "url": "https://en.wikipedia.org/wiki/Nein",
+  "extract": "Nein (Arabic: نين, Nayin, lit. Charming, Hebrew: ניין) — also Nain or Naim in English — is an Arab village in northern Israel.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Kfarnin_%28cropped%29.jpg/960px-Kfarnin_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "Public domain",
+   "artist": "Almog",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Kfarnin_(cropped).jpg"
+  },
+  "distanceKm": 0
+ },
+ "bethsaida": {
+  "title": "Bethsaida",
+  "url": "https://en.wikipedia.org/wiki/Bethsaida",
+  "extract": "Bethsaida ( beth-SAY-id-ə; from Koine Greek: Βηθσαϊδά, romanized: Bēthsaïdá; from Aramaic and Hebrew: בֵּית צַידָה, romanized: Bēṯ Ṣayḏā, lit. 'House of Fishing, or House of the Hunt', from the Hebrew root צ-י-ד; Arabic: بيت صيدا, romanized: Bayt Ṣaydā), also known as Julias or Julia (Ancient Greek: Ἰουλία, romanized: Ioulía), is a place mentioned in the New Testament. Julias lay in an administrative district known as Gaulonitis, now the Golan Heights.",
+  "image": null,
+  "distanceKm": 0
+ },
+ "aphek": {
+  "title": "Aphek (biblical)",
+  "url": "https://en.wikipedia.org/wiki/Aphek_(biblical)",
+  "extract": "The name Aphek or Aphec refers to one of several locations mentioned in the Hebrew Bible as the scenes of a number of battles between the Israelites and the Arameans and Philistines:\n\nMost famously, a town near which one or more rulers of Damascus named Ben-hadad were defeated by the Israelites and in which the Damascene king and his surviving soldiers found a safe place of retreat (1 Kings 20:26–30; 2 Kings 13:17, 24–25). Just before his death, the prophet Elisha predicted:\n\"The arrow of the Lord's deliverance and the arrow of deliverance from Syria; for you must strike the Syrians at Aphek till you have destroyed them (2 Kings 13:17).",
+  "image": null,
+  "distanceKm": 0
+ },
+ "zarephath": {
+  "title": "Sarepta",
+  "url": "https://en.wikipedia.org/wiki/Sarepta",
+  "extract": "Sarepta (near modern Sarafand, Lebanon) was a Phoenician city on the Mediterranean coast between Sidon and Tyre, also known biblically as Zarephath. It became a bishopric, which faded, and remains a double (Latin and Maronite) Catholic titular see.",
+  "image": null,
+  "distanceKm": 0
+ },
+ "sheba": {
+  "title": "Sheba",
+  "url": "https://en.wikipedia.org/wiki/Sheba",
+  "extract": "Sheba, or Saba, was an ancient South Arabian kingdom that existed in Yemen before 275 CE. It likely began its existence between c. 1000 BCE and c.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Yemen_100_BC.svg/960px-Yemen_100_BC.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 3.0",
+   "artist": "User:Schreiber",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Yemen_100_BC.svg"
+  },
+  "distanceKm": 0
+ },
+ "rhodes": {
+  "title": "Rhodes",
+  "url": "https://en.wikipedia.org/wiki/Rhodes",
+  "extract": "Rhodes ( ; Greek: Ρόδος, romanized: Ródos [ˈroðos]) is the largest of Greece's Dodecanese islands and their historical capital; it is the ninth largest island in the  Mediterranean Sea. Administratively, Rhodes constitutes a separate municipality within the Rhodes regional unit, which is part of the South Aegean administrative region.",
+  "image": null,
+  "distanceKm": 0
+ }
+}

@@ -5,6 +5,7 @@ import { ERAS, ERA_BY_ID, CATEGORIES, CATEGORY_BY_ID } from './data/eras.js'
 import { PLACES, PLACE_BY_ID, CERTAINTY_LABEL } from './data/places.js'
 import { EVENTS, EVENT_BY_ID, DATE_CONFIDENCE } from './data/events.js'
 import { THEMES, THEME_BY_ID, THEME_EVENT_SETS, THEME_KIND_LABEL } from './data/themes.js'
+import { territoriesAt } from './data/territories.js'
 
 const ICONS = {
   compass: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"/></svg>',
@@ -13,6 +14,7 @@ const ICONS = {
   layers: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>',
   route: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M7.5 16.5 16.5 7.5M8 6h3a3 3 0 0 1 3 3v6"/></svg>',
   close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>',
+  territory: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5 9.5 5l5 2.5L20 5v11.5L14.5 19l-5-2.5L4 19Z"/><path d="M9.5 5v11.5M14.5 7.5V19"/></svg>',
 }
 
 const app = document.querySelector('#app')
@@ -83,8 +85,10 @@ app.innerHTML = `
       <div class="map-tools glass-panel" aria-label="Map options">
         <button id="fit-event" aria-label="Fit selected event on map" title="Fit selected event">${ICONS.route}</button>
         <button id="toggle-places" class="active" aria-pressed="true" aria-label="Toggle place labels" title="Toggle all places">${ICONS.layers}</button>
+        <button id="toggle-territories" aria-pressed="false" aria-label="Toggle kingdom territories" title="Show kingdoms and empires at this date">${ICONS.territory}</button>
       </div>
 
+      <div class="territory-caption glass-panel" id="territory-caption" hidden></div>
       <article class="event-card glass-panel" id="event-card" aria-live="polite"></article>
 
       <section class="timeline-panel" aria-label="Historical timeline">
@@ -126,6 +130,9 @@ const state = {
   selectedEvent: (EVENTS.find((item) => item.featured) || EVENTS[0]).id,
   query: '',
   showPlaces: true,
+  showTerritories: false,
+  translation: 'web',
+  openRef: null,
   playing: false,
 }
 
@@ -152,6 +159,7 @@ L.tileLayer(`https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}${retin
     '&copy; <a href="https://carto.com/attributions">CARTO</a>',
 }).addTo(map)
 
+const territoryLayer = L.layerGroup().addTo(map)
 const allPlacesLayer = L.layerGroup().addTo(map)
 const eventOverviewLayer = L.layerGroup().addTo(map)
 const selectedEventLayer = L.layerGroup().addTo(map)
@@ -173,9 +181,64 @@ function iconForPlace(place, selected = false, category = null) {
   })
 }
 
+/** Photographs and extracts load on first popup, not on first paint. */
+let WIKI = null
+let wikiLoading = null
+function loadWiki() {
+  if (WIKI) return Promise.resolve(WIKI)
+  wikiLoading ??= import('./data/wikipedia.json').then((m) => (WIKI = m.default ?? m))
+  return wikiLoading
+}
+
+/**
+ * Every image here passed a licence check at build time, and the credit line is a
+ * condition of reusing it rather than decoration — so it is rendered with the image
+ * or the image is not rendered at all.
+ */
+function wikiMarkup(place) {
+  const wiki = WIKI?.[place.id]
+  if (!wiki) return ''
+  const figure = wiki.image ? `<figure class="wiki-figure">
+      <img src="${wiki.image.src}" alt="${place.name}" loading="lazy" />
+      <figcaption>${wiki.image.artist ? wiki.image.artist + ' · ' : ''}<a href="${wiki.image.filePage}" target="_blank" rel="noopener noreferrer">${wiki.image.licence}</a></figcaption>
+    </figure>` : ''
+  const summary = wiki.extract ? `<p class="wiki-extract">${wiki.extract}</p>` : ''
+  const link = wiki.url ? `<a class="wiki-link" href="${wiki.url}" target="_blank" rel="noopener noreferrer">Read about ${wiki.title} on Wikipedia →</a>` : ''
+  return figure + summary + link
+}
+
+/** Popup content is regenerated rather than patched in place: Leaflet's own
+ *  update() re-renders from the stored content string, so anything written straight
+ *  into the live DOM is wiped the moment the popup resizes. Re-setting the content
+ *  is the supported path and lets the popup size itself around the photograph. */
+async function hydratePopup(popup, place) {
+  if (!WIKI) await loadWiki()
+  if (!WIKI?.[place.id]) return
+  popup.setContent(placePopup(place))
+  wireRelatedEvents()
+}
+
+/** The related-event buttons live inside popup content, so they are re-bound
+ *  whenever that content is regenerated. */
+function wireRelatedEvents() {
+  document.querySelectorAll('.popup-events button').forEach((button) => {
+    button.addEventListener('click', () => selectEvent(button.dataset.eventId))
+  })
+}
+
+/** Keeps an open popup out from under the event card and the timeline panel. */
+const POPUP_OPTIONS = {
+  maxWidth: 310,
+  className: 'atlas-popup',
+  autoPanPaddingTopLeft: [48, 64],
+  autoPanPaddingBottomRight: [400, 230],
+}
+
 function placePopup(place) {
   const related = EVENTS.filter((item) => item.places.includes(place.id)).slice(0, 4)
+
   return `<div class="place-popup">
+    ${wikiMarkup(place)}
     <span class="popup-certainty ${place.certainty}">${CERTAINTY_LABEL[place.certainty]}</span>
     <h3>${place.name}</h3>
     ${place.modern ? `<p class="modern-name">Today: ${place.modern}</p>` : ''}
@@ -196,14 +259,42 @@ function renderAllPlaces() {
       title: place.name,
     })
     marker.bindTooltip(place.name, { direction: 'top', offset: [0, -7], className: 'place-tooltip' })
-    marker.bindPopup(placePopup(place), { maxWidth: 310, className: 'atlas-popup' })
-    marker.on('popupopen', () => {
-      document.querySelectorAll('.popup-events button').forEach((button) => {
-        button.addEventListener('click', () => selectEvent(button.dataset.eventId))
-      })
+    marker.bindPopup(placePopup(place), POPUP_OPTIONS)
+    marker.on('popupopen', (event) => {
+      wireRelatedEvents()
+      hydratePopup(event.popup, place)
     })
     marker.addTo(allPlacesLayer)
   })
+}
+
+function renderTerritories() {
+  territoryLayer.clearLayers()
+  const caption = document.querySelector('#territory-caption')
+  const item = EVENT_BY_ID[state.selectedEvent]
+  if (!state.showTerritories || !item) { if (caption) caption.hidden = true; return }
+
+  const active = territoriesAt(item.year)
+  for (const t of active) {
+    for (const ring of t.rings) {
+      L.polygon(ring.map(([lng, lat]) => [lat, lng]), {
+        color: t.color, weight: 1.5, opacity: 0.75, fillColor: t.color, fillOpacity: 0.1,
+        dashArray: '7 5', interactive: false, className: 'territory-shape',
+      }).addTo(territoryLayer)
+    }
+  }
+  territoryLayer.eachLayer((l) => l.bringToBack())
+
+  if (caption) {
+    caption.hidden = false
+    // An empty result is information too: before the monarchy there is no polity to
+    // draw, and saying nothing would read as the layer being broken.
+    caption.innerHTML = active.length
+      ? `<strong>${active.map((t) => t.name).join(' · ')}</strong>
+         <span>${active.length === 1 ? active[0].precision + ' — ' : ''}borders are schematic</span>`
+      : `<strong>No mapped polity at this date</strong>
+         <span>the atlas maps territories from the monarchy onward</span>`
+  }
 }
 
 function filteredEvents() {
@@ -344,7 +435,8 @@ function drawSelectedEvent({ fit = false } = {}) {
       offset: [0, -11],
       className: 'selected-tooltip',
     })
-    marker.bindPopup(placePopup(place), { maxWidth: 310, className: 'atlas-popup' })
+    marker.bindPopup(placePopup(place), POPUP_OPTIONS)
+    marker.on('popupopen', (event) => hydratePopup(event.popup, place))
     marker.addTo(selectedEventLayer)
   })
 
@@ -409,8 +501,61 @@ function renderEventCard() {
     <div class="place-sequence">${placeNames.map((name, index) => `<span>${name}</span>${index < placeNames.length - 1 ? '<i>→</i>' : ''}`).join('')}</div>
     ${item.note ? `<p class="event-note"><strong>Historical note</strong>${item.note}</p>` : ''}
     ${item.anchor ? `<p class="event-note event-anchor"><strong>Outside evidence</strong>${item.anchor}</p>` : ''}
-    <div class="scripture-row">${ICONS.book}<div><span>Primary texts</span><strong>${item.scripture.join(' · ')}</strong></div></div>
-  `
+    <div class="scripture-row">${ICONS.book}<div><span>Primary texts</span>
+      <div class="scripture-refs">${item.scripture.map((ref) =>
+        `<button class="ref-btn${state.openRef === ref ? ' open' : ''}" data-ref="${ref}">${ref}</button>`).join('')}</div>
+    </div></div>
+    <div class="passage" id="passage"></div>`
+
+  renderPassage()
+}
+
+/** Lazily loaded so ~1 MB of scripture never lands in the initial bundle. */
+let VERSES = null
+let versesLoading = null
+function loadVerses() {
+  if (VERSES) return Promise.resolve(VERSES)
+  versesLoading ??= import('./data/verses.json').then((m) => (VERSES = m.default ?? m))
+  return versesLoading
+}
+
+async function renderPassage() {
+  const host = document.querySelector('#passage')
+  if (!host) return
+  if (!state.openRef) { host.innerHTML = ''; return }
+
+  host.innerHTML = '<p class="passage-loading">Loading…</p>'
+  const data = await loadVerses()
+  if (state.openRef === null) { host.innerHTML = ''; return }
+
+  const entry = data[state.openRef]
+  if (!entry) {
+    host.innerHTML = `<p class="passage-missing">Not a scripture reference, so there is no text to show.</p>`
+    return
+  }
+  const body = entry[state.translation] ?? entry.web ?? entry.kjv
+  if (!body) { host.innerHTML = '<p class="passage-missing">No text available.</p>'; return }
+
+  const verses = body.verses.map((v) =>
+    `<span class="v"><sup>${v.v}</sup>${escapeHtml(v.t)}</span>`).join(' ')
+
+  host.innerHTML = `
+    <div class="passage-head">
+      <strong>${body.reference}</strong>
+      <div class="passage-trans">
+        <button data-trans="web"${state.translation === 'web' ? ' class="on"' : ''}>WEB</button>
+        <button data-trans="kjv"${state.translation === 'kjv' ? ' class="on"' : ''}>KJV</button>
+      </div>
+    </div>
+    <div class="passage-body">${verses}</div>
+    ${entry.excerpt ? '<p class="passage-note">Opening chapter only — the reference spans several chapters.</p>' : ''}
+    ${body.truncated ? `<p class="passage-note">First ${body.verses.length} of ${body.totalVerses} verses.</p>` : ''}
+    <p class="passage-credit">${state.translation === 'web' ? 'World English Bible' : 'King James Version'} · public domain</p>`
+}
+
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, (c) =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
 }
 
 function renderEventRail() {
@@ -466,6 +611,7 @@ function render() {
   renderEventCard()
   renderOverviewMarkers()
   drawSelectedEvent()
+  renderTerritories()
   renderStatus()
 }
 
@@ -526,6 +672,31 @@ document.querySelector('#toggle-places').addEventListener('click', (event) => {
   event.currentTarget.setAttribute('aria-pressed', String(state.showPlaces))
   renderAllPlaces()
 })
+document.querySelector('#toggle-territories').addEventListener('click', (event) => {
+  state.showTerritories = !state.showTerritories
+  event.currentTarget.classList.toggle('active', state.showTerritories)
+  event.currentTarget.setAttribute('aria-pressed', String(state.showTerritories))
+  renderTerritories()
+})
+
+// Scripture references and the translation switch both live inside markup that is
+// re-rendered on every selection, so they are delegated from the card itself.
+document.querySelector('#event-card').addEventListener('click', (event) => {
+  const ref = event.target.closest('.ref-btn')
+  if (ref) {
+    state.openRef = state.openRef === ref.dataset.ref ? null : ref.dataset.ref
+    renderEventCard()
+    return
+  }
+  const trans = event.target.closest('[data-trans]')
+  if (trans) {
+    state.translation = trans.dataset.trans
+    renderPassage()
+    document.querySelectorAll('[data-trans]').forEach((b) =>
+      b.classList.toggle('on', b.dataset.trans === state.translation))
+  }
+})
+
 document.querySelector('#clear-era').addEventListener('click', () => {
   state.selectedEra = null
   ensureSelectedEvent()
