@@ -123,6 +123,10 @@ export const THEMES = [
     'The one book in the canon that never mentions God. A queen who has concealed who she is decides, at the last possible moment, not to stay quiet.',
     ['esther-vashti', 'esther', 'esther-haman', 'esther-purim']),
 
+  theme('ezra', 'Ezra', 'life', 'Ezra 7–10; Nehemiah 8',
+    'A scribe with a Persian mandate and no soldiers, who reorganises a community around a book. The reform he forces through is the harshest thing in the returned community’s history, and the text reports it without defending it.',
+    ['ezra-commission', 'ezra', 'ezra-reform', 'nehemiah-reading']),
+
   theme('nehemiah', 'Nehemiah', 'life', 'Nehemiah 1–13',
     'A civil servant who takes leave to rebuild a city wall, finishes it in fifty-two days against organised obstruction, and comes back years later to find most of it undone.',
     ['nehemiah-news', 'nehemiah', 'nehemiah-opposition', 'nehemiah-reading', 'nehemiah-reforms']),
@@ -148,10 +152,20 @@ export const THEMES = [
     ['capernaum-base', 'walking-water', 'peter-confession', 'last-supper', 'gethsemane', 'resurrection',
      'pentecost', 'cornelius', 'nero-fire']),
 
+  theme('barnabas', 'Barnabas', 'life', 'Acts 4–15',
+    'The man who vouched for Saul when nobody in Jerusalem would meet him, fetched him out of Tarsus, and led the first journey until the roles quietly reversed. He leaves the story over a second chance for John Mark, and Acts never mentions him again.',
+    ['barnabas-gift', 'barnabas-vouches', 'antioch-church', 'paul-1', 'jerusalem-council',
+     'barnabas-split']),
+
   theme('paul', 'Paul', 'life', 'Acts 7–28 & the letters',
     'Holds the coats at a stoning, then spends thirty years crossing the empire. His chronology is the firmest in the New Testament, thanks to one bored proconsul.',
     ['stephen', 'damascus-road', 'antioch-church', 'paul-1', 'jerusalem-council', 'paul-2', 'gallio',
      'paul-3', 'paul-arrest', 'caesarea-prison', 'shipwreck', 'paul-rome', 'nero-fire']),
+
+  theme('timothy', 'Timothy', 'life', 'Acts 16; 1 & 2 Timothy',
+    'Picked up at Lystra as a young man and still being written to twenty years later. The last letter in the collection asks him to come before winter and bring the cloak left behind at Troas.',
+    ['timothy-joins', 'paul-2', 'paul-3', 'timothy-corinth', 'timothy-ephesus',
+     'timothy-last-letter']),
 
   // ---- threads ----------------------------------------------------------
   theme('temple', 'The Temple', 'thread', 'A tent, two buildings, and a ruin',

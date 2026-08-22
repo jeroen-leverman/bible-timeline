@@ -914,10 +914,21 @@ export const EVENTS = [
     scripture: ['Esther 8–9'],
     summary: 'A Persian decree cannot be revoked, so a second is issued to stand beside it. The festival of Purim is named for the lots Haman cast.',
   }),
-  event('ezra', 'Ezra returns with the law', -458, 'exile-return', 'covenant', ['babylon', 'jerusalem'], {
+  event('ezra-commission', 'The commission from Artaxerxes', -458, 'exile-return', 'kingdom', ['susa', 'babylon'], {
     dateLabel: '458 BC', dateConfidence: 'anchored',
-    scripture: ['Ezra 7–10', 'Nehemiah 8'],
-    summary: 'A priest and scribe arrives from Babylon and reads the law aloud to the assembly.',
+    scripture: ['Ezra 7'],
+    summary: 'A Persian king funds the restoration of a religion not his own, authorises Ezra to appoint judges, and exempts the temple staff from tax.',
+  }),
+  event('ezra', 'Ezra returns with the law', -458, 'exile-return', 'migration', ['babylon', 'jerusalem'], {
+    dateLabel: '458 BC', dateConfidence: 'anchored',
+    scripture: ['Ezra 8'],
+    summary: 'Four months on the road with the temple silver and no armed escort, because he had told the king that God would protect them and was too embarrassed to ask for soldiers.',
+    route: ['babylon', 'carchemish', 'damascus', 'jerusalem'],
+  }),
+  event('ezra-reform', 'The crisis over intermarriage', -457, 'exile-return', 'covenant', ['jerusalem'], {
+    dateLabel: 'c. 457 BC', dateConfidence: 'estimated',
+    scripture: ['Ezra 9–10'],
+    summary: 'Told that the returned community has married into the surrounding peoples, he tears his clothes and sits appalled until evening. The remedy agreed in the rain is harsh, and the book ends without defending it.',
   }),
   event('nehemiah-news', 'News from Jerusalem', -446, 'exile-return', 'kingdom', ['susa'], {
     dateLabel: '446 BC', dateConfidence: 'anchored',
@@ -1143,6 +1154,11 @@ export const EVENTS = [
     summary: 'Wind, fire and speech in many languages during the festival; the first proclamation and three thousand added.',
     featured: true,
   }),
+  event('barnabas-gift', 'Barnabas sells a field', 33, 'early-church', 'ministry', ['jerusalem'], {
+    dateLabel: 'c. AD 33', dateConfidence: 'estimated',
+    scripture: ['Acts 4:36–37'],
+    summary: 'A Levite from Cyprus named Joseph sells a field and lays the money at the apostles’ feet. They call him Barnabas, son of encouragement, and the name sticks.',
+  }),
   event('stephen', 'The stoning of Stephen', 34, 'early-church', 'ministry', ['jerusalem'], {
     dateLabel: 'c. AD 34', dateConfidence: 'estimated',
     scripture: ['Acts 6–7'],
@@ -1153,6 +1169,11 @@ export const EVENTS = [
     scripture: ['Acts 9', 'Galatians 1'],
     summary: 'Saul, travelling to arrest believers, is blinded by light and turned around.',
     route: ['jerusalem', 'damascus', 'tarsus'], featured: true,
+  }),
+  event('barnabas-vouches', 'Barnabas vouches for Saul', 36, 'early-church', 'ministry', ['jerusalem', 'tarsus'], {
+    dateLabel: 'c. AD 36', dateConfidence: 'estimated',
+    scripture: ['Acts 9:26–30'],
+    summary: 'Nobody in Jerusalem believes the conversion, and nobody will meet him. Barnabas takes him to the apostles himself — the reason Paul has a career at all.',
   }),
   event('cornelius', 'Peter and Cornelius at Caesarea', 40, 'early-church', 'ministry', ['joppa', 'caesarea'], {
     dateLabel: 'c. AD 40', dateConfidence: 'estimated',
@@ -1178,6 +1199,17 @@ export const EVENTS = [
     summary: 'The decisive question — whether Gentile believers must keep the law of Moses — is answered no.',
     featured: true,
   }),
+  event('barnabas-split', 'Barnabas and Paul part', 49, 'early-church', 'migration', ['antioch-syria', 'salamis'], {
+    dateLabel: 'c. AD 49', dateConfidence: 'estimated',
+    scripture: ['Acts 15:36–41'],
+    summary: 'They disagree so sharply over whether to give John Mark a second chance that they separate. Barnabas takes Mark and sails for Cyprus, and Acts never mentions him again.',
+    route: ['antioch-syria', 'salamis', 'paphos'],
+  }),
+  event('timothy-joins', 'Timothy joins Paul at Lystra', 49, 'early-church', 'ministry', ['lystra', 'derbe'], {
+    dateLabel: 'c. AD 49', dateConfidence: 'estimated',
+    scripture: ['Acts 16:1–5'],
+    summary: 'A young man with a Jewish mother and a Greek father, well spoken of by the believers at Lystra and Iconium. Paul takes him on, and he stays for the rest of it.',
+  }),
   event('paul-2', 'Paul’s second journey: into Europe', 49, 'early-church', 'migration',
     ['troas', 'philippi', 'thessalonica', 'berea', 'athens', 'corinth'], {
     dateLabel: 'c. AD 49–52', dateConfidence: 'estimated',
@@ -1197,6 +1229,12 @@ export const EVENTS = [
     scripture: ['Acts 18:23–21:16'],
     summary: 'Nearly three years in Ephesus, a riot in the theatre of the silversmiths, and the letters to Corinth and Rome written along the way.',
     route: ROUTE_PAUL3,
+  }),
+  event('timothy-corinth', 'Timothy sent to Corinth', 55, 'early-church', 'ministry', ['ephesus', 'corinth'], {
+    dateLabel: 'c. AD 55', dateConfidence: 'estimated',
+    scripture: ['1 Corinthians 4:17', '1 Corinthians 16:10–11'],
+    summary: 'Sent ahead into a congregation that is quarrelling and confident, with a note asking them not to look down on him.',
+    route: ['ephesus', 'corinth'],
   }),
   event('paul-arrest', 'Paul arrested in Jerusalem', 57, 'early-church', 'ministry', ['jerusalem', 'caesarea'], {
     dateLabel: 'c. AD 57', dateConfidence: 'estimated',
@@ -1220,6 +1258,17 @@ export const EVENTS = [
     dateLabel: 'c. AD 60–62', dateConfidence: 'estimated',
     scripture: ['Acts 28:11–31'],
     summary: 'Two years in rented lodgings, teaching without hindrance. Acts simply stops here, without saying how the trial ended.',
+  }),
+  event('timothy-ephesus', 'Timothy left at Ephesus', 63, 'early-church', 'ministry', ['ephesus'], {
+    dateLabel: 'c. AD 63', dateConfidence: 'estimated',
+    scripture: ['1 Timothy 1:3', '1 Timothy 4:12'],
+    summary: 'Left in charge of a difficult church and told not to let anyone despise his youth — the instruction that dates him as young at the start and explains the tone of both letters.',
+  }),
+  event('timothy-last-letter', 'The last letter to Timothy', 66, 'early-church', 'ministry', ['rome', 'ephesus'], {
+    dateLabel: 'c. AD 66', dateConfidence: 'estimated',
+    scripture: ['2 Timothy 4:6–22'],
+    summary: 'Paul writes from custody asking him to come before winter, and to bring the cloak left at Troas and the parchments. It is the last thing in the New Testament that sounds like an ordinary letter.',
+    route: ['rome', 'ephesus'],
   }),
   event('nero-fire', 'The fire of Rome and Nero’s persecution', 64, 'early-church', 'kingdom', ['rome'], {
     dateLabel: 'AD 64', dateConfidence: 'anchored',

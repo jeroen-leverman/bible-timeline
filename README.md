@@ -4,7 +4,7 @@ An interactive timeline and historical map of events described in the Bible, fro
 Genesis through Revelation — including the period between the testaments, because the
 New Testament opens in a world that period created.
 
-**214 events · 147 places · 45 mapped routes · 33 curated threads · 241 passages · 9 territories**
+**223 events · 147 places · 48 mapped routes · 36 curated threads · 253 passages · 9 territories**
 
 ## Lives and threads
 
@@ -12,11 +12,11 @@ An era answers *when*. An event type answers *what kind*. A theme answers *whose
 is this* — it gathers one life, or one long argument, so the timeline can be read as that
 story instead of the whole sweep.
 
-Thirty lives — Noah, Job, Abraham, Isaac, Jacob, Joseph, Moses, Joshua, Deborah, Gideon,
-Samson, Ruth, Samuel, Saul, David, Solomon, Elijah, Elisha, Jonah, Isaiah, Hezekiah,
-Jeremiah, Daniel, Esther, Nehemiah, John the Baptist, Mary, Jesus, Peter, Paul — and
-three threads that cut across eras: **The Temple** (a tent, two buildings and a ruin),
-**Exile and return**, and **The covenants**.
+Thirty-three lives — Noah, Job, Abraham, Isaac, Jacob, Joseph, Moses, Joshua, Deborah,
+Gideon, Samson, Ruth, Samuel, Saul, David, Solomon, Elijah, Elisha, Jonah, Isaiah,
+Hezekiah, Jeremiah, Daniel, Esther, Ezra, Nehemiah, John the Baptist, Mary, Jesus, Peter,
+Barnabas, Paul, Timothy — and three threads that cut across eras: **The Temple** (a tent,
+two buildings and a ruin), **Exile and return**, and **The covenants**.
 
 Noah and Job are the instructive ones. Neither carries a date. Noah has no location
 either until the ark grounds on Ararat; Job has only the name of a land nobody can
