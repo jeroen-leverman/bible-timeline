@@ -14,6 +14,7 @@
  */
 import { writeFileSync, readFileSync, existsSync } from 'node:fs'
 import { EVENTS } from '../src/data/events.js'
+import { PEOPLE } from '../src/data/people.js'
 
 const API = 'https://bible-api.com'
 const UA = 'ScriptureAtlas/1.0 (https://github.com/jeroen-leverman/bible-timeline)'
@@ -68,7 +69,8 @@ async function fetchPassage(query, translation) {
 const out = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : {}
 const save = () => writeFileSync(OUT, JSON.stringify(out))
 
-const all = [...new Set(EVENTS.flatMap((e) => e.scripture))].sort()
+// Both the atlas and the family tree open passages, so both are sources of references.
+const all = [...new Set([...EVENTS, ...PEOPLE].flatMap((e) => e.scripture))].sort()
 const scripture = all.filter((r) => !NOT_SCRIPTURE.test(r))
 const complete = (r) => out[r]?.web && out[r]?.kjv
 const todo = scripture.filter((r) => !complete(r))

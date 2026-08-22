@@ -6,6 +6,8 @@ import { PLACES, PLACE_BY_ID, CERTAINTY_LABEL } from './data/places.js'
 import { EVENTS, EVENT_BY_ID, DATE_CONFIDENCE } from './data/events.js'
 import { THEMES, THEME_BY_ID, THEME_EVENT_SETS, THEME_KIND_LABEL } from './data/themes.js'
 import { territoriesAt } from './data/territories.js'
+import { renderPassageInto, escapeHtml } from './verses.js'
+import { createTree } from './tree.js'
 
 const ICONS = {
   compass: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"/></svg>',
@@ -25,6 +27,10 @@ app.innerHTML = `
       <span class="brand-mark">${ICONS.compass}</span>
       <span><strong>Scripture Atlas</strong><small>Biblical history in place & time</small></span>
     </a>
+    <nav class="view-tabs" role="tablist" aria-label="View">
+      <button role="tab" data-view="atlas" aria-selected="true" class="on">Atlas</button>
+      <button role="tab" data-view="tree" aria-selected="false">Family tree</button>
+    </nav>
     <div class="top-actions">
       <button class="icon-button mobile-only" id="mobile-filters" aria-label="Open filters">${ICONS.layers}</button>
       <button class="method-button" id="method-button"><span>About this atlas</span><span aria-hidden="true">↗</span></button>
@@ -107,6 +113,8 @@ app.innerHTML = `
       </section>
     </section>
   </main>
+
+  <section class="tree-view" id="tree-view" hidden></section>
 
   <dialog class="method-dialog" id="method-dialog">
     <button class="dialog-close icon-button" id="dialog-close" aria-label="Close">${ICONS.close}</button>
@@ -510,52 +518,8 @@ function renderEventCard() {
   renderPassage()
 }
 
-/** Lazily loaded so ~1 MB of scripture never lands in the initial bundle. */
-let VERSES = null
-let versesLoading = null
-function loadVerses() {
-  if (VERSES) return Promise.resolve(VERSES)
-  versesLoading ??= import('./data/verses.json').then((m) => (VERSES = m.default ?? m))
-  return versesLoading
-}
-
 async function renderPassage() {
-  const host = document.querySelector('#passage')
-  if (!host) return
-  if (!state.openRef) { host.innerHTML = ''; return }
-
-  host.innerHTML = '<p class="passage-loading">Loading…</p>'
-  const data = await loadVerses()
-  if (state.openRef === null) { host.innerHTML = ''; return }
-
-  const entry = data[state.openRef]
-  if (!entry) {
-    host.innerHTML = `<p class="passage-missing">Not a scripture reference, so there is no text to show.</p>`
-    return
-  }
-  const body = entry[state.translation] ?? entry.web ?? entry.kjv
-  if (!body) { host.innerHTML = '<p class="passage-missing">No text available.</p>'; return }
-
-  const verses = body.verses.map((v) =>
-    `<span class="v"><sup>${v.v}</sup>${escapeHtml(v.t)}</span>`).join(' ')
-
-  host.innerHTML = `
-    <div class="passage-head">
-      <strong>${body.reference}</strong>
-      <div class="passage-trans">
-        <button data-trans="web"${state.translation === 'web' ? ' class="on"' : ''}>WEB</button>
-        <button data-trans="kjv"${state.translation === 'kjv' ? ' class="on"' : ''}>KJV</button>
-      </div>
-    </div>
-    <div class="passage-body">${verses}</div>
-    ${entry.excerpt ? '<p class="passage-note">Opening chapter only — the reference spans several chapters.</p>' : ''}
-    ${body.truncated ? `<p class="passage-note">First ${body.verses.length} of ${body.totalVerses} verses.</p>` : ''}
-    <p class="passage-credit">${state.translation === 'web' ? 'World English Bible' : 'King James Version'} · public domain</p>`
-}
-
-function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, (c) =>
-    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
+  await renderPassageInto(document.querySelector('#passage'), state.openRef, state.translation)
 }
 
 function renderEventRail() {
@@ -695,6 +659,29 @@ document.querySelector('#event-card').addEventListener('click', (event) => {
     document.querySelectorAll('[data-trans]').forEach((b) =>
       b.classList.toggle('on', b.dataset.trans === state.translation))
   }
+})
+
+const tree = createTree(document.querySelector('#tree-view'), {
+  onShowInAtlas: (eventId) => { setView('atlas'); selectEvent(eventId) },
+})
+
+function setView(view) {
+  const isTree = view === 'tree'
+  document.querySelector('.atlas-shell').hidden = isTree
+  document.querySelector('#tree-view').hidden = !isTree
+  document.querySelectorAll('[data-view]').forEach((b) => {
+    const on = b.dataset.view === view
+    b.classList.toggle('on', on)
+    b.setAttribute('aria-selected', String(on))
+  })
+  if (isTree) tree.show()
+  // Leaflet cannot measure a hidden container, so the map is re-measured on return.
+  else requestAnimationFrame(() => map.invalidateSize())
+}
+
+document.querySelector('.view-tabs').addEventListener('click', (event) => {
+  const view = event.target.closest('[data-view]')?.dataset.view
+  if (view) setView(view)
 })
 
 document.querySelector('#clear-era').addEventListener('click', () => {

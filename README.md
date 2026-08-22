@@ -4,7 +4,37 @@ An interactive timeline and historical map of events described in the Bible, fro
 Genesis through Revelation — including the period between the testaments, because the
 New Testament opens in a world that period created.
 
-**238 events · 149 places · 51 mapped routes · 43 curated threads · 271 passages · 9 territories**
+**238 events · 149 places · 51 mapped routes · 43 curated threads · 89 people · 378 passages · 9 territories**
+
+## The family tree
+
+A second tab traces descent from Adam to Jesus — 89 figures with parents, spouses,
+children, a bio, the scripture that mentions them, and a link into the atlas events
+they appear in. Clicking a name in the tree opens their passage; clicking one of their
+events jumps to the map.
+
+Genealogy has its own honesty problem, distinct from the atlas's. Genesis 5 and 11 state
+how old each man was when his son was born and how long he lived. **Those ages are in the
+text. The years are not** — they only exist once you chain the ages from a fixed creation
+date, and the two anchors in common use disagree: Ussher's chain puts Abraham's birth at
+1996 BC, while reading back from a 1446 BC Exodus puts it at 2166. Carrying both at once
+produced a Terah born forty years after his own son, which is how the inconsistency was
+caught. Genesis 5 and 11 therefore show **stated ages only** — Methuselah reads "lived 969
+years", not a pair of years — and each person is labelled with where their dating comes
+from:
+
+| | |
+|---|---|
+| Age stated in scripture | the number is in the text |
+| Year chained from stated ages | internally consistent, externally unanchored |
+| Estimated from external evidence | a scholarly date |
+| No date given | scripture supplies nothing |
+
+Every parent link is checked at load to span exactly one generation. That matters more
+than it sounds: the Judahite king list is easy to write with four kings missing, and a
+tree drawn from it would quietly assert that Jehoshaphat was Rehoboam's son. It is also
+worth remembering that the Hebrew "X fathered Y" does not require Y to be an immediate
+son, so even a complete chain may telescope.
 
 ## Lives and threads
 
