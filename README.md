@@ -4,7 +4,7 @@ An interactive timeline and historical map of events described in the Bible, fro
 Genesis through Revelation — including the period between the testaments, because the
 New Testament opens in a world that period created.
 
-**223 events · 147 places · 48 mapped routes · 36 curated threads · 253 passages · 9 territories**
+**238 events · 149 places · 51 mapped routes · 43 curated threads · 271 passages · 9 territories**
 
 ## Lives and threads
 
@@ -12,11 +12,18 @@ An era answers *when*. An event type answers *what kind*. A theme answers *whose
 is this* — it gathers one life, or one long argument, so the timeline can be read as that
 story instead of the whole sweep.
 
-Thirty-three lives — Noah, Job, Abraham, Isaac, Jacob, Joseph, Moses, Joshua, Deborah,
-Gideon, Samson, Ruth, Samuel, Saul, David, Solomon, Elijah, Elisha, Jonah, Isaiah,
-Hezekiah, Jeremiah, Daniel, Esther, Ezra, Nehemiah, John the Baptist, Mary, Jesus, Peter,
-Barnabas, Paul, Timothy — and three threads that cut across eras: **The Temple** (a tent,
-two buildings and a ruin), **Exile and return**, and **The covenants**.
+Forty lives — Noah, Job, Abraham, Sarah, Hagar, Isaac, Jacob, Joseph, Moses, Miriam,
+Joshua, Rahab, Deborah, Gideon, Samson, Ruth, Hannah, Samuel, Saul, Abigail, David,
+Solomon, Elijah, Elisha, Jonah, Isaiah, Hezekiah, Jeremiah, Daniel, Esther, Ezra,
+Nehemiah, John the Baptist, Mary, Jesus, Mary Magdalene, Peter, Barnabas, Paul, Timothy —
+and three threads that cut across eras: **The Temple** (a tent, two buildings and a
+ruin), **Exile and return**, and **The covenants**.
+
+Eleven of the forty are women. Several of them — Hagar, Miriam, Rahab, Abigail, Mary
+Magdalene — had no events in the atlas at all until they were given threads of their own,
+despite appearing inside other people's stories throughout. Following Sarah and Hagar
+separately through the same chapters is the clearest demonstration of what a theme does:
+the events are shared, and they are not the same story.
 
 Noah and Job are the instructive ones. Neither carries a date. Noah has no location
 either until the ark grounds on Ararat; Job has only the name of a land nobody can

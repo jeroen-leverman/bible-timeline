@@ -69,6 +69,10 @@ export const PLACES = [
   P('bethlehem', 'Bethlehem', 31.7054, 35.2024, 'secure'),
   P('hebron', 'Hebron', 31.5326, 35.0998, 'secure'),
   P('beersheba', 'Beersheba', 31.2518, 34.7913, 'secure'),
+  P('beer-lahai-roi', 'Beer-lahai-roi', 30.7000, 34.7000, 'disputed', {
+    note: 'The well where Hagar named God — "the well of the Living One who sees me". ' +
+          'Genesis places it between Kadesh and Bered, neither of which is securely located.',
+  }),
   P('gerar', 'Gerar', 31.3833, 34.5833, 'probable', { modern: 'Tel Haror, Israel' }),
   P('bethel', 'Bethel', 31.9275, 35.2333, 'probable', { modern: 'Beitin' }),
   P('ai', 'Ai', 31.9167, 35.2611, 'disputed', { modern: 'et-Tell' }),
@@ -84,6 +88,11 @@ export const PLACES = [
   P('lachish', 'Lachish', 31.5650, 34.8494, 'secure', { modern: 'Tel Lachish' }),
   P('elah', 'Valley of Elah', 31.6900, 34.9700, 'secure'),
   P('adullam', 'Adullam', 31.6500, 34.9800, 'probable'),
+  P('carmel-judah', 'Carmel of Judah', 31.4272, 35.1361, 'secure', {
+    modern: 'Khirbet el-Kirmil',
+    note: 'Nabal and Abigail’s town in the Judean hills, not to be confused with Mount Carmel ' +
+          'on the northern coast some 150 km away.',
+  }),
   P('en-gedi', 'En Gedi', 31.4614, 35.3925, 'secure'),
   P('ziklag', 'Ziklag', 31.4000, 34.7000, 'disputed'),
   P('qumran', 'Qumran', 31.7411, 35.4589, 'secure'),

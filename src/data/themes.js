@@ -29,6 +29,14 @@ export const THEMES = [
     'From Ur to Haran to Canaan to Egypt and back — roughly 1,500 miles, all of it on the promise of a land he never owns and a son he does not yet have.',
     ['abram-ur', 'call-abram', 'abram-egypt', 'abraham-covenant', 'sodom', 'isaac-born', 'binding-isaac']),
 
+  theme('sarah', 'Sarah', 'life', 'Genesis 12–23',
+    'Promised a nation and left childless for twenty-five years. She takes matters into her own hands, cannot live with the result, and laughs when she is finally told — then denies laughing. Her grave is the only land Abraham ever owns.',
+    ['call-abram', 'abram-egypt', 'sarah-hagar', 'sarah-laughs', 'isaac-born', 'sarah-death']),
+
+  theme('hagar', 'Hagar', 'life', 'Genesis 16, 21',
+    'A slave with no say in any of it, twice driven into the desert and twice found there. She is the only person in the Hebrew Bible who gives God a name — El Roi, the God who sees — which she does while running away.',
+    ['sarah-hagar', 'hagar-flight', 'hagar-wilderness']),
+
   theme('isaac', 'Isaac', 'life', 'Genesis 21–35',
     'The quietest of the three patriarchs, and the only one who never leaves Canaan. He is carried through his own story by other people — bound by his father, chosen a wife by a servant, deceived by his son — and gets exactly one chapter of his own.',
     ['isaac-born', 'binding-isaac', 'isaac-rebekah', 'jacob-born', 'isaac-gerar', 'jacob-esau',
@@ -49,9 +57,17 @@ export const THEMES = [
     ['moses-born', 'burning-bush', 'plagues', 'exodus', 'sea-crossing', 'sinai-law', 'golden-calf',
      'tabernacle', 'kadesh-spies', 'wilderness', 'moses-nebo']),
 
+  theme('miriam', 'Miriam', 'life', 'Exodus 15; Numbers 12, 20',
+    'Called a prophet, and the first person in the Bible to lead worship. She challenges Moses jointly with Aaron and is punished alone, and her death gets a single sentence — after which the water fails.',
+    ['moses-born', 'miriam-song', 'miriam-challenge', 'miriam-death']),
+
   theme('joshua', 'Joshua', 'life', 'Joshua 1–24',
     'The campaigns, and the archaeology that both supports and complicates them — Hazor burns on schedule, Jericho does not.',
     ['jordan-crossing-ev', 'jericho', 'ai', 'gibeon-sun', 'hazor-burn', 'shechem-covenant']),
+
+  theme('rahab', 'Rahab', 'life', 'Joshua 2, 6',
+    'A prostitute living in the city wall who hides two spies, lies to the king’s men, and negotiates survival for her entire family before the siege begins. Matthew puts her in the genealogy of Jesus.',
+    ['rahab-spies', 'jordan-crossing-ev', 'jericho']),
 
   theme('deborah', 'Deborah', 'life', 'Judges 4–5',
     'The only judge who is also a prophet, and the only one people travel to for rulings. Her war is won by two women and remembered in a poem older than the account beside it.',
@@ -69,6 +85,10 @@ export const THEMES = [
     'A famine, two widows, and a foreign woman who refuses to go home. The whole book turns on a legal technicality about redeeming a dead man’s land, and ends by making her David’s great-grandmother.',
     ['ruth-moab', 'ruth-vow', 'ruth', 'ruth-threshing', 'ruth-obed']),
 
+  theme('hannah', 'Hannah', 'life', '1 Samuel 1–2',
+    'Prays so intently that the priest assumes she is drunk, is granted a son, and then hands him over as promised. The song she sings walking home — the powerful pulled down, the barren bearing seven — is the model for the Magnificat a thousand years later.',
+    ['hannah-vow', 'samuel-born', 'hannah-song']),
+
   theme('samuel', 'Samuel', 'life', '1 Samuel 1–16',
     'Born to a woman who was mocked for wanting a child, handed to a shrine, and left as the last judge — the man who both installs Israel’s first king and warns them what a king will cost.',
     ['samuel-born', 'samuel-call', 'ark-captured', 'saul-king', 'samuel-anoints-david']),
@@ -82,6 +102,10 @@ export const THEMES = [
     'Shepherd, outlaw, king, adulterer, refugee from his own son. The most fully told life in the Hebrew Bible, and the least flattering.',
     ['samuel-anoints-david', 'david-goliath', 'david-flees', 'gilboa', 'david-king', 'jerusalem-captured',
      'ark-jerusalem', 'davidic-covenant', 'bathsheba', 'absalom']),
+
+  theme('abigail', 'Abigail', 'life', '1 Samuel 25',
+    'Rides down a ravine to intercept four hundred armed men on their way to kill her household, and talks David out of it in the longest speech any woman is given in Samuel. He thanks her for stopping him.',
+    ['david-flees', 'abigail-nabal', 'abigail-david']),
 
   theme('solomon', 'Solomon', 'life', '1 Kings 1–11',
     'Asks for wisdom rather than long life or riches, builds the temple, and leaves a kingdom that splits the moment he dies.',
@@ -139,6 +163,10 @@ export const THEMES = [
     'Present at the start and at the end, and largely silent in between. Her one long speech is a song about thrones being emptied, and the last thing anyone says to her in the temple is that a sword will go through her too.',
     ['annunciation', 'visitation', 'nativity', 'presentation', 'flight-egypt', 'boy-temple',
      'cana', 'crucifixion', 'pentecost']),
+
+  theme('magdalene', 'Mary Magdalene', 'life', 'Luke 8; John 19–20',
+    'One of the women funding the movement out of their own pockets, present at the execution when most of the men were not, and first to the tomb in all four Gospels — sent to tell the others, in a culture where her testimony would not have been accepted in court.',
+    ['magdalene-follows', 'crucifixion', 'resurrection', 'magdalene-tomb']),
 
   theme('jesus', 'Jesus', 'life', 'The Gospels',
     'From a birth placed before Herod’s death in 4 BC to an execution dated either AD 30 or 33 — a life whose start and end are both approximate.',

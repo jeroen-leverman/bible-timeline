@@ -163,20 +163,46 @@ export const EVENTS = [
     scripture: ['Genesis 12:10–20'],
     summary: 'Famine drives Abram to Egypt, where he passes Sarai off as his sister.',
   }),
+  event('sarah-hagar', 'Sarai gives Hagar to Abram', -2081, 'patriarchs', 'covenant', ['hebron'], {
+    dateLabel: 'c. 2081 BC traditional · c. 1900–1750 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 16:1–6'],
+    summary: 'Ten years into the promise and still childless, Sarai hands her Egyptian slave to her husband. When it works she cannot bear it, and Abram tells her to do as she likes.',
+  }),
+  event('hagar-flight', 'Hagar names God', -2080, 'patriarchs', 'covenant', ['beer-lahai-roi'], {
+    dateLabel: 'c. 2080 BC traditional · c. 1900–1750 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 16:7–16'],
+    summary: 'A pregnant slave runs into the desert and is found by a well. She calls God El Roi, the God who sees — the only person in the Hebrew Bible to give God a name.',
+  }),
   event('abraham-covenant', 'The covenant with Abraham', -2081, 'patriarchs', 'covenant', ['hebron'], {
     dateLabel: 'c. 2081 BC traditional · c. 1900–1750 BC academic', dateConfidence: 'disputed',
     scripture: ['Genesis 15', 'Genesis 17'],
     summary: 'A covenant cut between divided animals, later sealed by circumcision, promising land and innumerable descendants.',
+  }),
+  event('sarah-laughs', 'Sarah laughs at Mamre', -2067, 'patriarchs', 'covenant', ['hebron'], {
+    dateLabel: 'c. 2067 BC traditional · c. 1900–1750 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 18:1–15'],
+    summary: 'Listening at the tent door, she laughs at being told she will have a son at ninety, then denies it because she is frightened. "No, but you did laugh."',
   }),
   event('sodom', 'The destruction of Sodom and Gomorrah', -2067, 'patriarchs', 'miracle', ['sodom', 'hebron'], {
     dateLabel: 'c. 2067 BC traditional · c. 1900–1750 BC academic', dateConfidence: 'disputed',
     scripture: ['Genesis 18–19'],
     summary: 'Abraham bargains for the cities; Lot escapes as they are overthrown, and his wife looks back.',
   }),
+  event('hagar-wilderness', 'Hagar and Ishmael in the wilderness', -2062, 'patriarchs', 'covenant', ['beersheba', 'beer-lahai-roi'], {
+    dateLabel: 'c. 2062 BC traditional · c. 1880–1730 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 21:8–21'],
+    summary: 'Sent away with bread and a skin of water, she puts the boy under a bush so she will not have to watch him die, and sits a bowshot off. God hears the boy, not her.',
+    route: ['beersheba', 'beer-lahai-roi'],
+  }),
   event('isaac-born', 'Birth of Isaac', -2066, 'patriarchs', 'covenant', ['beersheba'], {
     dateLabel: 'c. 2066 BC traditional · c. 1880–1730 BC academic', dateConfidence: 'disputed',
     scripture: ['Genesis 21:1–7'],
     summary: 'The promised son is born to Abraham and Sarah in their old age.',
+  }),
+  event('sarah-death', 'Sarah dies at Hebron', -2029, 'patriarchs', 'covenant', ['hebron'], {
+    dateLabel: 'c. 2029 BC traditional · c. 1870–1720 BC academic', dateConfidence: 'disputed',
+    scripture: ['Genesis 23'],
+    summary: 'Abraham buys the cave of Machpelah at a price he is invited to refuse and insists on paying — the only piece of the promised land he ever owns, and it is a grave.',
   }),
   event('binding-isaac', 'The binding of Isaac', -2050, 'patriarchs', 'covenant', ['beersheba', 'temple-mount'], {
     dateLabel: 'c. 2050 BC traditional · c. 1880–1730 BC academic', dateConfidence: 'disputed',
@@ -324,6 +350,11 @@ export const EVENTS = [
     summary: 'The waters divide, Israel passes through, and the pursuing army is drowned.',
     note: 'The Hebrew reads yam suph, “Sea of Reeds”. Candidates range from Delta lakes to the Gulf of Suez to the Gulf of Aqaba.',
   }),
+  event('miriam-song', 'The song of Miriam', -1446, 'egypt-exodus', 'prophet', ['red-sea-crossing'], {
+    dateLabel: 'c. 1446 BC traditional · c. 1260 BC academic', dateConfidence: 'disputed',
+    scripture: ['Exodus 15:19–21'],
+    summary: 'She takes a tambourine and leads the women out dancing. Her two lines are widely held to be older than the long poem attributed to Moses beside them.',
+  }),
   event('sinai-law', 'The covenant at Sinai', -1446, 'egypt-exodus', 'covenant', ['sinai'], {
     dateLabel: 'c. 1446 BC traditional · c. 1260 BC academic', dateConfidence: 'disputed',
     scripture: ['Exodus 19–24'],
@@ -345,6 +376,16 @@ export const EVENTS = [
     scripture: ['Numbers 13–14'],
     summary: 'Ten of twelve scouts report the land cannot be taken. The generation is sentenced to forty years in the wilderness.',
   }),
+  event('miriam-challenge', 'Miriam challenges Moses', -1443, 'egypt-exodus', 'prophet', ['kadesh-barnea'], {
+    dateLabel: 'c. 1443 BC traditional · c. 1257 BC academic', dateConfidence: 'disputed',
+    scripture: ['Numbers 12'],
+    summary: '"Has the Lord spoken only through Moses?" Both she and Aaron say it; only she is struck with disease, and the whole camp waits seven days for her.',
+  }),
+  event('miriam-death', 'The death of Miriam', -1407, 'egypt-exodus', 'prophet', ['kadesh-barnea'], {
+    dateLabel: 'c. 1407 BC traditional · c. 1221 BC academic', dateConfidence: 'disputed',
+    scripture: ['Numbers 20:1'],
+    summary: 'One sentence: she died at Kadesh and was buried there. The water fails immediately afterwards, which later readers took to be connected.',
+  }),
   event('wilderness', 'Forty years in the wilderness', -1440, 'egypt-exodus', 'migration',
     ['sinai', 'kadesh-barnea', 'mount-hor', 'moab-plains'], {
     dateLabel: 'c. 1446–1406 BC traditional · c. 1260–1220 BC academic', dateConfidence: 'disputed',
@@ -360,6 +401,11 @@ export const EVENTS = [
   }),
 
   // ----------------------------------------------------- conquest & judges
+  event('rahab-spies', 'Rahab hides the spies', -1407, 'conquest-judges', 'covenant', ['jericho'], {
+    dateLabel: 'c. 1407 BC traditional · c. 1221–1201 BC academic', dateConfidence: 'disputed',
+    scripture: ['Joshua 2', 'Joshua 6:22–25'],
+    summary: 'A prostitute in the wall of the city hides two spies under flax on her roof, lies to the king’s men, and negotiates terms for her whole family. The scarlet cord is her idea.',
+  }),
   event('jordan-crossing-ev', 'Israel crosses the Jordan', -1406, 'conquest-judges', 'migration',
     ['moab-plains', 'jordan-crossing', 'gilgal'], {
     dateLabel: 'c. 1406 BC traditional · c. 1220–1200 BC academic', dateConfidence: 'disputed',
@@ -463,10 +509,20 @@ export const EVENTS = [
     scripture: ['Ruth 4'],
     summary: 'A nearer kinsman declines at the town gate. Boaz marries Ruth, and their son Obed becomes grandfather to David.',
   }),
-  event('samuel-born', 'Hannah’s prayer and Samuel’s birth', -1105, 'conquest-judges', 'covenant', ['shiloh'], {
+  event('hannah-vow', 'Hannah’s vow at Shiloh', -1106, 'conquest-judges', 'covenant', ['shiloh'], {
+    dateLabel: 'c. 1106 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 1:1–18'],
+    summary: 'Provoked yearly by her husband’s other wife and told by her husband that he is worth more to her than ten sons, she prays at the sanctuary with her lips moving and no sound. Eli assumes she is drunk.',
+  }),
+  event('samuel-born', 'Samuel is born, and given up', -1105, 'conquest-judges', 'covenant', ['shiloh'], {
     dateLabel: 'c. 1105 BC', dateConfidence: 'estimated',
-    scripture: ['1 Samuel 1–2'],
-    summary: 'A childless woman prays at the sanctuary so fervently that Eli takes her for drunk, and gives back to the shrine the son she is granted.',
+    scripture: ['1 Samuel 1:19–28'],
+    summary: 'She keeps him until he is weaned, then walks him to Shiloh and hands him over, having promised him away before he existed.',
+  }),
+  event('hannah-song', 'Hannah’s song', -1103, 'conquest-judges', 'prophet', ['shiloh'], {
+    dateLabel: 'c. 1103 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 2:1–10'],
+    summary: 'A poem about the powerful being brought down and the barren bearing seven, sung by a woman walking home without her child. Mary’s Magnificat follows its shape closely.',
   }),
   event('samuel-call', 'The call of Samuel at Shiloh', -1095, 'conquest-judges', 'prophet', ['shiloh'], {
     dateLabel: 'c. 1095 BC', dateConfidence: 'estimated',
@@ -541,6 +597,17 @@ export const EVENTS = [
     dateLabel: 'c. 1011 BC', dateConfidence: 'estimated',
     scripture: ['1 Samuel 28'],
     summary: 'Having outlawed mediums himself, he goes in disguise by night to consult one, and is told what he already knows: tomorrow.',
+  }),
+  event('abigail-nabal', 'Abigail intercepts David', -1013, 'united-monarchy', 'kingdom', ['carmel-judah', 'adullam'], {
+    dateLabel: 'c. 1013 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 25:1–35'],
+    summary: 'Her husband insults David and David sets out with four hundred men to kill every male in the household. She loads donkeys, rides down the ravine to meet him, and talks him out of it in a speech that runs to fourteen verses.',
+    route: ['adullam', 'carmel-judah'],
+  }),
+  event('abigail-david', 'Nabal dies, and Abigail marries David', -1013, 'united-monarchy', 'kingdom', ['carmel-judah'], {
+    dateLabel: 'c. 1013 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 25:36–42'],
+    summary: 'She tells him the next morning, when he is sober, and he has some kind of seizure and dies ten days later. She accepts David’s proposal and rides off with five servants.',
   }),
   event('gilboa', 'Saul dies at Gilboa', -1010, 'united-monarchy', 'battle', ['gilboa', 'beth-shan', 'jabesh-gilead'], {
     dateLabel: 'c. 1010 BC', dateConfidence: 'estimated',
@@ -1063,6 +1130,11 @@ export const EVENTS = [
     summary: 'A fishing town on the north shore becomes the centre of the Galilean ministry, and the first disciples are called from its boats.',
     route: ROUTE_GALILEE, featured: true,
   }),
+  event('magdalene-follows', 'Mary Magdalene follows Jesus', 30, 'jesus', 'ministry', ['magdala', 'galilee-sea'], {
+    dateLabel: 'c. AD 30', dateConfidence: 'estimated',
+    scripture: ['Luke 8:1–3', 'Mark 15:40–41'],
+    summary: 'One of several women travelling with the group and paying for it out of their own means. Luke says seven demons had gone out of her, and says nothing else about her past.',
+  }),
   event('sermon-mount', 'The Sermon on the Mount', 30, 'jesus', 'ministry', ['galilee-sea', 'capernaum'], {
     dateLabel: 'c. AD 30', dateConfidence: 'estimated',
     scripture: ['Matthew 5–7'],
@@ -1133,6 +1205,11 @@ export const EVENTS = [
     scripture: ['Matthew 28', 'Luke 24', 'John 20'],
     summary: 'The tomb found empty on the first day of the week.',
     featured: true,
+  }),
+  event('magdalene-tomb', 'Mary Magdalene at the tomb', 30, 'jesus', 'miracle', ['golgotha'], {
+    dateLabel: 'AD 30 or AD 33', dateConfidence: 'disputed',
+    scripture: ['John 20:1–18'],
+    summary: 'She comes while it is still dark, mistakes him for the gardener, and is sent to tell the others — first witness in all four Gospels, in a culture where her testimony would not have stood in court.',
   }),
   event('emmaus-road', 'The road to Emmaus', 30, 'jesus', 'ministry', ['jerusalem', 'emmaus'], {
     dateLabel: 'AD 30 or AD 33', dateConfidence: 'disputed',

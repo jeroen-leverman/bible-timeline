@@ -1770,5 +1770,18 @@
    "filePage": "https://commons.wikimedia.org/wiki/File:Kingdoms_of_the_Levant_Map_830.png"
   },
   "distanceKm": 0
+ },
+ "carmel-judah": {
+  "title": "Al-Karmil",
+  "url": "https://en.wikipedia.org/wiki/Al-Karmil",
+  "extract": "al-Karmil (Arabic: خربة الكرمل) is a Palestinian village located twelve kilometers south of Hebron. The village is in the Hebron Governorate Southern West Bank, within Area A under total Palestinian control.",
+  "image": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Al-Karmil0240.JPG/960px-Al-Karmil0240.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "width": 640,
+   "licence": "CC BY-SA 4.0",
+   "artist": "עדירל",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Al-Karmil0240.JPG"
+  },
+  "distanceKm": 0.5
  }
 }
