@@ -300,11 +300,42 @@ export const EVENTS = [
     scripture: ['Judges 6–8'],
     summary: 'An army cut to three hundred, armed with trumpets, jars and torches.',
   }),
+  event('ruth-moab', 'Naomi’s family leaves for Moab', -1130, 'conquest-judges', 'migration', ['bethlehem', 'moab-plains'], {
+    dateLabel: 'c. 1150–1100 BC', dateConfidence: 'estimated',
+    scripture: ['Ruth 1:1–5'],
+    summary: 'Famine drives a Bethlehem family across the Dead Sea into Moab, where the father and both sons die.',
+    route: ['bethlehem', 'moab-plains'],
+  }),
+  event('ruth-vow', 'Where you go I will go', -1125, 'conquest-judges', 'covenant', ['moab-plains'], {
+    dateLabel: 'c. 1150–1100 BC', dateConfidence: 'estimated',
+    scripture: ['Ruth 1:6–18'],
+    summary: 'Naomi releases her daughters-in-law. Orpah turns back; Ruth binds herself to a people and a God not her own.',
+  }),
   event('ruth', 'Ruth gleans in Bethlehem', -1120, 'conquest-judges', 'migration', ['moab-plains', 'bethlehem'], {
     dateLabel: 'c. 1150–1100 BC', dateConfidence: 'estimated',
     scripture: ['Ruth 1–4'],
     summary: 'A Moabite widow returns with Naomi and marries Boaz, becoming great-grandmother to David.',
     route: ['moab-plains', 'bethlehem'],
+  }),
+  event('ruth-threshing', 'The threshing floor', -1119, 'conquest-judges', 'covenant', ['bethlehem'], {
+    dateLabel: 'c. 1150–1100 BC', dateConfidence: 'estimated',
+    scripture: ['Ruth 3'],
+    summary: 'On Naomi’s instruction Ruth goes to Boaz at night and asks him to act as redeemer.',
+  }),
+  event('ruth-obed', 'Boaz redeems, and Obed is born', -1118, 'conquest-judges', 'kingdom', ['bethlehem'], {
+    dateLabel: 'c. 1150–1100 BC', dateConfidence: 'estimated',
+    scripture: ['Ruth 4'],
+    summary: 'A nearer kinsman declines at the town gate. Boaz marries Ruth, and their son Obed becomes grandfather to David.',
+  }),
+  event('samuel-born', 'Hannah’s prayer and Samuel’s birth', -1105, 'conquest-judges', 'covenant', ['shiloh'], {
+    dateLabel: 'c. 1105 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 1–2'],
+    summary: 'A childless woman prays at the sanctuary so fervently that Eli takes her for drunk, and gives back to the shrine the son she is granted.',
+  }),
+  event('samuel-call', 'The call of Samuel at Shiloh', -1095, 'conquest-judges', 'prophet', ['shiloh'], {
+    dateLabel: 'c. 1095 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 3'],
+    summary: 'A boy sleeping beside the ark hears his name three times and mistakes it for the old priest calling him.',
   }),
   event('samson', 'Samson and the Philistines', -1075, 'conquest-judges', 'battle', ['gaza', 'ashkelon'], {
     dateLabel: 'c. 1100–1050 BC', dateConfidence: 'estimated',
@@ -322,6 +353,11 @@ export const EVENTS = [
     dateLabel: 'c. 1050 BC', dateConfidence: 'estimated',
     scripture: ['1 Samuel 9–10'],
     summary: 'Israel demands a king “like the other nations”; Samuel anoints Saul.',
+  }),
+  event('samuel-anoints-david', 'Samuel anoints David at Bethlehem', -1026, 'united-monarchy', 'kingdom', ['bethlehem'], {
+    dateLabel: 'c. 1026 BC', dateConfidence: 'estimated',
+    scripture: ['1 Samuel 16:1–13'],
+    summary: 'Seven sons are passed over before the youngest is fetched in from the sheep.',
   }),
   event('david-goliath', 'David and Goliath', -1025, 'united-monarchy', 'battle', ['elah', 'gath', 'bethlehem'], {
     dateLabel: 'c. 1025 BC', dateConfidence: 'estimated',
@@ -536,11 +572,44 @@ export const EVENTS = [
     scripture: ['Ezekiel 1–48'],
     summary: 'A priest deported to the Chebar canal sees wheels within wheels, the glory leaving the temple, and a valley of dry bones.',
   }),
-  event('daniel-lions', 'Daniel in Babylon and Persia', -560, 'exile-return', 'prophet', ['babylon', 'susa'], {
-    dateLabel: '605–536 BC', dateConfidence: 'traditional',
-    scripture: ['Daniel 1–6'],
-    summary: 'The fiery furnace, the writing on the wall, and the night in the lions’ den.',
-    note: 'The book’s court tales are set in the exile; most critical scholars date its composition to the Maccabean crisis of the 160s BC, which is a separate question from when the stories are set.',
+  event('daniel-taken', 'Daniel taken to Babylon', -605, 'exile-return', 'migration', ['jerusalem', 'babylon'], {
+    dateLabel: '605 BC', dateConfidence: 'anchored',
+    scripture: ['Daniel 1'],
+    summary: 'Among the young men of the Judean nobility picked for the king’s service, retrained in Babylonian letters and given new names.',
+    route: ['jerusalem', 'riblah', 'babylon'],
+    anchor: 'The Babylonian Chronicle dates Nebuchadnezzar’s campaign in the west to this year.',
+  }),
+  event('daniel-statue', 'Nebuchadnezzar’s dream of the statue', -603, 'exile-return', 'prophet', ['babylon'], {
+    dateLabel: 'c. 603 BC', dateConfidence: 'traditional',
+    scripture: ['Daniel 2'],
+    summary: 'A statue of four metals, broken by a stone cut without hands — read as four empires and something that outlasts all of them.',
+  }),
+  event('daniel-furnace', 'The fiery furnace', -590, 'exile-return', 'miracle', ['babylon'], {
+    dateLabel: 'c. 590 BC', dateConfidence: 'traditional',
+    scripture: ['Daniel 3'],
+    summary: 'Three men refuse to bow to the image and are thrown into the fire. "But if not" — they will not bow either way.',
+  }),
+  event('daniel-madness', 'Nebuchadnezzar’s madness', -570, 'exile-return', 'kingdom', ['babylon'], {
+    dateLabel: 'c. 570 BC', dateConfidence: 'traditional',
+    scripture: ['Daniel 4'],
+    summary: 'The king who built Babylon is driven out to live like an animal until he acknowledges a power above his own.',
+  }),
+  event('daniel-writing', 'The writing on the wall', -539, 'exile-return', 'prophet', ['babylon'], {
+    dateLabel: '539 BC', dateConfidence: 'anchored',
+    scripture: ['Daniel 5'],
+    summary: 'A hand writes four words during Belshazzar’s feast. The city falls to Persia that same night.',
+    anchor: 'Babylonian texts name Belshazzar as Nabonidus’s son and co-regent — a detail the book gets right that was unknown from Greek sources.',
+  }),
+  event('daniel-lions', 'Daniel in the lions’ den', -538, 'exile-return', 'miracle', ['babylon'], {
+    dateLabel: 'c. 538 BC', dateConfidence: 'traditional',
+    scripture: ['Daniel 6'],
+    summary: 'A law is drafted that cannot be revoked, precisely so that one man’s habit of praying at an open window becomes a capital offence.',
+  }),
+  event('daniel-visions', 'Daniel’s visions of the kingdoms', -536, 'exile-return', 'prophet', ['babylon', 'susa'], {
+    dateLabel: 'c. 551–536 BC', dateConfidence: 'traditional',
+    scripture: ['Daniel 7–12'],
+    summary: 'Four beasts out of the sea, a ram and a goat, and seventy weeks — the imagery later apocalyptic writing, Revelation included, would build on.',
+    note: 'The court tales are set in the exile, but most critical scholars date the book’s composition to the Maccabean crisis of the 160s BC, on the grounds that Daniel 11 tracks that period unusually closely. That is a separate question from when the stories are set.',
   }),
   event('babylon-falls', 'Cyrus takes Babylon', -539, 'exile-return', 'kingdom', ['babylon', 'persepolis'], {
     dateLabel: '539 BC', dateConfidence: 'anchored',
@@ -565,10 +634,25 @@ export const EVENTS = [
     scripture: ['Ezra 6:15', 'Haggai 1–2', 'Zechariah 4'],
     summary: 'Finished in the sixth year of Darius, spurred on by Haggai and Zechariah. Those who remembered the first one wept.',
   }),
-  event('esther', 'Esther at the Persian court', -479, 'exile-return', 'kingdom', ['susa'], {
+  event('esther-vashti', 'Vashti refuses the king', -483, 'exile-return', 'kingdom', ['susa'], {
+    dateLabel: 'c. 483 BC', dateConfidence: 'estimated',
+    scripture: ['Esther 1'],
+    summary: 'Summoned to display her beauty at the end of a long banquet, the queen declines, and is deposed for it.',
+  }),
+  event('esther', 'Esther becomes queen', -479, 'exile-return', 'kingdom', ['susa'], {
     dateLabel: 'c. 479 BC', dateConfidence: 'estimated',
-    scripture: ['Esther 1–10'],
-    summary: 'Set in the reign of Xerxes I: a queen conceals her people, then risks the throne room to save them.',
+    scripture: ['Esther 2'],
+    summary: 'A Jewish orphan raised by her cousin Mordecai is taken into the household of Xerxes I, and does not say where she is from.',
+  }),
+  event('esther-haman', 'Haman’s decree', -474, 'exile-return', 'kingdom', ['susa'], {
+    dateLabel: 'c. 474 BC', dateConfidence: 'estimated',
+    scripture: ['Esther 3–4'],
+    summary: 'Slighted by one man, the king’s highest official buys a decree against that man’s entire people. "Who knows whether you have not come to the kingdom for such a time as this."',
+  }),
+  event('esther-purim', 'The reversal, and Purim', -473, 'exile-return', 'kingdom', ['susa'], {
+    dateLabel: 'c. 473 BC', dateConfidence: 'estimated',
+    scripture: ['Esther 8–9'],
+    summary: 'A Persian decree cannot be revoked, so a second is issued to stand beside it. The festival of Purim is named for the lots Haman cast.',
   }),
   event('ezra', 'Ezra returns with the law', -458, 'exile-return', 'covenant', ['babylon', 'jerusalem'], {
     dateLabel: '458 BC', dateConfidence: 'anchored',
@@ -618,6 +702,11 @@ export const EVENTS = [
   }),
 
   // --------------------------------------------------------- life of Jesus
+  event('john-born', 'The birth of John the Baptist', -6, 'jesus', 'prophet', ['temple-mount', 'jerusalem'], {
+    dateLabel: 'c. 7–6 BC', dateConfidence: 'estimated',
+    scripture: ['Luke 1'],
+    summary: 'An angel appears to the priest Zechariah at the incense altar. He doubts, and is left mute until the child is named.',
+  }),
   event('nativity', 'The birth of Jesus', -5, 'jesus', 'ministry', ['nazareth', 'bethlehem', 'jerusalem'], {
     dateLabel: 'c. 6–4 BC', dateConfidence: 'estimated',
     scripture: ['Matthew 1–2', 'Luke 2'],
@@ -635,6 +724,12 @@ export const EVENTS = [
     dateLabel: 'c. AD 8', dateConfidence: 'estimated',
     scripture: ['Luke 2:41–52'],
     summary: 'Left behind after Passover at twelve years old, found questioning the teachers.',
+  }),
+  event('john-preaching', 'John preaches in the wilderness', 28, 'jesus', 'prophet', ['jordan-crossing'], {
+    dateLabel: 'c. AD 28–29', dateConfidence: 'anchored',
+    scripture: ['Matthew 3:1–12', 'Luke 3:1–20'],
+    summary: 'A camel-hair prophet at the Jordan calling for repentance, and refusing every title the crowds offer him.',
+    anchor: 'Luke dates the start of his preaching to the fifteenth year of Tiberius — AD 28/29.',
   }),
   event('baptism', 'The baptism of Jesus', 29, 'jesus', 'ministry', ['jordan-crossing'], {
     dateLabel: 'c. AD 29', dateConfidence: 'anchored',
@@ -664,6 +759,12 @@ export const EVENTS = [
     dateLabel: 'c. AD 30', dateConfidence: 'estimated',
     scripture: ['Matthew 5–7'],
     summary: 'The Beatitudes, the Lord’s Prayer, and the command to love enemies.',
+  }),
+  event('john-death', 'The death of John the Baptist', 30, 'jesus', 'prophet', ['machaerus'], {
+    dateLabel: 'c. AD 30', dateConfidence: 'estimated',
+    scripture: ['Mark 6:14–29'],
+    summary: 'Imprisoned for condemning Herod Antipas’s marriage, and executed after a dance and a rash oath.',
+    anchor: 'Josephus reports the execution independently of the Gospels, and names Machaerus as the fortress where it happened.',
   }),
   event('feeding-5000', 'Feeding the five thousand', 30, 'jesus', 'miracle', ['bethsaida', 'galilee-sea'], {
     dateLabel: 'c. AD 30', dateConfidence: 'estimated',

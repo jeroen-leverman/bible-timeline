@@ -41,10 +41,18 @@ export const THEMES = [
     'The campaigns, and the archaeology that both supports and complicates them — Hazor burns on schedule, Jericho does not.',
     ['jordan-crossing-ev', 'jericho', 'ai', 'gibeon-sun', 'hazor-burn', 'shechem-covenant']),
 
+  theme('ruth', 'Ruth', 'life', 'Ruth 1–4',
+    'A famine, two widows, and a foreign woman who refuses to go home. The whole book turns on a legal technicality about redeeming a dead man’s land, and ends by making her David’s great-grandmother.',
+    ['ruth-moab', 'ruth-vow', 'ruth', 'ruth-threshing', 'ruth-obed']),
+
+  theme('samuel', 'Samuel', 'life', '1 Samuel 1–16',
+    'Born to a woman who was mocked for wanting a child, handed to a shrine, and left as the last judge — the man who both installs Israel’s first king and warns them what a king will cost.',
+    ['samuel-born', 'samuel-call', 'ark-captured', 'saul-king', 'samuel-anoints-david']),
+
   theme('david', 'David', 'life', '1 Samuel 16 – 1 Kings 2',
     'Shepherd, outlaw, king, adulterer, refugee from his own son. The most fully told life in the Hebrew Bible, and the least flattering.',
-    ['david-goliath', 'david-flees', 'gilboa', 'david-king', 'jerusalem-captured', 'ark-jerusalem',
-     'davidic-covenant', 'bathsheba', 'absalom']),
+    ['samuel-anoints-david', 'david-goliath', 'david-flees', 'gilboa', 'david-king', 'jerusalem-captured',
+     'ark-jerusalem', 'davidic-covenant', 'bathsheba', 'absalom']),
 
   theme('solomon', 'Solomon', 'life', '1 Kings 1–11',
     'Asks for wisdom rather than long life or riches, builds the temple, and leaves a kingdom that splits the moment he dies.',
@@ -53,6 +61,27 @@ export const THEMES = [
   theme('elijah', 'Elijah and Elisha', 'life', '1 Kings 17 – 2 Kings 13',
     'Fire on Carmel, then a whisper at Horeb. The mantle passes to a successor who does twice as many miracles and gets a fraction of the attention.',
     ['elijah-carmel', 'elijah-horeb', 'naboth', 'elisha']),
+
+  theme('isaiah', 'Isaiah', 'life', 'Isaiah 1–39',
+    'Called in the year King Uzziah died, and active through the two Assyrian crises that defined his lifetime: the north falling in 722, and Jerusalem surviving 701.',
+    ['isaiah-call', 'samaria-falls', 'sennacherib', 'lachish']),
+
+  theme('jeremiah', 'Jeremiah', 'life', 'Jeremiah 1–52',
+    'Forty years telling a city it will fall and that resistance is pointless — imprisoned, thrown into a cistern, and finally proved right, which helped nobody.',
+    ['josiah-reform', 'megiddo-josiah', 'carchemish', 'jeremiah', 'first-deportation', 'jerusalem-falls']),
+
+  theme('daniel', 'Daniel', 'life', 'Daniel 1–12',
+    'Taken as a teenager in the first deportation and still at court seventy years later under a different empire. Court tales and visions, set in the exile whatever date the book itself was written.',
+    ['daniel-taken', 'daniel-statue', 'daniel-furnace', 'daniel-madness', 'daniel-writing',
+     'daniel-lions', 'daniel-visions']),
+
+  theme('esther', 'Esther', 'life', 'Esther 1–10',
+    'The one book in the canon that never mentions God. A queen who has concealed who she is decides, at the last possible moment, not to stay quiet.',
+    ['esther-vashti', 'esther', 'esther-haman', 'esther-purim']),
+
+  theme('john-baptist', 'John the Baptist', 'life', 'Luke 1; Mark 1–6',
+    'Six months older than his cousin, and the one firm chronological peg in the Gospels — Luke dates his preaching to the fifteenth year of Tiberius. Killed at a fortress Josephus names.',
+    ['john-born', 'john-preaching', 'baptism', 'john-death']),
 
   theme('jesus', 'Jesus', 'life', 'The Gospels',
     'From a birth placed before Herod’s death in 4 BC to an execution dated either AD 30 or 33 — a life whose start and end are both approximate.',

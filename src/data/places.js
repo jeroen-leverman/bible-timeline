@@ -114,6 +114,10 @@ export const PLACES = [
   P('mahanaim', 'Mahanaim', 32.2200, 35.6700, 'disputed'),
   P('jabesh-gilead', 'Jabesh Gilead', 32.4400, 35.6800, 'disputed'),
   P('rabbah', 'Rabbah of the Ammonites', 31.9539, 35.9106, 'secure', { modern: 'Amman, Jordan' }),
+  P('machaerus', 'Machaerus', 31.5661, 35.6250, 'secure', {
+    modern: 'Mukawir, Jordan',
+    note: 'Herod Antipas’s fortress east of the Dead Sea. Josephus names it as the place John the Baptist was imprisoned and executed.',
+  }),
   P('petra', 'Sela / Petra (Edom)', 30.3285, 35.4444, 'secure', { modern: 'Petra, Jordan' }),
   P('beth-shan', 'Beth Shan', 32.5031, 35.5031, 'secure' ),
   P('jezreel', 'Jezreel', 32.5556, 35.3306, 'secure'),

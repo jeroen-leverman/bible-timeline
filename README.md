@@ -4,7 +4,7 @@ An interactive timeline and historical map of events described in the Bible, fro
 Genesis through Revelation — including the period between the testaments, because the
 New Testament opens in a world that period created.
 
-**138 events · 141 places · 35 mapped routes · 15 curated threads**
+**157 events · 142 places · 37 mapped routes · 22 curated threads**
 
 ## Lives and threads
 
@@ -12,9 +12,10 @@ An era answers *when*. An event type answers *what kind*. A theme answers *whose
 is this* — it gathers one life, or one long argument, so the timeline can be read as that
 story instead of the whole sweep.
 
-Twelve lives — Noah, Abraham, Jacob, Joseph, Moses, Joshua, David, Solomon, Elijah and
-Elisha, Jesus, Peter, Paul — and three threads that cut across eras: **The Temple** (a
-tent, two buildings and a ruin), **Exile and return**, and **The covenants**.
+Nineteen lives — Noah, Abraham, Jacob, Joseph, Moses, Joshua, Ruth, Samuel, David,
+Solomon, Elijah and Elisha, Isaiah, Jeremiah, Daniel, Esther, John the Baptist, Jesus,
+Peter, Paul — and three threads that cut across eras: **The Temple** (a tent, two
+buildings and a ruin), **Exile and return**, and **The covenants**.
 
 Noah is the instructive one. His seven events carry no dates at all, and no location
 until the ark grounds on the mountains of Ararat — so his life reads as a sequence
@@ -23,6 +24,9 @@ without a chronology, which is exactly what Genesis gives.
 Themes are curations rather than categories: an event can sit in several, and plenty sit
 in none. Event ids are validated on load, so a typo fails loudly instead of quietly
 shortening someone's life.
+
+Theme and era are mutually exclusive, since "the life of Paul" filtered to "the
+patriarchs" is an empty screen. Search and event type still compose on top of a theme.
 
 ## The idea
 
@@ -91,6 +95,19 @@ npm run preview   # serve the production build
 Pushing to `main` builds and publishes to GitHub Pages via
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The Vite `base` is `./`,
 so the build works from any path without configuration.
+
+## On other timelines
+
+[BibleHub's timeline](https://biblehub.com/timeline/) is the closest widely used
+reference, and a useful cross-check: its traditional anchors — a 1446 BC Exodus, the
+temple begun in 966 BC — are exactly the ones this atlas uses for its *traditional*
+reading, arrived at independently. It is also denser, running to several hundred entries.
+
+Two things it does not do, which are the reason this project exists. It commits to a
+single conservative chronology without showing where scholarship disagrees, and it is a
+list rather than a map, so it cannot show that Abraham's journey is 1,500 miles or that
+Paul's last voyage went the wrong way round Crete. No content has been copied from it;
+dates and scripture references are facts, and the cross-check was only ever a check.
 
 ## Credits
 
