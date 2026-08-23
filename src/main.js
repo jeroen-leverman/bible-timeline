@@ -34,7 +34,7 @@ app.innerHTML = `
     </nav>
     <div class="top-actions">
       <button class="icon-button mobile-only" id="mobile-filters" aria-label="Open filters">${ICONS.layers}</button>
-      <button class="method-button" id="method-button"><span>About this atlas</span><span aria-hidden="true">↗</span></button>
+      <button class="method-button" id="method-button" aria-label="About this atlas"><span>About this atlas</span><span aria-hidden="true">↗</span></button>
     </div>
   </header>
 
@@ -138,6 +138,16 @@ app.innerHTML = `
       <div><span>03</span><h3>Routes are interpretive</h3><p>Lines connect the named sequence of places; they do not claim to reconstruct every ancient road.</p></div>
       <div><span>04</span><h3>Genealogies telescope</h3><p>Generation gaps are disclosed: “fathered” can refer to a later descendant rather than an immediate son.</p></div>
     </div>
+    <section class="source-policy" aria-labelledby="source-policy-title">
+      <p class="eyebrow">Source policy</p>
+      <h3 id="source-policy-title">Research independently. Attribute every dataset.</h3>
+      <p>Other atlases can reveal a topic worth investigating, but their prose, hand-curated databases, and interface are not copied here. Biblical claims are checked against the cited passages. External facts and coordinates are traced to their original sources, licensed, and attributed.</p>
+      <div class="source-links" aria-label="Open source candidates">
+        <a href="https://www.openbible.info/geo/" target="_blank" rel="noreferrer">OpenBible.info <span>CC BY 4.0</span></a>
+        <a href="https://pleiades.stoa.org/" target="_blank" rel="noreferrer">Pleiades <span>CC BY 3.0</span></a>
+        <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap <span>ODbL</span></a>
+      </div>
+    </section>
     <p class="dialog-footnote">The basemap shows modern coastlines and terrain with present-day labels removed, so the ancient names stand on their own. It does not depict ancient political boundaries.</p>
   </dialog>
   <div class="mobile-scrim" id="mobile-scrim"></div>

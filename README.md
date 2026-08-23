@@ -155,6 +155,21 @@ npm run fetch:wikipedia   # extracts, images and licence checks
 Both scripts resume: anything already fetched is skipped, so an interrupted run can be
 restarted without redoing the work.
 
+## Source and reuse policy
+
+Another atlas can be a useful **research lead**, but it is not automatically a reusable
+source. Bible History Explorer does not copy another site's prose, hand-curated database,
+or interface. A person, place, event, or relationship noticed elsewhere must be verified
+against the cited biblical passage and, when relevant, an original historical or
+archaeological source before it is added here.
+
+External datasets are imported from their original publishers only when their licences
+permit reuse, with attribution kept alongside the data. Useful candidates include
+[OpenBible.info's geocoding data](https://www.openbible.info/geo/) (CC BY 4.0),
+[Pleiades](https://pleiades.stoa.org/) (CC BY 3.0), and
+[OpenStreetMap](https://www.openstreetmap.org/copyright) (ODbL). Discovery through a
+third-party atlas never replaces checking the original source and its current licence.
+
 ## Running locally
 
 ```bash
