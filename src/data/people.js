@@ -22,9 +22,20 @@
  * `gen` is the generation index used to lay the tree out, counting Adam as 1.
  * `major` marks figures who carry a full card; the rest are genealogical links and
  * collapse into a run.
+ * `reigns` records distinct royal offices so an accession can link back to its own
+ * timeline event instead of turning a person's whole life into one undifferentiated reign.
  */
 
-const P = (id, name, o) => ({ id, name, spouses: [], scripture: [], events: [], major: false, ...o })
+const P = (id, name, o) => ({
+  id,
+  name,
+  spouses: [],
+  scripture: [],
+  events: [],
+  reigns: [],
+  major: false,
+  ...o,
+})
 
 export const PEOPLE = [
   // ---- Genesis 5: Adam to Noah ------------------------------------------
@@ -221,7 +232,14 @@ const ROYAL_LINE = [
 // ---- the house of David --------------------------------------------------
 const DAVIDIC = [
   P('david', 'David', { gen: 33, born: -1040, died: -970, age: 70, dating: 'text', era: 'united-monarchy', major: true, father: 'jesse', spouses: ['abigail', 'bathsheba'],
-    scripture: ['1 Samuel 16 – 1 Kings 2'], events: ['david-goliath', 'david-king', 'jerusalem-captured', 'bathsheba'],
+    scripture: ['1 Samuel 16 – 1 Kings 2'],
+    events: ['samuel-anoints-david', 'david-goliath', 'david-flees', 'david-king', 'david-king-israel',
+      'jerusalem-captured', 'ark-jerusalem', 'davidic-covenant', 'bathsheba', 'absalom'],
+    reigns: [
+      { title: 'King of Judah', place: 'Hebron', from: -1010, to: -1003, event: 'david-king' },
+      { title: 'King over Israel and Judah', place: 'Hebron → Jerusalem', from: -1003, to: -970, event: 'david-king-israel' },
+    ],
+    reignNote: '2 Samuel records two accessions: Judah first, then all Israel.',
     bio: 'Shepherd, outlaw, king, adulterer, and refugee from his own son. The most fully told life in the Hebrew Bible and the least flattering.' }),
   P('abigail', 'Abigail', { gen: 33, dating: 'unknown', era: 'united-monarchy', major: true, spouses: ['david'],
     scripture: ['1 Samuel 25'], events: ['abigail-nabal', 'abigail-david'],
@@ -234,9 +252,13 @@ const DAVIDIC = [
     bio: 'Kills the brother who raped his sister, is exiled, returns, and takes the kingdom from his father before dying in a forest.' }),
   P('solomon', 'Solomon', { gen: 34, born: -991, died: -931, dating: 'derived', era: 'united-monarchy', major: true, father: 'david', mother: 'bathsheba',
     scripture: ['1 Kings 1–11'], events: ['solomon-king', 'first-temple', 'solomon-apostasy'],
+    reigns: [{ title: 'King over Israel and Judah', place: 'Jerusalem', from: -970, to: -931, event: 'solomon-king' }],
+    reignNote: 'Kings and Chronicles present the same reign with different emphases: royal policy in Kings, temple and worship in Chronicles.',
     bio: 'Asks for wisdom rather than long life or riches, builds the temple, and leaves a kingdom that splits the moment he dies.' }),
   P('rehoboam', 'Rehoboam', { gen: 35, born: -972, died: -913, dating: 'inferred', era: 'divided-kingdom', major: true, father: 'solomon',
     scripture: ['1 Kings 12'], events: ['division', 'shishak'],
+    reigns: [{ title: 'King of Judah', place: 'Jerusalem', from: -931, to: -913, event: 'division' }],
+    reignNote: '1 Kings 12 and 2 Chronicles 10 place his accession at the division of the united kingdom.',
     bio: 'Takes the advice of the young men over the elders, refuses to lighten the forced labour, and loses ten tribes in an afternoon.' }),
   P('abijah', 'Abijah', { gen: 36, dating: 'inferred', era: 'divided-kingdom', father: 'rehoboam', scripture: ['1 Kings 15:1–8'], bio: 'Three years, and a war with Jeroboam.' }),
   P('asa', 'Asa', { gen: 37, dating: 'inferred', era: 'divided-kingdom', father: 'abijah', scripture: ['1 Kings 15:9–24'], bio: 'A long reign and a thorough purge of the shrines, including deposing his own grandmother.' }),

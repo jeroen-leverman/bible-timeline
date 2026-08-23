@@ -100,8 +100,8 @@ export const THEMES = [
 
   theme('david', 'David', 'life', '1 Samuel 16 – 1 Kings 2',
     'Shepherd, outlaw, king, adulterer, refugee from his own son. The most fully told life in the Hebrew Bible, and the least flattering.',
-    ['samuel-anoints-david', 'david-goliath', 'david-flees', 'gilboa', 'david-king', 'jerusalem-captured',
-     'ark-jerusalem', 'davidic-covenant', 'bathsheba', 'absalom']),
+    ['samuel-anoints-david', 'david-goliath', 'david-flees', 'gilboa', 'david-king', 'david-king-israel',
+     'jerusalem-captured', 'ark-jerusalem', 'davidic-covenant', 'bathsheba', 'absalom']),
 
   theme('abigail', 'Abigail', 'life', '1 Samuel 25',
     'Rides down a ravine to intercept four hundred armed men on their way to kill her household, and talks David out of it in the longest speech any woman is given in Samuel. He thanks her for stopping him.',

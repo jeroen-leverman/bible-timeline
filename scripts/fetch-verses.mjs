@@ -17,7 +17,7 @@ import { EVENTS } from '../src/data/events.js'
 import { PEOPLE } from '../src/data/people.js'
 
 const API = 'https://bible-api.com'
-const UA = 'ScriptureAtlas/1.0 (https://github.com/jeroen-leverman/bible-timeline)'
+const UA = 'BibleHistoryExplorer/1.0 (https://github.com/jeroen-leverman/bible-timeline)'
 const TRANSLATIONS = ['web', 'kjv']
 const MAX_VERSES = 20
 const OUT = new URL('../src/data/verses.json', import.meta.url)

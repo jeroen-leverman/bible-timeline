@@ -1,0 +1,16 @@
+{
+  "name": "Bible History Explorer",
+  "short_name": "Bible Explorer",
+  "description": "An interactive historical map, timeline, and family tree of biblical events.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f0e5",
+  "theme_color": "#102a22",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

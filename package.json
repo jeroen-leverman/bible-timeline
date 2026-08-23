@@ -1,9 +1,9 @@
 {
-  "name": "bible-timeline",
+  "name": "bible-history-explorer",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "An interactive timeline and historical map of events in the Bible",
+  "description": "An interactive historical map, timeline, and family tree of biblical events",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

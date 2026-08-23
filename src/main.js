@@ -6,6 +6,7 @@ import { PLACES, PLACE_BY_ID, CERTAINTY_LABEL } from './data/places.js'
 import { EVENTS, EVENT_BY_ID, DATE_CONFIDENCE } from './data/events.js'
 import { THEMES, THEME_BY_ID, THEME_EVENT_SETS, THEME_KIND_LABEL } from './data/themes.js'
 import { territoriesAt } from './data/territories.js'
+import { BOOKS, BOOK_GROUP_LABEL, booksForReferences } from './data/books.js'
 import { renderPassageInto, escapeHtml } from './verses.js'
 import { createTree } from './tree.js'
 
@@ -23,9 +24,9 @@ const app = document.querySelector('#app')
 
 app.innerHTML = `
   <header class="topbar">
-    <a class="brand" href="#" aria-label="Scripture Atlas home">
+    <a class="brand" href="#" aria-label="Bible History Explorer home">
       <span class="brand-mark">${ICONS.compass}</span>
-      <span><strong>Scripture Atlas</strong><small>Biblical history in place & time</small></span>
+      <span><strong>Bible History Explorer</strong><small>History, scripture &amp; place</small></span>
     </a>
     <nav class="view-tabs" role="tablist" aria-label="View">
       <button role="tab" data-view="atlas" aria-selected="true" class="on">Atlas</button>
@@ -55,6 +56,16 @@ app.innerHTML = `
         <section class="filter-section">
           <div class="section-heading"><h2>Historical era</h2><button class="text-button" id="clear-era">All eras</button></div>
           <div class="era-list" id="era-list"></div>
+        </section>
+
+        <section class="filter-section book-filter-section">
+          <div class="section-heading"><h2>Biblical book</h2><button class="text-button" id="clear-book">All books</button></div>
+          <label class="book-select" for="book-filter">
+            ${ICONS.book}
+            <select id="book-filter" aria-label="Filter events by biblical book"></select>
+            <span aria-hidden="true">⌄</span>
+          </label>
+          <p class="book-filter-summary" id="book-filter-summary" hidden></p>
         </section>
 
         <section class="filter-section">
@@ -134,6 +145,7 @@ app.innerHTML = `
 
 const state = {
   selectedEra: null,
+  selectedBook: null,
   selectedTheme: null,
   selectedCategories: new Set(CATEGORIES.map(({ id }) => id)),
   selectedEvent: (EVENTS.find((item) => item.featured) || EVENTS[0]).id,
@@ -144,6 +156,8 @@ const state = {
   openRef: null,
   playing: false,
 }
+
+const EVENT_BOOKS = new Map(EVENTS.map((item) => [item.id, booksForReferences(item.scripture)]))
 
 const map = L.map('map', {
   center: [32.4, 35.2],
@@ -310,6 +324,7 @@ function filteredEvents() {
   const query = state.query.trim().toLowerCase()
   return EVENTS.filter((item) => {
     if (state.selectedEra && item.era !== state.selectedEra) return false
+    if (state.selectedBook && !EVENT_BOOKS.get(item.id).includes(state.selectedBook)) return false
     if (state.selectedTheme && !THEME_EVENT_SETS[state.selectedTheme].has(item.id)) return false
     if (!state.selectedCategories.has(item.category)) return false
     if (!query) return true
@@ -319,6 +334,29 @@ function filteredEvents() {
       .toLowerCase()
       .includes(query)
   })
+}
+
+function renderBookFilter() {
+  const select = document.querySelector('#book-filter')
+  const represented = BOOKS.map((book) => ({
+    ...book,
+    count: EVENTS.filter((item) => EVENT_BOOKS.get(item.id).includes(book.name)).length,
+  })).filter(({ count }) => count > 0)
+
+  select.innerHTML = `<option value="">All represented books</option>${Object.keys(BOOK_GROUP_LABEL).map((group) => {
+    const books = represented.filter((book) => book.group === group)
+    if (!books.length) return ''
+    return `<optgroup label="${BOOK_GROUP_LABEL[group]}">${books.map((book) =>
+      `<option value="${escapeHtml(book.name)}">${escapeHtml(book.name)} · ${book.count}</option>`).join('')}</optgroup>`
+  }).join('')}`
+  select.value = state.selectedBook ?? ''
+
+  const summary = document.querySelector('#book-filter-summary')
+  summary.hidden = !state.selectedBook
+  if (state.selectedBook) {
+    const count = filteredEvents().length
+    summary.textContent = `${count} ${count === 1 ? 'timeline stop' : 'timeline stops'} · related people highlighted in the tree`
+  }
 }
 
 function renderEraList() {
@@ -495,6 +533,7 @@ function renderEventCard() {
   const era = ERA_BY_ID[item.era]
   const category = CATEGORY_BY_ID[item.category]
   const placeNames = item.places.map((id) => PLACE_BY_ID[id]?.name).filter(Boolean)
+  const books = EVENT_BOOKS.get(item.id)
   card.innerHTML = `
     <div class="event-card-top">
       <span class="event-category" style="--category-color:${category.color}"><i></i>${category.name}</span>
@@ -507,6 +546,8 @@ function renderEventCard() {
       <span class="date-confidence ${confidenceClass(item.dateConfidence)}">${DATE_CONFIDENCE[item.dateConfidence]}</span>
     </div>
     <p class="event-summary">${item.summary}</p>
+    ${books.length ? `<div class="event-books" aria-label="Biblical books">${books.map((book) =>
+      `<span>${escapeHtml(book)}</span>`).join('')}</div>` : ''}
     <div class="place-sequence">${placeNames.map((name, index) => `<span>${name}</span>${index < placeNames.length - 1 ? '<i>→</i>' : ''}`).join('')}</div>
     ${item.note ? `<p class="event-note"><strong>Historical note</strong>${item.note}</p>` : ''}
     ${item.anchor ? `<p class="event-note event-anchor"><strong>Outside evidence</strong>${item.anchor}</p>` : ''}
@@ -569,6 +610,7 @@ function renderStatus() {
 }
 
 function render() {
+  renderBookFilter()
   renderEraList()
   renderThemes()
   renderCategories()
@@ -676,7 +718,10 @@ function setView(view) {
     b.classList.toggle('on', on)
     b.setAttribute('aria-selected', String(on))
   })
-  if (isTree) tree.show()
+  if (isTree) {
+    tree.setBook(state.selectedBook)
+    tree.show()
+  }
   // Leaflet cannot measure a hidden container, so the map is re-measured on return.
   else requestAnimationFrame(() => map.invalidateSize())
 }
@@ -689,6 +734,20 @@ document.querySelector('.view-tabs').addEventListener('click', (event) => {
 document.querySelector('#clear-era').addEventListener('click', () => {
   state.selectedEra = null
   ensureSelectedEvent()
+  render()
+  fitFilteredEvents()
+})
+document.querySelector('#book-filter').addEventListener('change', (event) => {
+  state.selectedBook = event.target.value || null
+  ensureSelectedEvent()
+  tree.setBook(state.selectedBook)
+  render()
+  fitFilteredEvents()
+})
+document.querySelector('#clear-book').addEventListener('click', () => {
+  state.selectedBook = null
+  ensureSelectedEvent()
+  tree.setBook(null)
   render()
   fitFilteredEvents()
 })

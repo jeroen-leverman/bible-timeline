@@ -14,6 +14,7 @@
 import { PEOPLE, PERSON_BY_ID, DATING_LABEL, childrenOf } from './data/people.js'
 import { ERA_BY_ID } from './data/eras.js'
 import { EVENT_BY_ID } from './data/events.js'
+import { BOOK_BY_NAME, booksForReferences } from './data/books.js'
 import { renderPassageInto, escapeHtml } from './verses.js'
 
 const fmtYear = (y) => (y < 0 ? `${Math.abs(y)} BC` : `AD ${y}`)
@@ -26,6 +27,15 @@ function lifeLine(p) {
   return 'no dates given'
 }
 
+function yearSpan(from, to) {
+  return `${fmtYear(from)} – ${fmtYear(to)}`
+}
+
+const PERSON_BOOKS = new Map(PEOPLE.map((person) => {
+  const eventReferences = person.events.flatMap((id) => EVENT_BY_ID[id]?.scripture ?? [])
+  return [person.id, new Set(booksForReferences([...person.scripture, ...eventReferences]))]
+}))
+
 export function createTree(root, { onShowInAtlas }) {
   const state = {
     selected: 'abraham',
@@ -34,6 +44,7 @@ export function createTree(root, { onShowInAtlas }) {
     trace: true,
     focus: false,
     query: '',
+    book: null,
   }
 
   const jumpPeople = ['adam', 'noah', 'abraham', 'moses', 'david', 'jesus']
@@ -199,10 +210,13 @@ export function createTree(root, { onShowInAtlas }) {
 
   function cardHtml(p) {
     const era = ERA_BY_ID[p.era]
-    return `<button class="tree-card${p.major ? ' is-major' : ''}${state.selected === p.id ? ' is-selected' : ''}"
+    const royalRole = p.reigns.at(-1)?.title
+    const bookMatch = state.book && PERSON_BOOKS.get(p.id)?.has(state.book)
+    return `<button class="tree-card${p.major ? ' is-major' : ''}${state.selected === p.id ? ' is-selected' : ''}${bookMatch ? ' is-book-match' : ''}"
                     data-person="${p.id}" style="--era:${era?.color ?? '#888'}"
                     aria-pressed="${state.selected === p.id}">
       <span class="tc-name">${escapeHtml(p.name)}</span>
+      ${royalRole ? `<span class="tc-role">${escapeHtml(royalRole)}</span>` : ''}
       <span class="tc-life">${escapeHtml(lifeLine(p))}</span>
     </button>`
   }
@@ -242,6 +256,7 @@ export function createTree(root, { onShowInAtlas }) {
     const { ancestors, descendants, immediate } = traceSets(state.selected)
     const traced = new Set([state.selected, ...ancestors, ...descendants, ...immediate])
     canvas.classList.toggle('is-tracing', state.trace)
+    canvas.classList.toggle('is-book-filtering', Boolean(state.book))
 
     rowsEl.querySelectorAll('.tree-card').forEach((card) => {
       const id = card.dataset.person
@@ -249,6 +264,7 @@ export function createTree(root, { onShowInAtlas }) {
       card.classList.toggle('is-selected', selected)
       card.classList.toggle('is-lineage', ancestors.has(id) || descendants.has(id))
       card.classList.toggle('is-immediate', immediate.has(id))
+      card.classList.toggle('is-book-match', Boolean(state.book && PERSON_BOOKS.get(id)?.has(state.book)))
       card.setAttribute('aria-pressed', String(selected))
     })
 
@@ -401,7 +417,12 @@ export function createTree(root, { onShowInAtlas }) {
   function updateToolbar() {
     const people = visiblePeople()
     const p = PERSON_BY_ID[state.selected]
-    contextEl.textContent = state.focus
+    const matchingPeople = state.book
+      ? people.filter((person) => PERSON_BOOKS.get(person.id)?.has(state.book)).length
+      : 0
+    contextEl.textContent = state.book
+      ? `${matchingPeople} ${matchingPeople === 1 ? 'person' : 'people'} connected to ${state.book}${state.trace ? ` · tracing ${p?.name ?? ''}` : ''}`
+      : state.focus
       ? `${people.length} close relatives around ${p?.name ?? 'the selection'}`
       : `${PEOPLE.length} people · ${gens.length} represented generations${state.trace ? ` · tracing ${p?.name ?? ''}` : ''}`
     const traceButton = root.querySelector('[data-tree-action="trace"]')
@@ -458,7 +479,9 @@ export function createTree(root, { onShowInAtlas }) {
     const mother = p.mother && PERSON_BY_ID[p.mother]
     const spouses = p.spouses.map((id) => PERSON_BY_ID[id]).filter(Boolean)
     const kids = childrenOf(p.id)
-    const events = p.events.map((id) => EVENT_BY_ID[id]).filter(Boolean)
+    const reignEventIds = new Set(p.reigns.map(({ event }) => event).filter(Boolean))
+    const events = p.events.map((id) => EVENT_BY_ID[id]).filter((event) => event && !reignEventIds.has(event.id))
+    const books = [...(PERSON_BOOKS.get(p.id) ?? [])]
 
     const rel = (label, list) => list.length
       ? `<div class="td-rel"><span>${label}</span><div>${list.map((x) =>
@@ -478,6 +501,14 @@ export function createTree(root, { onShowInAtlas }) {
       ${p.age && (p.born != null || p.died != null) ? `<p class="td-age">Scripture gives an age of ${p.age} years.</p>` : ''}
       <p class="td-bio">${escapeHtml(p.bio)}</p>
       ${p.note ? `<p class="td-note"><strong>Note</strong>${escapeHtml(p.note)}</p>` : ''}
+      ${p.reigns.length ? `<div class="td-section td-office">
+        <span class="td-label">Royal office</span>
+        <div class="td-reigns">${p.reigns.map((reign) => `<button class="td-reign" data-event="${reign.event}">
+          <span><strong>${escapeHtml(reign.title)}</strong><small>${escapeHtml(reign.place)}</small></span>
+          <b>${escapeHtml(yearSpan(reign.from, reign.to))}</b>
+        </button>`).join('')}</div>
+        ${p.reignNote ? `<p>${escapeHtml(p.reignNote)}</p>` : ''}
+      </div>` : ''}
       <div class="td-rels">
         ${rel('Named parent / ancestor', [father, mother].filter(Boolean))}
         ${rel(spouses.length > 1 ? 'Spouses' : 'Spouse', spouses)}
@@ -485,6 +516,8 @@ export function createTree(root, { onShowInAtlas }) {
       </div>
       <div class="td-section">
         <span class="td-label">Scripture</span>
+        ${books.length ? `<div class="td-books">${books.map((book) =>
+          `<span class="${state.book === book ? 'is-active' : ''}">${escapeHtml(book)}</span>`).join('')}</div>` : ''}
         <div class="scripture-refs">${p.scripture.map((r) =>
           `<button class="ref-btn${state.openRef === r ? ' open' : ''}" data-ref="${escapeHtml(r)}">${escapeHtml(r)}</button>`).join('')}</div>
         <div class="passage" id="tree-passage"></div>
@@ -574,6 +607,26 @@ export function createTree(root, { onShowInAtlas }) {
 
   let drawn = false
   let initiallyCentered = false
+
+  function setBook(book) {
+    state.book = BOOK_BY_NAME[book] ? book : null
+    if (state.book && !PERSON_BOOKS.get(state.selected)?.has(state.book)) {
+      const matches = PEOPLE.filter((person) => PERSON_BOOKS.get(person.id)?.has(state.book))
+      state.selected = (matches.find((person) => person.major) ?? matches[0] ?? PERSON_BY_ID[state.selected]).id
+      state.openRef = null
+    }
+    if (!drawn) return
+    if (state.focus) {
+      renderRows()
+      drawLinks()
+    } else {
+      refreshHighlights()
+    }
+    renderDetail()
+    updateToolbar()
+    requestAnimationFrame(() => centerPerson(state.selected))
+  }
+
   function show() {
     if (!drawn) { renderRows(); renderDetail(); updateToolbar(); drawn = true }
     // Drawn synchronously first: the connectors are the whole point of the view, and
@@ -593,5 +646,5 @@ export function createTree(root, { onShowInAtlas }) {
 
   new ResizeObserver(() => { if (drawn) drawLinks() }).observe(root)
 
-  return { show, select: (id) => selectPerson(id) }
+  return { show, select: (id) => selectPerson(id), setBook }
 }

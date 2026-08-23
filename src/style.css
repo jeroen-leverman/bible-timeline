@@ -26,7 +26,7 @@
 
 html, body, #app { width: 100%; height: 100%; margin: 0; overflow: hidden; }
 body { position: fixed; inset: 0; min-width: 320px; }
-button, input { font: inherit; }
+button, input, select { font: inherit; }
 button { color: inherit; }
 svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -85,6 +85,13 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
 .era-option strong { font-family: 'EB Garamond', Georgia, serif; font-size: 13px; font-weight: 600; }
 .era-option small { margin-top: 1px; color: #8a948e; font-size: 8px; }
 .era-option b { display: grid; width: 20px; height: 20px; place-items: center; color: #829087; background: rgba(31,54,44,.055); border-radius: 50%; font-size: 8px; }
+
+.book-select { position: relative; height: 43px; display: flex; align-items: center; gap: 9px; padding: 0 11px; color: #637168; background: #fffdf7; border: 1px solid var(--line); border-radius: 4px; box-shadow: 0 3px 14px rgba(31,54,44,.04); }
+.book-select:focus-within { border-color: rgba(135,106,53,.5); box-shadow: 0 0 0 3px rgba(183,135,59,.1); }
+.book-select svg { width: 15px; flex: 0 0 auto; color: #98743b; }
+.book-select select { width: 100%; min-width: 0; appearance: none; color: var(--ink); background: transparent; border: 0; outline: 0; font-size: 11px; cursor: pointer; }
+.book-select > span { color: #9b8a6c; font-size: 12px; pointer-events: none; }
+.book-filter-summary { margin: 7px 2px 0; color: #7d887f; font-family: 'EB Garamond', Georgia, serif; font-size: 10px; line-height: 1.35; }
 
 /* Lives & threads — same affordance as the era list, with a kind marker instead of a
    colour dot, since a theme cuts across eras rather than belonging to one. */
@@ -151,6 +158,8 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
 .date-confidence.traditional { color: #806330; background: rgba(128,99,48,.1); }
 .date-confidence.undated { color: #5c6b76; background: rgba(92,107,118,.1); }
 .event-summary { margin: 13px 0; color: #536158; font-family: 'EB Garamond', Georgia, serif; font-size: 14px; line-height: 1.45; }
+.event-books { display: flex; flex-wrap: wrap; gap: 4px; margin: -4px 0 10px; }
+.event-books span { padding: 3px 6px; color: #7c6234; background: rgba(183,135,59,.09); border: 1px solid rgba(137,106,53,.16); border-radius: 99px; font-size: 7px; font-weight: 700; letter-spacing: .055em; text-transform: uppercase; }
 .place-sequence { display: flex; align-items: center; gap: 5px; overflow: hidden; margin: 11px 0; padding: 8px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: #5f6e65; font-size: 8px; white-space: nowrap; }
 .place-sequence span { max-width: 92px; overflow: hidden; text-overflow: ellipsis; }
 .place-sequence i { color: #b4a47e; font-style: normal; }
@@ -285,12 +294,16 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
 .tree-card.is-lineage { border-color: color-mix(in srgb, var(--era) 58%, #9b8d72); }
 .tree-card.is-immediate { box-shadow: 0 0 0 2px rgba(183,135,59,.18), 0 3px 12px rgba(31,54,44,.08); }
 .tree-canvas.is-tracing .tree-card:not(.is-selected):not(.is-lineage):not(.is-immediate) { opacity: .28; filter: saturate(.25); }
+.tree-canvas.is-book-filtering .tree-card:not(.is-book-match):not(.is-selected) { opacity: .16; filter: saturate(.18); }
+.tree-canvas.is-book-filtering .tree-card.is-book-match { opacity: 1; filter: none; box-shadow: 0 0 0 2px rgba(183,135,59,.2), 0 3px 12px rgba(31,54,44,.08); }
 .tree-card.is-selected { z-index: 2; opacity: 1 !important; filter: none !important; background: var(--forest); border-color: var(--forest); box-shadow: 0 0 0 3px rgba(183,135,59,.26), 0 6px 20px rgba(16,42,34,.27); }
-.tc-name, .tc-life { display: block; }
+.tc-name, .tc-role, .tc-life { display: block; }
 .tc-name { color: var(--ink); font-family: 'EB Garamond', Georgia, serif; font-size: 13px; font-weight: 600; white-space: nowrap; }
 .tree-card.is-major .tc-name { font-size: 14px; }
+.tc-role { margin-top: 1px; color: var(--era); font-size: 7px; font-weight: 700; letter-spacing: .055em; text-transform: uppercase; white-space: nowrap; }
 .tc-life { margin-top: 1px; color: #8b958e; font-size: 8px; white-space: nowrap; }
 .tree-card.is-selected .tc-name { color: #f4e7c9; }
+.tree-card.is-selected .tc-role { color: #d9b66f; }
 .tree-card.is-selected .tc-life { color: rgba(244,231,201,.6); }
 
 .tree-detail { min-height: 0; overflow-y: auto; padding: 26px 24px 40px; background: var(--paper-light); border-left: 1px solid var(--line); }
@@ -319,7 +332,19 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
 
 .td-section { padding-top: 13px; }
 .td-label { display: block; margin-bottom: 5px; color: #919b95; font-size: 7px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.td-books { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+.td-books span { padding: 3px 6px; color: #68766e; background: rgba(31,54,44,.05); border: 1px solid rgba(31,54,44,.1); border-radius: 99px; font-size: 7px; font-weight: 700; letter-spacing: .055em; text-transform: uppercase; }
+.td-books span.is-active { color: #7c5c27; background: rgba(183,135,59,.12); border-color: rgba(137,106,53,.3); }
 .td-event { font-family: 'DM Sans', sans-serif !important; font-size: 9px !important; }
+.td-office { margin: 2px 0 13px; padding: 11px 0 13px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.td-reigns { display: flex; flex-direction: column; gap: 5px; }
+.td-reign { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 9px; color: #536158; text-align: left; background: rgba(183,135,59,.07); border: 1px solid rgba(137,106,53,.2); border-radius: 3px; cursor: pointer; }
+.td-reign:hover { border-color: var(--gold); background: rgba(183,135,59,.12); }
+.td-reign > span { min-width: 0; display: flex; flex-direction: column; }
+.td-reign strong { color: var(--ink); font-family: 'EB Garamond', Georgia, serif; font-size: 12px; font-weight: 600; }
+.td-reign small { margin-top: 1px; color: #8b958e; font-size: 7px; letter-spacing: .07em; text-transform: uppercase; }
+.td-reign b { flex: 0 0 auto; color: #8b6d37; font-family: 'EB Garamond', Georgia, serif; font-size: 10px; font-weight: 600; white-space: nowrap; }
+.td-office > p { margin: 7px 0 0; color: #817864; font-family: 'EB Garamond', Georgia, serif; font-size: 10px; line-height: 1.35; }
 
 @media (max-width: 900px) {
   .tree-shell { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; }
@@ -457,6 +482,7 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
   .tree-card:active, .tree-tool:active, .tree-detail-close:active { transform: scale(.98); }
   .tc-name { font-size: 15px; }
   .tree-card.is-major .tc-name { font-size: 16px; }
+  .tc-role { font-size: 8px; }
   .tc-life { margin-top: 2px; font-size: 9px; }
   .tree-era-break { grid-template-columns: 54px auto 1fr; gap: 8px; min-width: calc(100vw - 20px); margin-top: 5px; }
   .tree-era-break i:first-child { margin-left: 44px; }
@@ -471,7 +497,12 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
   .tree-detail h2 { padding-right: 42px; font-size: 25px; }
   .td-bio { margin: 10px 0; font-size: 13px; }
   .td-link { min-height: 40px; padding: 8px 10px; font-size: 12px; }
+  .td-reign { min-height: 48px; padding: 9px 11px; }
+  .td-reign strong { font-size: 13px; }
+  .td-reign b { font-size: 11px; }
   .ref-btn { min-height: 40px; padding: 8px 10px; font-size: 12px; }
+  .book-select { min-height: 44px; }
+  .book-select select { font-size: 13px; }
   .passage-trans button { min-width: 40px; min-height: 40px; }
   .atlas-shell { display: block; height: calc(100% - 64px); }
   .sidebar { position: absolute; z-index: 1100; top: 64px; bottom: 0; left: 0; width: min(330px, 88vw); transform: translateX(-105%); transition: transform .25s ease; box-shadow: 15px 0 50px rgba(14,35,27,.28); }

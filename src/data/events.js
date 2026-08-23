@@ -611,29 +611,33 @@ export const EVENTS = [
   }),
   event('gilboa', 'Saul dies at Gilboa', -1010, 'united-monarchy', 'battle', ['gilboa', 'beth-shan', 'jabesh-gilead'], {
     dateLabel: 'c. 1010 BC', dateConfidence: 'estimated',
-    scripture: ['1 Samuel 31'],
+    scripture: ['1 Samuel 31', '1 Chronicles 10'],
     summary: 'Defeated by the Philistines, Saul and Jonathan fall on Mount Gilboa.',
   }),
-  event('david-king', 'David becomes king', -1010, 'united-monarchy', 'kingdom', ['hebron', 'jerusalem'], {
-    dateLabel: '1010–970 BC', dateConfidence: 'estimated',
-    scripture: ['2 Samuel 2', '2 Samuel 5'],
-    summary: 'Made king over Judah at Hebron, and seven years later over all Israel.',
-    route: ['hebron', 'jerusalem'],
+  event('david-king', 'David becomes king of Judah', -1010, 'united-monarchy', 'kingdom', ['hebron'], {
+    dateLabel: 'c. 1010 BC', dateConfidence: 'estimated',
+    scripture: ['2 Samuel 2'],
+    summary: 'The people of Judah anoint David at Hebron, where he reigns for seven years and six months.',
+  }),
+  event('david-king-israel', 'David becomes king over all Israel', -1003, 'united-monarchy', 'kingdom', ['hebron'], {
+    dateLabel: 'c. 1003 BC', dateConfidence: 'estimated',
+    scripture: ['2 Samuel 5', '1 Chronicles 11:1–3'],
+    summary: 'The elders of Israel come to Hebron and anoint David; his rule now joins Israel and Judah before he takes Jerusalem as his capital.',
   }),
   event('jerusalem-captured', 'David captures Jerusalem', -1003, 'united-monarchy', 'battle', ['jerusalem'], {
     dateLabel: 'c. 1003 BC', dateConfidence: 'estimated',
-    scripture: ['2 Samuel 5:6–10'],
+    scripture: ['2 Samuel 5:6–10', '1 Chronicles 11:4–9'],
     summary: 'The Jebusite stronghold is taken and made the capital — a city belonging to no tribe, and so to all of them.',
     featured: true,
   }),
   event('ark-jerusalem', 'The ark brought to Jerusalem', -1000, 'united-monarchy', 'temple', ['gibeon', 'jerusalem'], {
     dateLabel: 'c. 1000 BC', dateConfidence: 'estimated',
-    scripture: ['2 Samuel 6'],
+    scripture: ['2 Samuel 6', '1 Chronicles 13', '1 Chronicles 15–16'],
     summary: 'David dances before the ark as it enters the city.',
   }),
   event('davidic-covenant', 'The covenant with David', -995, 'united-monarchy', 'covenant', ['jerusalem'], {
     dateLabel: 'c. 995 BC', dateConfidence: 'estimated',
-    scripture: ['2 Samuel 7'],
+    scripture: ['2 Samuel 7', '1 Chronicles 17'],
     summary: 'David is refused permission to build a temple, and promised an enduring house.',
   }),
   event('bathsheba', 'David, Bathsheba and Nathan', -991, 'united-monarchy', 'prophet', ['jerusalem', 'rabbah'], {
@@ -649,7 +653,7 @@ export const EVENTS = [
   }),
   event('solomon-king', 'Solomon becomes king', -970, 'united-monarchy', 'kingdom', ['jerusalem', 'gibeon'], {
     dateLabel: '970–931 BC', dateConfidence: 'estimated',
-    scripture: ['1 Kings 1–3'],
+    scripture: ['1 Kings 1–3', '1 Chronicles 29:21–25', '2 Chronicles 1'],
     summary: 'Anointed at Gihon, and asking for wisdom to govern rather than long life or riches.',
   }),
   event('solomon-judgment', 'The judgment of Solomon', -968, 'united-monarchy', 'kingdom', ['jerusalem'], {
@@ -659,19 +663,19 @@ export const EVENTS = [
   }),
   event('first-temple', 'The First Temple is built', -966, 'united-monarchy', 'temple', ['temple-mount', 'tyre'], {
     dateLabel: '966–959 BC', dateConfidence: 'estimated',
-    scripture: ['1 Kings 6–8'],
+    scripture: ['1 Kings 6–8', '2 Chronicles 2–5'],
     summary: 'Seven years of building, with Phoenician cedar and craftsmen sent by Hiram of Tyre.',
     featured: true,
     note: 'Solomon’s fourth year, dated c. 966 BC, is the hinge on which the internal chronology of 1 Kings 6:1 turns.',
   }),
   event('temple-dedication', 'The dedication of the Temple', -959, 'united-monarchy', 'temple', ['temple-mount'], {
     dateLabel: '959 BC', dateConfidence: 'estimated',
-    scripture: ['1 Kings 8'],
+    scripture: ['1 Kings 8', '2 Chronicles 6–7'],
     summary: 'The ark is carried in, the cloud fills the house, and Solomon prays a dedication that keeps conceding the building cannot contain God.',
   }),
   event('queen-sheba', 'The queen of Sheba visits', -950, 'united-monarchy', 'kingdom', ['sheba', 'jerusalem'], {
     dateLabel: 'c. 950 BC', dateConfidence: 'estimated',
-    scripture: ['1 Kings 10'],
+    scripture: ['1 Kings 10', '2 Chronicles 9:1–12'],
     summary: 'A southern Arabian monarch arrives with spices, gold and hard questions.',
     route: ['sheba', 'ezion-geber', 'jerusalem'],
   }),
@@ -690,7 +694,7 @@ export const EVENTS = [
   }),
   event('division', 'The kingdom divides', -931, 'divided-kingdom', 'kingdom', ['shechem', 'jerusalem', 'dan', 'bethel'], {
     dateLabel: '931 BC', dateConfidence: 'estimated',
-    scripture: ['1 Kings 12'],
+    scripture: ['1 Kings 12', '2 Chronicles 10'],
     summary: 'Rehoboam refuses to lighten the forced labour and ten tribes secede under Jeroboam. Israel in the north, Judah in the south.',
     featured: true,
   }),
@@ -702,7 +706,7 @@ export const EVENTS = [
   }),
   event('shishak', 'Shishak invades Judah', -925, 'divided-kingdom', 'battle', ['thebes-eg', 'megiddo', 'jerusalem'], {
     dateLabel: '925 BC', dateConfidence: 'anchored',
-    scripture: ['1 Kings 14:25–28'],
+    scripture: ['1 Kings 14:25–28', '2 Chronicles 12'],
     summary: 'The Egyptian pharaoh strips the treasures of the temple and palace.',
     anchor: 'Shoshenq I’s campaign is recorded on the Bubastite Portal at Karnak, listing captured towns — one of the earliest firm synchronisms with the biblical text.',
   }),
@@ -840,7 +844,7 @@ export const EVENTS = [
   }),
   event('sennacherib', 'Sennacherib besieges Jerusalem', -701, 'divided-kingdom', 'battle', ['lachish', 'jerusalem', 'nineveh'], {
     dateLabel: '701 BC', dateConfidence: 'anchored',
-    scripture: ['2 Kings 18–19', 'Isaiah 36–37'],
+    scripture: ['2 Kings 18–19', '2 Chronicles 32', 'Isaiah 36–37'],
     summary: 'Judah’s fortified towns fall and Jerusalem is surrounded, then the Assyrian army withdraws. Hezekiah’s tunnel, cut to secure the water supply, still stands.',
     route: ['nineveh', 'lachish', 'jerusalem'],
     anchor: 'Sennacherib’s prism says he shut Hezekiah up “like a bird in a cage” — and notably does not claim to have taken the city.',
@@ -853,7 +857,7 @@ export const EVENTS = [
   }),
   event('josiah-reform', 'Josiah’s reform and the book of the law', -622, 'divided-kingdom', 'temple', ['temple-mount', 'bethel'], {
     dateLabel: '622 BC', dateConfidence: 'estimated',
-    scripture: ['2 Kings 22–23'],
+    scripture: ['2 Kings 22–23', '2 Chronicles 34–35'],
     summary: 'A scroll found during temple repairs triggers a sweeping purge of shrines and a renewed Passover.',
   }),
   event('nineveh-falls', 'Fall of Nineveh', -612, 'divided-kingdom', 'battle', ['nineveh', 'babylon'], {
@@ -864,7 +868,7 @@ export const EVENTS = [
   }),
   event('megiddo-josiah', 'Josiah killed at Megiddo', -609, 'divided-kingdom', 'battle', ['megiddo', 'jerusalem'], {
     dateLabel: '609 BC', dateConfidence: 'anchored',
-    scripture: ['2 Kings 23:29–30'],
+    scripture: ['2 Kings 23:29–30', '2 Chronicles 35:20–24'],
     summary: 'Judah’s reforming king intercepts Pharaoh Neco marching north, and dies.',
   }),
   event('carchemish', 'Battle of Carchemish', -605, 'divided-kingdom', 'battle', ['carchemish', 'babylon'], {

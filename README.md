@@ -1,14 +1,14 @@
-# Scripture Atlas
+# Bible History Explorer
 
-An interactive timeline and historical map of events described in the Bible, from
+An interactive timeline, family tree, and historical map of events described in the Bible, from
 Genesis through Revelation — including the period between the testaments, because the
 New Testament opens in a world that period created.
 
-**238 events · 149 places · 51 mapped routes · 43 curated threads · 89 people · 378 passages · 9 territories**
+**239 events · 149 places · 50 mapped routes · 43 curated threads · 98 people · 401 passages · 9 territories**
 
 ## The family tree
 
-A second tab traces descent from Adam to Jesus — 89 figures with parents, spouses,
+A second tab traces descent from Adam to Jesus — 98 figures with parents, spouses,
 children, a bio, the scripture that mentions them, and a link into the atlas events
 they appear in. Clicking a name in the tree opens their passage; clicking one of their
 events jumps to the map.
@@ -174,6 +174,12 @@ npm run preview   # serve the production build
 Pushing to `main` builds and publishes to GitHub Pages via
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The Vite `base` is `./`,
 so the build works from any path without configuration.
+
+The production site uses **[biblehistoryexplorer.com](https://biblehistoryexplorer.com/)**.
+Because Pages is deployed with GitHub Actions, the custom domain is configured in the
+repository's Pages settings rather than with a `CNAME` file. The apex DNS records point
+to GitHub Pages, and `www` points to `jeroen-leverman.github.io` so GitHub can redirect it
+to the canonical apex domain.
 
 ## On other timelines
 

@@ -20,7 +20,7 @@ import { writeFileSync, readFileSync, existsSync } from 'node:fs'
 import { PLACES } from '../src/data/places.js'
 
 const API = 'https://en.wikipedia.org/w/api.php'
-const UA = 'ScriptureAtlas/1.0 (https://github.com/jeroen-leverman/bible-timeline; atlas of biblical places)'
+const UA = 'BibleHistoryExplorer/1.0 (https://github.com/jeroen-leverman/bible-timeline; atlas of biblical places)'
 const OUT = new URL('../src/data/wikipedia.json', import.meta.url)
 const MAX_KM = 40            // how far an article may sit from our coordinates
 const DELAY_MS = 180
