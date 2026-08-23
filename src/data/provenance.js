@@ -62,6 +62,12 @@ export const SOURCE_CATALOG = {
     license: 'CC BY 3.0',
     url: 'https://pleiades.stoa.org/',
   },
+  'unesco-world-heritage': {
+    title: 'UNESCO World Heritage Centre',
+    type: 'archaeological-reference',
+    license: 'Page text CC BY-SA 3.0 IGO; citation only',
+    url: 'https://whc.unesco.org/',
+  },
   openstreetmap: {
     title: 'OpenStreetMap',
     type: 'basemap-data',
@@ -71,7 +77,7 @@ export const SOURCE_CATALOG = {
 }
 
 export const PROVENANCE_STATUS = {
-  'primary-cited': 'Primary texts cited',
+  'primary-cited': 'Sources cited',
   partial: 'Bibliography in progress',
   'needs-review': 'Source review needed',
 }
@@ -124,12 +130,12 @@ function manualSources(record) {
   }))
 }
 
-function provenance(kind, status, note, sources) {
+function provenance(kind, status, note, sources, reviewedOn = null) {
   return {
     schemaVersion: PROVENANCE_SCHEMA_VERSION,
     kind,
     status,
-    reviewedOn: null,
+    reviewedOn,
     note,
     sources,
   }
@@ -165,6 +171,7 @@ export function buildEventProvenance(record) {
       ? 'Primary texts are cited; date or historical claims still need complete bibliographic records.'
       : 'Primary texts are cited and the chronology method is disclosed.',
     sources,
+    record.reviewedOn,
   )
 }
 
@@ -197,6 +204,7 @@ export function buildPersonProvenance(record) {
       ? 'Biblical references are cited; external dating or commentary needs a complete citation.'
       : 'Biblical references are cited and the dating method is disclosed.',
     sources,
+    record.reviewedOn,
   )
 }
 
@@ -220,10 +228,11 @@ export function buildPlaceProvenance(record) {
   return provenance(
     'place',
     incomplete ? 'needs-review' : 'primary-cited',
-    incomplete
+    record.sourceReviewNote ?? (incomplete
       ? 'The map records its current certainty judgment, but the identification and coordinates need an original geographic citation.'
-      : 'The place identification and coordinates have a cited geographic source.',
+      : 'The place identification and coordinates have a cited geographic source.'),
     sources,
+    record.reviewedOn,
   )
 }
 
@@ -258,6 +267,9 @@ export function validateProvenanceCollection(records, kind) {
     if (item.kind !== kind) errors.push(`${kind}:${record.id} is labelled ${item.kind}`)
     if (!statuses.has(item.status)) errors.push(`${kind}:${record.id} has invalid status ${item.status}`)
     if (!item.sources?.length) errors.push(`${kind}:${record.id} has no provenance sources`)
+    if (kind === 'place' && item.status === 'primary-cited' && !/^\d{4}-\d{2}-\d{2}$/.test(item.reviewedOn ?? '')) {
+      errors.push(`${kind}:${record.id} has cited geography but no ISO review date`)
+    }
     for (const source of item.sources ?? []) {
       if (!SOURCE_CATALOG[source.sourceId]) errors.push(`${kind}:${record.id} has unknown source ${source.sourceId}`)
       if (!SOURCE_ROLE_LABEL[source.role]) errors.push(`${kind}:${record.id} has invalid role ${source.role}`)
