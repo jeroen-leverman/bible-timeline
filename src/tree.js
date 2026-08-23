@@ -72,7 +72,7 @@ export function createTree(root, { onShowInAtlas }) {
             </div>
           </div>
           <div class="tree-toolbar-foot">
-            <div><span id="tree-context" aria-live="polite"></span><small>Spacing follows named generations; genealogies may skip unnamed ancestors.</small></div>
+            <div><span id="tree-context" aria-live="polite"></span><small><span class="tree-help-wide">Spacing follows named generations; genealogies may skip unnamed ancestors.</span><span class="tree-help-mobile">Swipe to explore · tap a person for details</span></small></div>
             <div class="tree-legend" aria-label="Relationship line legend">
               <span><i class="legend-descent"></i>Named descent</span>
               <span><i class="legend-spouse"></i>Spouses</span>
@@ -82,7 +82,7 @@ export function createTree(root, { onShowInAtlas }) {
         <svg class="tree-links" id="tree-links" aria-hidden="true"></svg>
         <div class="tree-rows" id="tree-rows"></div>
       </div>
-      <aside class="tree-detail" id="tree-detail" aria-live="polite"></aside>
+      <aside class="tree-detail" id="tree-detail" aria-label="Selected person details" aria-live="polite"></aside>
     </div>`
 
   const canvas = root.querySelector('#tree-canvas')
@@ -253,8 +253,13 @@ export function createTree(root, { onShowInAtlas }) {
     })
 
     linksEl.querySelectorAll('path').forEach((path) => {
-      const ids = [path.dataset.from, path.dataset.parent2, path.dataset.to].filter(Boolean)
-      path.classList.toggle('is-traced', ids.length > 0 && ids.every((id) => traced.has(id)))
+      const sources = [path.dataset.from, path.dataset.parent2].filter(Boolean)
+      const targets = path.dataset.children?.split(' ').filter(Boolean)
+        ?? [path.dataset.to].filter(Boolean)
+      const connected = path.classList.contains('tl-descent')
+        ? sources.some((id) => traced.has(id)) && targets.some((id) => traced.has(id))
+        : [...sources, ...targets].every((id) => traced.has(id))
+      path.classList.toggle('is-traced', sources.length > 0 && targets.length > 0 && connected)
     })
   }
 
@@ -288,8 +293,10 @@ export function createTree(root, { onShowInAtlas }) {
       }
     }
 
+    const snap = (value) => Math.round(value * 2) / 2
     const parts = []
-    // spouse links: a short bar between partners on the same row
+    // Spouse links use the direct gap when the cards are adjacent. A longer link is
+    // routed above intervening cards instead of disappearing behind them in pieces.
     const drawn = new Set()
     for (const p of PEOPLE) {
       for (const sp of p.spouses) {
@@ -298,12 +305,26 @@ export function createTree(root, { onShowInAtlas }) {
         drawn.add(key)
         const a = at(p.id), b = at(sp)
         if (!a || !b || Math.abs(a.midY - b.midY) > 4) continue
-        const x1 = Math.min(a.right, b.right), x2 = Math.max(a.left, b.left)
+        const [left, right] = [a, b].sort((first, second) => first.left - second.left)
+        const x1 = snap(left.right), x2 = snap(right.left)
         if (x2 <= x1) continue
-        parts.push(`<path class="tl-spouse" data-from="${p.id}" data-to="${sp}" d="M${x1} ${a.midY} H${x2}" />`)
+        const midY = snap((a.midY + b.midY) / 2)
+        const d = x2 - x1 <= 20
+          ? `M${x1} ${midY} H${x2}`
+          : (() => {
+              const laneY = snap(Math.max(2, Math.min(left.top, right.top) - 8))
+              const startX = snap(left.right - 8), endX = snap(right.left + 8)
+              return `M${startX} ${snap(left.top)} V${laneY} H${endX} V${snap(right.top)}`
+            })()
+        parts.push(`<path class="tl-spouse" data-from="${p.id}" data-to="${sp}" d="${d}" />`)
       }
     }
-    // parent → child
+
+    // Build one connector group per parent or parent pair. The earlier implementation
+    // emitted a complete path for every child, painting shared trunks several times and
+    // making them darker and thicker. Couples also placed their horizontal bus halfway
+    // from card centre to the next row, which could leave it behind the parent cards.
+    const families = new Map()
     for (const p of PEOPLE) {
       const parentIds = [...new Set([p.father, p.mother].filter(Boolean))]
       const parents = parentIds.map((id) => ({ id, box: at(id) })).filter(({ box: parentBox }) => parentBox)
@@ -313,22 +334,50 @@ export function createTree(root, { onShowInAtlas }) {
       const areSpouses = parents.length === 2 && (
         PERSON_BY_ID[parents[0].id]?.spouses.includes(parents[1].id) ||
         PERSON_BY_ID[parents[1].id]?.spouses.includes(parents[0].id)
-      )
-      if (areSpouses && Math.abs(parents[0].box.midY - parents[1].box.midY) <= 4) {
+      ) && Math.abs(parents[0].box.midY - parents[1].box.midY) <= 4
+      const areAdjacentSpouses = areSpouses && (() => {
         const [left, right] = parents.map(({ box: parentBox }) => parentBox).sort((a, b) => a.left - b.left)
-        const sourceX = (left.right + right.left) / 2
-        const sourceY = left.midY
-        const midY = sourceY + (child.top - sourceY) / 2
-        parts.push(`<path class="tl-descent" data-from="${parents[0].id}" data-parent2="${parents[1].id}" data-to="${p.id}" d="M${sourceX} ${sourceY} V${midY} H${child.cx} V${child.top}" />`)
-      } else {
-        // Two named parents are not necessarily spouses (Judah and Tamar are the
-        // important case here), so draw independent parent links rather than a
-        // marriage-shaped joint connector.
-        parents.forEach(({ id, box: parentBox }) => {
-          const midY = parentBox.bottom + (child.top - parentBox.bottom) / 2
-          parts.push(`<path class="tl-descent" data-from="${id}" data-to="${p.id}" d="M${parentBox.cx} ${parentBox.bottom} V${midY} H${child.cx} V${child.top}" />`)
-        })
+        return right.left - left.right <= 20
+      })()
+
+      // Only adjacent spouses have a clear midpoint anchor. When another card sits
+      // between them, use two bottom anchors so the descent trunk cannot cut through it.
+      const type = parents.length === 1 ? 'person' : areAdjacentSpouses ? 'couple' : 'pair'
+      const ids = parents.map(({ id }) => id).sort()
+      const key = `${type}:${ids.join('|')}`
+      if (!families.has(key)) families.set(key, { type, parents, children: [] })
+      families.get(key).children.push({ id: p.id, box: child })
+    }
+
+    for (const family of families.values()) {
+      const parents = family.parents
+      const children = family.children.sort((a, b) => a.box.cx - b.box.cx)
+      const parentBottom = Math.max(...parents.map(({ box: parentBox }) => parentBox.bottom))
+      const childTop = Math.min(...children.map(({ box: childBox }) => childBox.top))
+      const junctionY = snap(parentBottom + (childTop - parentBottom) / 2)
+      const sourcePoints = family.type === 'couple'
+        ? (() => {
+            const [left, right] = parents.map(({ box: parentBox }) => parentBox).sort((a, b) => a.left - b.left)
+            return [{ x: snap((left.right + right.left) / 2), y: snap((left.midY + right.midY) / 2) }]
+          })()
+        : parents.map(({ box: parentBox }) => ({ x: snap(parentBox.cx), y: snap(parentBox.bottom) }))
+      const childXs = children.map(({ box: childBox }) => snap(childBox.cx))
+      const busXs = [...sourcePoints.map(({ x }) => x), ...childXs]
+      const busStart = Math.min(...busXs), busEnd = Math.max(...busXs)
+      const shared = [
+        ...sourcePoints.map(({ x, y }) => `M${x} ${y} V${junctionY}`),
+        ...(busEnd > busStart ? [`M${busStart} ${junctionY} H${busEnd}`] : []),
+      ].join(' ')
+      const sourceAttrs = `data-from="${parents[0].id}"${parents[1] ? ` data-parent2="${parents[1].id}"` : ''}`
+      const childIds = children.map(({ id }) => id).join(' ')
+
+      if (shared) {
+        parts.push(`<path class="tl-descent tl-descent-shared" ${sourceAttrs} data-children="${childIds}" d="${shared}" />`)
       }
+      children.forEach(({ id, box: childBox }) => {
+        const childX = snap(childBox.cx), top = snap(childBox.top)
+        parts.push(`<path class="tl-descent tl-descent-branch" ${sourceAttrs} data-to="${id}" d="M${childX} ${junctionY} V${top}" />`)
+      })
     }
     linksEl.innerHTML = parts.join('')
     refreshHighlights()
@@ -340,7 +389,10 @@ export function createTree(root, { onShowInAtlas }) {
     const canvasBox = canvas.getBoundingClientRect()
     const cardBox = card.getBoundingClientRect()
     const toolbarHeight = toolbarEl.getBoundingClientRect().height + 12
-    const usableHeight = Math.max(120, canvas.clientHeight - toolbarHeight)
+    const detailOcclusion = window.matchMedia('(max-width: 760px)').matches && detailEl.classList.contains('is-open')
+      ? detailEl.getBoundingClientRect().height + 10
+      : 0
+    const usableHeight = Math.max(120, canvas.clientHeight - toolbarHeight - detailOcclusion)
     const top = canvas.scrollTop + cardBox.top - canvasBox.top - toolbarHeight - (usableHeight / 2) + (cardBox.height / 2)
     const left = canvas.scrollLeft + cardBox.left - canvasBox.left - (canvas.clientWidth / 2) + (cardBox.width / 2)
     canvas.scrollTo({ top: Math.max(0, top), left: Math.max(0, left), behavior })
@@ -371,6 +423,8 @@ export function createTree(root, { onShowInAtlas }) {
       refreshHighlights()
     }
     renderDetail()
+    detailEl.classList.add('is-open')
+    root.classList.add('detail-open')
     updateToolbar()
     if (center) requestAnimationFrame(() => centerPerson(id))
   }
@@ -412,6 +466,9 @@ export function createTree(root, { onShowInAtlas }) {
       : ''
 
     detailEl.innerHTML = `
+      <button class="tree-detail-close" data-tree-action="close-detail" aria-label="Close person details">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg><span>Close</span>
+      </button>
       <div class="td-heading-meta"><div class="td-era" style="--era:${era?.color ?? '#888'}">${era?.name ?? ''}</div><span>Generation ${p.gen}</span></div>
       <h2>${escapeHtml(p.name)}</h2>
       <div class="td-life">
@@ -454,6 +511,12 @@ export function createTree(root, { onShowInAtlas }) {
       return
     }
     const action = e.target.closest('[data-tree-action]')?.dataset.treeAction
+    if (action === 'close-detail') {
+      detailEl.classList.remove('is-open')
+      root.classList.remove('detail-open')
+      rowsEl.querySelector(`[data-person="${state.selected}"]`)?.focus({ preventScroll: true })
+      return
+    }
     if (action === 'trace') {
       state.trace = !state.trace
       refreshHighlights()

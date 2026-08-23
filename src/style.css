@@ -244,6 +244,7 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
 .tree-toolbar-foot > div:first-child { min-width: 0; }
 .tree-toolbar-foot #tree-context { display: block; overflow: hidden; color: #6f7b74; font-size: 8px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
 .tree-toolbar-foot small { display: block; margin-top: 2px; color: #9a8b70; font-family: 'EB Garamond', Georgia, serif; font-size: 8px; font-style: italic; }
+.tree-help-mobile { display: none; }
 .tree-legend { display: flex; gap: 10px; flex: 0 0 auto; color: #8a958e; font-size: 7px; }
 .tree-legend span { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
 .tree-legend i { width: 16px; height: 0; display: inline-block; border-top: 1px solid rgba(31,54,44,.55); }
@@ -252,7 +253,7 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
    spans the whole scrollable height, squashing every connector into the top strip.
    Anchored top-left instead so the width/height attributes set at draw time govern. */
 .tree-links { position: absolute; z-index: 0; top: 0; left: 0; pointer-events: none; overflow: visible; }
-.tree-links path { transition: opacity .2s ease, stroke .2s ease, stroke-width .2s ease; }
+.tree-links path { vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; shape-rendering: geometricPrecision; transition: opacity .2s ease, stroke .2s ease, stroke-width .2s ease; }
 .tl-descent { fill: none; stroke: rgba(31,54,44,.26); stroke-width: 1.2; }
 .tl-spouse { fill: none; stroke: var(--gold); stroke-width: 1.4; stroke-dasharray: 3 2.5; opacity: .75; }
 .tree-canvas.is-tracing .tree-links path { opacity: .09; }
@@ -293,6 +294,7 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
 .tree-card.is-selected .tc-life { color: rgba(244,231,201,.6); }
 
 .tree-detail { min-height: 0; overflow-y: auto; padding: 26px 24px 40px; background: var(--paper-light); border-left: 1px solid var(--line); }
+.tree-detail-close { display: none; }
 .td-heading-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .td-heading-meta > span { color: #929d96; font-size: 7px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .td-era { display: inline-block; margin-bottom: 8px; padding: 2px 7px; color: var(--era); background: color-mix(in srgb, var(--era) 12%, transparent); border-radius: 2px; font-size: 7px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
@@ -408,40 +410,69 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
   .mobile-only { display: grid; }
   .topbar { height: 64px; padding: 0 14px; }
   .brand strong { font-size: 18px; }
-  .brand small { display: none; }
+  .brand > span:last-child { display: none; }
+  .brand { min-width: 44px; min-height: 44px; }
   .brand-mark { width: 34px; height: 34px; }
-  .top-actions .icon-button { width: 36px; height: 36px; color: #f7f0df; border: 1px solid rgba(255,255,255,.17); border-radius: 4px; }
+  .top-actions .icon-button { width: 44px; height: 44px; color: #f7f0df; border: 1px solid rgba(255,255,255,.17); border-radius: 4px; }
   .method-button span:first-child { display: none; }
-  .method-button { gap: 0; padding: 9px 12px; }
+  .method-button { width: 44px; height: 44px; justify-content: center; gap: 0; padding: 0; }
+  .view-tabs button { min-height: 44px; padding: 7px 11px; }
   .topbar.tree-mode #mobile-filters { display: none; }
-  .topbar.tree-mode .brand span:last-child { display: none; }
   .topbar.tree-mode .view-tabs { margin-left: 0; }
   .tree-view { inset: 64px 0 0; }
-  .tree-canvas { padding: 12px 14px max(42px, 34vh); scroll-padding-top: 118px; }
-  .tree-toolbar { top: -12px; width: calc(100vw - 28px); margin-bottom: 18px; padding: 9px 9px 7px; }
+  .tree-shell { position: relative; display: block; }
+  .tree-canvas { height: 100%; padding: 10px 10px max(72px, 20vh); scroll-padding: 122px 12px max(72px, 20vh); overscroll-behavior: contain; touch-action: pan-x pan-y; -webkit-overflow-scrolling: touch; }
+  .tree-view.detail-open .tree-canvas { padding-bottom: max(72px, 58vh); scroll-padding-bottom: 58vh; }
+  .tree-toolbar { top: -10px; width: calc(100vw - 20px); margin-bottom: 20px; padding: 8px; }
   .tree-toolbar-main { grid-template-columns: minmax(0, 1fr) auto; }
+  .tree-search { height: 44px; padding: 0 11px; }
+  .tree-search input { font-size: 12px; }
+  .tree-search-results { top: calc(100% + 7px); }
+  .tree-search-result { min-height: 44px; padding: 9px 11px; }
+  .tree-search-result strong { font-size: 14px; }
+  .tree-search-result small, .tree-search-result b { font-size: 8px; }
   .tree-jump-label { display: none; }
-  .tree-tool { width: 32px; padding: 0; justify-content: center; }
+  .tree-toolbar-actions { gap: 5px; }
+  .tree-tool { width: 44px; height: 44px; padding: 0; justify-content: center; }
   .tree-tool > span:last-child { display: none; }
   .tree-center-tool { display: none; }
-  .tree-toolbar-foot { align-items: center; }
-  .tree-toolbar-foot small { max-width: 215px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tree-toolbar-foot { align-items: center; margin-top: 7px; }
+  .tree-toolbar-foot #tree-context { font-size: 9px; }
+  .tree-toolbar-foot small { max-width: 235px; margin-top: 3px; overflow: hidden; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+  .tree-help-wide { display: none; }
+  .tree-help-mobile { display: inline; }
   .tree-legend { gap: 7px; }
   .tree-legend span { font-size: 0; }
   .tree-legend i { width: 18px; }
-  .tree-rows { gap: 14px; }
-  .tree-time { width: 76px; min-width: 76px; padding-right: 18px; }
-  .tree-time::after { left: 64px; }
-  .tree-time i { left: 61px; }
-  .tree-time b { left: 69px; }
-  .tree-time span { max-width: 52px; font-size: 7px; }
-  .tree-row { gap: 9px; }
-  .tree-era-break { grid-template-columns: 76px auto 1fr; gap: 9px; min-width: 430px; }
-  .tree-era-break i:first-child { margin-left: 64px; }
-  .tree-gap { width: 300px; margin-left: 40px; }
-  .tree-detail { max-height: 42vh; padding: 17px 18px 28px; }
-  .tree-detail h2 { font-size: 23px; }
-  .td-bio { margin: 9px 0; font-size: 12px; }
+  .tree-rows { gap: 16px; }
+  .tree-row { gap: 8px; min-height: 52px; }
+  .tree-time { width: 54px; min-width: 54px; padding-right: 12px; }
+  .tree-time::after { left: 44px; }
+  .tree-time i { left: 41px; width: 9px; height: 9px; }
+  .tree-time b { left: 49px; width: 6px; }
+  .tree-time span { max-width: 40px; font-size: 7px; }
+  .tree-gen { width: 26px; height: 26px; font-size: 9px; }
+  .tree-cards { gap: 10px; }
+  .tree-card { min-width: 126px; min-height: 50px; padding: 9px 11px; }
+  .tree-card:active, .tree-tool:active, .tree-detail-close:active { transform: scale(.98); }
+  .tc-name { font-size: 15px; }
+  .tree-card.is-major .tc-name { font-size: 16px; }
+  .tc-life { margin-top: 2px; font-size: 9px; }
+  .tree-era-break { grid-template-columns: 54px auto 1fr; gap: 8px; min-width: calc(100vw - 20px); margin-top: 5px; }
+  .tree-era-break i:first-child { margin-left: 44px; }
+  .tree-era-break span { font-size: 8px; }
+  .tree-gap { width: min(300px, calc(100vw - 48px)); margin-left: 28px; padding: 10px 12px; }
+  .tree-gap strong { font-size: 11px; }
+  .tree-detail { position: absolute; z-index: 60; right: 8px; bottom: max(8px, env(safe-area-inset-bottom)); left: 8px; max-height: min(56vh, 520px); padding: 18px 18px calc(26px + env(safe-area-inset-bottom)); overscroll-behavior: contain; background: rgba(251,248,241,.985); border: 1px solid rgba(31,54,44,.18); border-radius: 12px; box-shadow: 0 -12px 42px rgba(16,42,34,.24); visibility: hidden; opacity: 0; pointer-events: none; transform: translateY(calc(100% + 20px)); transition: transform .24s ease, opacity .2s ease, visibility 0s linear .24s; }
+  .tree-detail.is-open { visibility: visible; opacity: 1; pointer-events: auto; transform: none; transition-delay: 0s; }
+  .tree-detail-close { position: sticky; z-index: 2; top: -10px; float: right; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; margin: -8px -8px 2px 10px; color: #5e6b63; background: rgba(245,240,229,.94); border: 1px solid rgba(31,54,44,.14); border-radius: 50%; cursor: pointer; }
+  .tree-detail-close svg { width: 19px; }
+  .tree-detail-close span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .tree-detail h2 { padding-right: 42px; font-size: 25px; }
+  .td-bio { margin: 10px 0; font-size: 13px; }
+  .td-link { min-height: 40px; padding: 8px 10px; font-size: 12px; }
+  .ref-btn { min-height: 40px; padding: 8px 10px; font-size: 12px; }
+  .passage-trans button { min-width: 40px; min-height: 40px; }
   .atlas-shell { display: block; height: calc(100% - 64px); }
   .sidebar { position: absolute; z-index: 1100; top: 64px; bottom: 0; left: 0; width: min(330px, 88vw); transform: translateX(-105%); transition: transform .25s ease; box-shadow: 15px 0 50px rgba(14,35,27,.28); }
   .sidebar.open { transform: none; }
