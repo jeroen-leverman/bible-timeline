@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "validate:data": "node scripts/validate-data.mjs",
     "fetch:verses": "node scripts/fetch-verses.mjs",
     "fetch:wikipedia": "node scripts/fetch-wikipedia.mjs"
   },

@@ -1,3 +1,5 @@
+import { buildPersonProvenance } from './provenance.js'
+
 /**
  * The main figures of the biblical narrative, and how they are related.
  *
@@ -26,16 +28,10 @@
  * timeline event instead of turning a person's whole life into one undifferentiated reign.
  */
 
-const P = (id, name, o) => ({
-  id,
-  name,
-  spouses: [],
-  scripture: [],
-  events: [],
-  reigns: [],
-  major: false,
-  ...o,
-})
+const P = (id, name, o) => {
+  const item = { id, name, spouses: [], scripture: [], events: [], reigns: [], major: false, ...o }
+  return { ...item, provenance: buildPersonProvenance(item) }
+}
 
 export const PEOPLE = [
   // ---- Genesis 5: Adam to Noah ------------------------------------------

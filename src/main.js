@@ -7,7 +7,9 @@ import { EVENTS, EVENT_BY_ID, DATE_CONFIDENCE } from './data/events.js'
 import { THEMES, THEME_BY_ID, THEME_EVENT_SETS, THEME_KIND_LABEL } from './data/themes.js'
 import { territoriesAt } from './data/territories.js'
 import { BOOKS, BOOK_GROUP_LABEL, booksForReferences } from './data/books.js'
+import { contextualPlaceProvenance } from './data/provenance.js'
 import { renderPassageInto, escapeHtml } from './verses.js'
+import { provenanceMarkup, provenanceStatusMarkup } from './provenanceView.js'
 import { createTree } from './tree.js'
 
 const ICONS = {
@@ -268,7 +270,10 @@ const POPUP_OPTIONS = {
 }
 
 function placePopup(place) {
-  const related = EVENTS.filter((item) => item.places.includes(place.id)).slice(0, 4)
+  const allRelated = EVENTS.filter((item) => item.places.includes(place.id))
+  const related = allRelated.slice(0, 4)
+  const references = [...new Set(allRelated.flatMap((item) => item.scripture))]
+  const provenance = contextualPlaceProvenance(place, references, WIKI?.[place.id])
 
   return `<div class="place-popup">
     ${wikiMarkup(place)}
@@ -277,6 +282,7 @@ function placePopup(place) {
     ${place.modern ? `<p class="modern-name">Today: ${place.modern}</p>` : ''}
     ${place.note ? `<p>${place.note}</p>` : ''}
     ${related.length ? `<div class="popup-events"><strong>Events here</strong>${related.map((item) => `<button data-event-id="${item.id}">${item.title}</button>`).join('')}</div>` : ''}
+    ${provenanceMarkup(provenance, 'Place sources')}
   </div>`
 }
 
@@ -554,6 +560,7 @@ function renderEventCard() {
     <div class="event-date-row">
       <strong>${item.dateLabel}</strong>
       <span class="date-confidence ${confidenceClass(item.dateConfidence)}">${DATE_CONFIDENCE[item.dateConfidence]}</span>
+      ${provenanceStatusMarkup(item.provenance)}
     </div>
     <p class="event-summary">${item.summary}</p>
     ${books.length ? `<div class="event-books" aria-label="Biblical books">${books.map((book) =>
@@ -565,6 +572,7 @@ function renderEventCard() {
       <div class="scripture-refs">${item.scripture.map((ref) =>
         `<button class="ref-btn${state.openRef === ref ? ' open' : ''}" data-ref="${ref}">${ref}</button>`).join('')}</div>
     </div></div>
+    ${provenanceMarkup(item.provenance)}
     <div class="passage" id="passage"></div>`
 
   renderPassage()

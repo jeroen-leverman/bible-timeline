@@ -1,3 +1,5 @@
+import { buildPlaceProvenance } from './provenance.js'
+
 /**
  * Gazetteer of biblical places.
  *
@@ -11,9 +13,10 @@
  *   symbolic – no real-world location; positioned only so it can be drawn
  */
 
-const P = (id, name, lat, lng, certainty, opts = {}) => ({
-  id, name, lat, lng, certainty, ...opts,
-})
+const P = (id, name, lat, lng, certainty, opts = {}) => {
+  const item = { id, name, lat, lng, certainty, ...opts }
+  return { ...item, provenance: buildPlaceProvenance(item) }
+}
 
 export const PLACES = [
   // ---- Mesopotamia & the east -------------------------------------------

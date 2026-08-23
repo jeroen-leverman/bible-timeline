@@ -1,3 +1,5 @@
+import { buildEventProvenance } from './provenance.js'
+
 /**
  * Events of the biblical narrative, placed in time and space.
  *
@@ -18,16 +20,10 @@
  * one rest on the biblical text alone.
  */
 
-const event = (id, title, year, era, category, places, details = {}) => ({
-  id,
-  title,
-  year,
-  era,
-  category,
-  places,
-  dateConfidence: 'estimated',
-  ...details,
-})
+const event = (id, title, year, era, category, places, details = {}) => {
+  const item = { id, title, year, era, category, places, dateConfidence: 'estimated', ...details }
+  return { ...item, provenance: buildEventProvenance(item) }
+}
 
 // Routes are the sequence of places named in the text. They are interpretive:
 // the stops are given, the roads between them are not.

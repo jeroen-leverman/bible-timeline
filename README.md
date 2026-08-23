@@ -170,6 +170,38 @@ permit reuse, with attribution kept alongside the data. Useful candidates includ
 [OpenStreetMap](https://www.openstreetmap.org/copyright) (ODbL). Discovery through a
 third-party atlas never replaces checking the original source and its current licence.
 
+### Provenance records
+
+Every event, person, and place has a `provenance` object generated from its citations.
+It records a schema version, review status, source role, reference or locator, licence,
+and verification level. The interface exposes this record under **Sources &
+provenance** rather than implying that every project claim is equally sourced.
+
+New manually researched data adds `sourceRefs` to its record:
+
+```js
+sourceRefs: [{
+  sourceId: 'pleiades',
+  role: 'geographic-identification',
+  citation: 'Pleiades place 687928',
+  url: 'https://pleiades.stoa.org/places/687928',
+  license: 'CC BY 3.0',
+  verification: 'cited',
+}]
+```
+
+The source must exist in `SOURCE_CATALOG`, and the role and verification value must be
+recognized by the schema. Run the validator before committing data work:
+
+```bash
+npm run validate:data
+```
+
+The first audit intentionally marks the current place gazetteer as **Source review
+needed**. Existing certainty labels remain visible, but they do not become citations by
+repetition; each place will move out of that state only when its identification and
+coordinates are tied to an original geographic source.
+
 ## Running locally
 
 ```bash

@@ -16,6 +16,7 @@ import { ERA_BY_ID } from './data/eras.js'
 import { EVENT_BY_ID } from './data/events.js'
 import { BOOK_BY_NAME, booksForReferences } from './data/books.js'
 import { renderPassageInto, escapeHtml } from './verses.js'
+import { provenanceMarkup } from './provenanceView.js'
 
 const fmtYear = (y) => (y < 0 ? `${Math.abs(y)} BC` : `AD ${y}`)
 
@@ -522,6 +523,7 @@ export function createTree(root, { onShowInAtlas }) {
           `<button class="ref-btn${state.openRef === r ? ' open' : ''}" data-ref="${escapeHtml(r)}">${escapeHtml(r)}</button>`).join('')}</div>
         <div class="passage" id="tree-passage"></div>
       </div>
+      ${provenanceMarkup(p.provenance)}
       ${events.length ? `<div class="td-section">
         <span class="td-label">In the atlas</span>
         <div class="scripture-refs">${events.map((e) =>
