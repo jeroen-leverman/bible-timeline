@@ -119,12 +119,13 @@ app.innerHTML = `
   <dialog class="method-dialog" id="method-dialog">
     <button class="dialog-close icon-button" id="dialog-close" aria-label="Close">${ICONS.close}</button>
     <p class="eyebrow">A note on method</p>
-    <h2>A map can clarify history—and overstate it.</h2>
-    <p>This atlas distinguishes three different things: what the biblical text says, how an event is dated, and how confidently a modern location can be identified. A precise dot does not always mean a precise identification.</p>
+    <h2>An atlas can clarify history—and overstate it.</h2>
+    <p>This atlas distinguishes what the biblical text says, how an event is dated, and how confidently a place or family relationship can be reconstructed. A precise dot or line does not always mean a precise identification.</p>
     <div class="method-grid">
       <div><span>01</span><h3>Dates are ranges</h3><p>Approximate and disputed chronologies are labeled rather than silently harmonized.</p></div>
       <div><span>02</span><h3>Places vary</h3><p>Excavated sites, probable identifications, and later traditional sites use different symbols.</p></div>
       <div><span>03</span><h3>Routes are interpretive</h3><p>Lines connect the named sequence of places; they do not claim to reconstruct every ancient road.</p></div>
+      <div><span>04</span><h3>Genealogies telescope</h3><p>Generation gaps are disclosed: “fathered” can refer to a later descendant rather than an immediate son.</p></div>
     </div>
     <p class="dialog-footnote">The basemap shows modern coastlines and terrain with present-day labels removed, so the ancient names stand on their own. It does not depict ancient political boundaries.</p>
   </dialog>
@@ -667,6 +668,7 @@ const tree = createTree(document.querySelector('#tree-view'), {
 
 function setView(view) {
   const isTree = view === 'tree'
+  document.querySelector('.topbar').classList.toggle('tree-mode', isTree)
   document.querySelector('.atlas-shell').hidden = isTree
   document.querySelector('#tree-view').hidden = !isTree
   document.querySelectorAll('[data-view]').forEach((b) => {
@@ -748,4 +750,3 @@ const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve()
 fontsReady.then(() => requestAnimationFrame(initialFit)).catch(() => requestAnimationFrame(initialFit))
 
 window.addEventListener('beforeunload', () => clearInterval(playTimer))
-

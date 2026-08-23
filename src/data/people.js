@@ -174,7 +174,7 @@ export const PEOPLE = [
   P('benjamin', 'Benjamin', { gen: 23, dating: 'unknown', era: 'patriarchs', father: 'jacob', mother: 'rachel', scripture: ['Genesis 35:16–18', 'Genesis 44'], bio: 'Rachel’s second son, born as she died. She named him Ben-oni, son of my sorrow; his father renamed him.' }),
   P('levi', 'Levi', { gen: 23, dating: 'unknown', era: 'patriarchs', father: 'jacob', mother: 'leah', scripture: ['Genesis 34', 'Genesis 49:5–7'], bio: 'Ancestor of the priestly tribe, and of Moses and Aaron. Jacob’s blessing on him is closer to a rebuke.' }),
   P('tamar', 'Tamar', {
-    gen: 24, dating: 'unknown', era: 'patriarchs', major: true, scripture: ['Genesis 38'],
+    gen: 23, dating: 'unknown', era: 'patriarchs', major: true, scripture: ['Genesis 38'],
     bio: 'Twice widowed and denied the third son she was owed, she takes the matter into her own hands and forces Judah to admit she was in the right. Matthew names her in the genealogy of Jesus.',
   }),
   P('perez', 'Perez', { gen: 24, dating: 'unknown', era: 'patriarchs', father: 'judah', mother: 'tamar', scripture: ['Genesis 38:29', 'Ruth 4:18'], bio: 'Tamar’s son, and the link from Judah to David.' }),
