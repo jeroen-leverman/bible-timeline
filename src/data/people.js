@@ -268,34 +268,58 @@ const DAVIDIC = [
   P('zedekiah', 'Zedekiah', { gen: 50, born: -618, dating: 'inferred', era: 'exile-return', major: true, father: 'josiah',
     scripture: ['2 Kings 25', 'Jeremiah 39'], events: ['jerusalem-falls'],
     bio: 'The last king of Judah, installed as a vassal and blinded at Riblah after watching his sons die. The line of kings ends with him.' }),
-  P('zerubbabel', 'Zerubbabel', { gen: 53, dating: 'unknown', era: 'exile-return', major: true, father: 'shealtiel', scripture: ['Ezra 3', 'Haggai 2:23'], events: ['return', 'second-temple'],
+  P('zerubbabel', 'Zerubbabel', { gen: 53, dating: 'unknown', era: 'exile-return', major: true, father: 'shealtiel', scripture: ['Ezra 3', 'Haggai 2:23', 'Matthew 1:12–16'], events: ['return', 'second-temple'],
     bio: 'A descendant of the exiled kings who leads the first return and lays the foundations of the second temple, governor rather than king.' }),
+]
+
+// ---- Matthew's line: Zerubbabel to Joseph (Matthew 1:12–16) ------------
+// Matthew and Luke give different post-exilic genealogies. This atlas follows
+// Matthew here because the royal line above already runs through Solomon.
+const MATTHEW_LINE = [
+  P('matthew-abiud', 'Abiud', { gen: 54, dating: 'unknown', era: 'second-temple', father: 'zerubbabel', scripture: ['Matthew 1:12–16'],
+    bio: 'Matthew names him as the next link after Zerubbabel and before Eliakim. The New Testament gives no other biographical details.' }),
+  P('matthew-eliakim', 'Eliakim', { gen: 55, dating: 'unknown', era: 'second-temple', father: 'matthew-abiud', scripture: ['Matthew 1:12–16'],
+    bio: 'A link in Matthew’s genealogy between Abiud and Azor; not otherwise described in the New Testament.' }),
+  P('matthew-azor', 'Azor', { gen: 56, dating: 'unknown', era: 'second-temple', father: 'matthew-eliakim', scripture: ['Matthew 1:12–16'],
+    bio: 'A link in Matthew’s genealogy between Eliakim and Zadok; not otherwise described in the New Testament.' }),
+  P('matthew-zadok', 'Zadok', { gen: 57, dating: 'unknown', era: 'second-temple', father: 'matthew-azor', scripture: ['Matthew 1:12–16'],
+    bio: 'A link in Matthew’s genealogy between Azor and Achim; not otherwise described in the New Testament.' }),
+  P('matthew-achim', 'Achim', { gen: 58, dating: 'unknown', era: 'second-temple', father: 'matthew-zadok', scripture: ['Matthew 1:12–16'],
+    bio: 'A link in Matthew’s genealogy between Zadok and Eliud; not otherwise described in the New Testament.' }),
+  P('matthew-eliud', 'Eliud', { gen: 59, dating: 'unknown', era: 'second-temple', father: 'matthew-achim', scripture: ['Matthew 1:12–16'],
+    bio: 'A link in Matthew’s genealogy between Achim and Eleazar; not otherwise described in the New Testament.' }),
+  P('matthew-eleazar', 'Eleazar', { gen: 60, dating: 'unknown', era: 'second-temple', father: 'matthew-eliud', scripture: ['Matthew 1:12–16'],
+    bio: 'A link in Matthew’s genealogy between Eliud and Matthan; not otherwise described in the New Testament.' }),
+  P('matthew-matthan', 'Matthan', { gen: 61, dating: 'unknown', era: 'second-temple', father: 'matthew-eleazar', scripture: ['Matthew 1:12–16'],
+    bio: 'A link in Matthew’s genealogy between Eleazar and Jacob; not otherwise described in the New Testament.' }),
+  P('matthew-jacob', 'Jacob', { gen: 62, dating: 'unknown', era: 'second-temple', father: 'matthew-matthan', scripture: ['Matthew 1:12–16'],
+    bio: 'The Jacob named directly before Joseph in Matthew’s genealogy; not the patriarch Jacob of Genesis.' }),
 ]
 
 // ---- the New Testament family -------------------------------------------
 const NT_FAMILY = [
-  P('zechariah-priest', 'Zechariah', { gen: 74, dating: 'unknown', era: 'jesus', spouses: ['elizabeth'], scripture: ['Luke 1:5–25'], events: ['john-born'],
+  P('zechariah-priest', 'Zechariah', { gen: 63, dating: 'unknown', era: 'jesus', spouses: ['elizabeth'], scripture: ['Luke 1:5–25'], events: ['john-born'],
     bio: 'A priest struck mute for doubting an angel at the incense altar, and given his voice back when he writes the child’s name.' }),
-  P('elizabeth', 'Elizabeth', { gen: 74, dating: 'unknown', era: 'jesus', major: true, spouses: ['zechariah-priest'], scripture: ['Luke 1:5–45'], events: ['john-born', 'visitation'],
+  P('elizabeth', 'Elizabeth', { gen: 63, dating: 'unknown', era: 'jesus', major: true, spouses: ['zechariah-priest'], scripture: ['Luke 1:5–45'], events: ['john-born', 'visitation'],
     bio: 'Childless into old age, and the first person to recognise what Mary is carrying.' }),
-  P('joseph-nazareth', 'Joseph', { gen: 74, dating: 'unknown', era: 'jesus', major: true, spouses: ['mary'], scripture: ['Matthew 1–2', 'Luke 2'], events: ['nativity', 'flight-egypt'],
+  P('joseph-nazareth', 'Joseph', { gen: 63, dating: 'unknown', era: 'jesus', major: true, father: 'matthew-jacob', spouses: ['mary'], scripture: ['Matthew 1–2', 'Luke 2'], events: ['nativity', 'flight-egypt'],
     bio: 'A carpenter who plans to end the engagement quietly rather than expose her, changes his mind on a dream, and is never quoted saying anything.' }),
-  P('mary', 'Mary', { gen: 74, dating: 'unknown', era: 'jesus', major: true, spouses: ['joseph-nazareth'],
+  P('mary', 'Mary', { gen: 63, dating: 'unknown', era: 'jesus', major: true, spouses: ['joseph-nazareth'],
     scripture: ['Luke 1–2', 'John 2', 'John 19:25–27'], events: ['annunciation', 'visitation', 'nativity', 'crucifixion'],
     bio: 'Present at the start and the end and largely silent in between. Her one long speech is a song about thrones being emptied.' }),
-  P('john-baptist', 'John the Baptist', { gen: 75, born: -6, died: 30, dating: 'inferred', era: 'jesus', major: true, father: 'zechariah-priest', mother: 'elizabeth',
+  P('john-baptist', 'John the Baptist', { gen: 64, born: -6, died: 30, dating: 'inferred', era: 'jesus', major: true, father: 'zechariah-priest', mother: 'elizabeth',
     scripture: ['Luke 1', 'Mark 1', 'Mark 6:14–29'], events: ['john-born', 'john-preaching', 'baptism', 'john-death'],
     bio: 'Six months older than his cousin, and the firmest chronological peg in the Gospels. Executed at Machaerus after a dance and a rash oath.' }),
-  P('jesus', 'Jesus', { gen: 75, born: -5, died: 30, dating: 'inferred', era: 'jesus', major: true, father: 'joseph-nazareth', mother: 'mary',
+  P('jesus', 'Jesus', { gen: 64, born: -5, died: 30, dating: 'inferred', era: 'jesus', major: true, father: 'joseph-nazareth', mother: 'mary',
     scripture: ['Matthew 1:18–25', 'Luke 2:1–20', 'Mark 1:9–11', 'John 19:16–30'], events: ['nativity', 'baptism', 'crucifixion', 'resurrection'],
     bio: 'Born before Herod the Great’s death in 4 BC and executed under Pilate, who governed AD 26–36 — the two ends of the life are both approximate.',
-    note: 'Matthew and Luke both trace his descent to David, by different routes, and both do so through Joseph.' }),
-  P('james-brother', 'James', { gen: 75, died: 62, dating: 'inferred', era: 'early-church', major: true, father: 'joseph-nazareth', mother: 'mary',
+    note: 'This tree follows Matthew’s royal genealogy through Solomon and Zerubbabel. Luke gives a different line through David’s son Nathan; both genealogies culminate in Joseph.' }),
+  P('james-brother', 'James', { gen: 64, died: 62, dating: 'inferred', era: 'early-church', major: true, father: 'joseph-nazareth', mother: 'mary',
     scripture: ['Mark 6:3', 'Acts 15:13–21', 'Galatians 1:19'], events: ['jerusalem-council'],
     bio: 'Sceptical during his brother’s lifetime and leading the Jerusalem church afterwards. Josephus records his execution in AD 62.' }),
 ]
 
-for (const list of [LEVI_LINE, ROYAL_LINE, DAVIDIC, NT_FAMILY]) PEOPLE.push(...list)
+for (const list of [LEVI_LINE, ROYAL_LINE, DAVIDIC, MATTHEW_LINE, NT_FAMILY]) PEOPLE.push(...list)
 
 export const PERSON_BY_ID = Object.fromEntries(PEOPLE.map((p) => [p.id, p]))
 
