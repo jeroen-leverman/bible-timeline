@@ -68,6 +68,12 @@ export const SOURCE_CATALOG = {
     license: 'Page text CC BY-SA 3.0 IGO; citation only',
     url: 'https://whc.unesco.org/',
   },
+  'israel-nature-parks': {
+    title: 'Israel Nature and Parks Authority',
+    type: 'archaeological-reference',
+    license: 'Citation only; page rights retained by publisher',
+    url: 'https://en.parks.org.il/',
+  },
   openstreetmap: {
     title: 'OpenStreetMap',
     type: 'basemap-data',

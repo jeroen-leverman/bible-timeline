@@ -27,10 +27,27 @@ const unesco = (id, label) => ({
   verification: 'cited',
 })
 
+const nationalPark = (slug, label) => ({
+  sourceId: 'israel-nature-parks',
+  role: 'historical-evidence',
+  citation: `Israel Nature and Parks Authority — ${label}`,
+  url: `https://en.parks.org.il/reserve-park/${slug}/`,
+  license: 'Citation only; page rights retained by publisher',
+  verification: 'cited',
+})
+
+const biblicalText = (citation) => ({
+  sourceId: 'biblical-text',
+  role: 'commentary',
+  citation,
+  verification: 'cited',
+})
+
 const reviewed = (...sourceRefs) => {
   const crossChecks = sourceRefs.slice(1).map(({ sourceId }) => ({
     pleiades: 'Pleiades',
     'unesco-world-heritage': 'UNESCO archaeological records',
+    'israel-nature-parks': 'an official archaeological site record',
   })[sourceId]).filter(Boolean)
   const comparison = crossChecks.length
     ? ` Cross-checked with ${crossChecks.join(' and ')}.`
@@ -41,6 +58,11 @@ const reviewed = (...sourceRefs) => {
     sourceRefs,
   }
 }
+
+const reviewedWithNote = (sourceReviewNote, ...sourceRefs) => ({
+  ...reviewed(...sourceRefs),
+  sourceReviewNote,
+})
 
 /**
  * First core-place audit batch.
@@ -138,5 +160,105 @@ export const PLACE_SOURCE_AUDITS = {
     openBible('a1fe6e7', 'athens', 'Athens'),
     pleiades('579885', 'Athenae'),
     unesco('404', 'Acropolis, Athens'),
+  ),
+
+  // ---- Israel, Judah & neighboring anchor sites (batch 2) -------------
+  'temple-mount': reviewedWithNote(
+    'The temple platform is securely located. Connecting it with Genesis’s broader “land of Moriah” follows 2 Chronicles 3:1 and later interpretation; it is not a separately excavated identification of the binding of Isaac.',
+    openBible('aac1fcf', 'mount-moriah', 'Mount Moriah (2 Chronicles 3:1)'),
+    pleiades('973646718', 'Second Temple, Jerusalem'),
+    unesco('148', 'Old City of Jerusalem and its Walls'),
+    biblicalText('Genesis 22:2; 2 Chronicles 3:1'),
+  ),
+  shiloh: reviewedWithNote(
+    'The marker follows OpenBible’s high-confidence Khirbet Seilun identification. Pleiades’ representative point for Silo is about 0.9 km east, so the two points are retained as a disclosed gazetteer difference.',
+    openBible('aa4680a', 'shiloh', 'Shiloh'),
+    pleiades('688028', 'Silo'),
+  ),
+  gibeon: reviewed(
+    openBible('aede336', 'gibeon', 'Gibeon'),
+    pleiades('687900', 'Gabaon'),
+  ),
+  lachish: reviewed(
+    openBible('a3cc590', 'lachish', 'Lachish'),
+    pleiades('687951', 'Lachish'),
+  ),
+  'en-gedi': reviewedWithNote(
+    'OpenBible and Pleiades use different representative points within the En Gedi oasis. The marker uses Pleiades’ ancient Engaddai point and the official antiquities record rather than a modern reserve entrance.',
+    pleiades('687893', 'Engaddai'),
+    openBible('a51df0e', 'engedi', 'Engedi'),
+    nationalPark('engedi', 'En Gedi Antiquities National Park'),
+  ),
+  masada: reviewedWithNote(
+    'Masada is not named in the biblical text dataset. Its marker and AD 73 event are sourced from the archaeological gazetteer, UNESCO, and the official site authority.',
+    pleiades('687968', 'Masada'),
+    unesco('1040', 'Masada'),
+    nationalPark('masada-national-park', 'Masada National Park'),
+  ),
+  bethany: reviewed(
+    openBible('a4f35bc', 'bethany-1', 'Bethany 1 (near Jerusalem)'),
+    pleiades('156668177', 'Bethania'),
+  ),
+  olives: reviewed(
+    openBible('ac2c4c5', 'mount-of-olives', 'Mount of Olives'),
+  ),
+  nebo: reviewedWithNote(
+    'OpenBible’s leading candidate is about 2.4 km east and has a lower identification score. The marker therefore uses Pleiades’ mountain representative point and retains the project’s traditional certainty label.',
+    pleiades('563265622', 'Mount Nebo'),
+    openBible('aefaa2d', 'mount-nebo', 'Mount Nebo'),
+  ),
+  rabbah: reviewed(
+    openBible('ae067b5', 'rabbah-1', 'Rabbah 1 (Rabbah of the Ammonites)'),
+    pleiades('697728', 'Amman/Philadelpheia'),
+  ),
+  'beth-shan': reviewed(
+    openBible('a2a8df0', 'beth-shan', 'Beth-shan'),
+    pleiades('678378', 'Scythopolis/Nysa'),
+    nationalPark('bet-shean-national-park', 'Bet She’an National Park'),
+  ),
+  jezreel: reviewed(
+    openBible('ae0bf4a', 'jezreel-2', 'Jezreel 2 (the northern city)'),
+    pleiades('678197', 'Iezreel/Isdradela'),
+  ),
+  megiddo: reviewed(
+    openBible('a8554e3', 'megiddo', 'Megiddo'),
+    pleiades('26356565', 'Magidû'),
+    unesco('1108', 'Biblical Tels — Megiddo component'),
+    nationalPark('tel-megiddo-armageddon-national-park', 'Tel Megiddo National Park'),
+  ),
+  samaria: reviewedWithNote(
+    'The marker identifies Omri’s city at Sebastia, not the wider region also called Samaria. Pleiades place 678370 is used for the city; the OpenBible-linked regional record is deliberately not substituted.',
+    openBible('a041bb3', 'samaria-1', 'Samaria 1 (the city)'),
+    pleiades('678370', 'Samaria/Sebaste'),
+  ),
+  hazor: reviewed(
+    openBible('a6f33c5', 'hazor-1', 'Hazor 1 (the northern royal city)'),
+    pleiades('779967430', 'Tel Hazor'),
+    unesco('1108', 'Biblical Tels — Hazor component'),
+    nationalPark('tel-hazor-national-park', 'Tel Hazor National Park'),
+  ),
+  dan: reviewedWithNote(
+    'The marker follows OpenBible’s high-confidence Tel Dan point and the official archaeological site. Pleiades’ broader representative point lies about 1 km southwest.',
+    openBible('a513646', 'dan', 'Dan'),
+    pleiades('678109', 'Dan'),
+    nationalPark('tel-dan-nature-reserve', 'Tel Dan Nature Reserve'),
+  ),
+  'caesarea-philippi': reviewed(
+    openBible('ab7bf48', 'caesarea-philippi', 'Caesarea Philippi'),
+    pleiades('678324', 'Paneas/Caesarea Philippi'),
+  ),
+  caesarea: reviewed(
+    openBible('a58735e', 'caesarea', 'Caesarea (Maritima)'),
+    pleiades('678401', 'Stratonos Pyrgos/Caesarea'),
+    nationalPark('caesarea-national-park', 'Caesarea National Park'),
+  ),
+  gath: reviewed(
+    openBible('a18873f', 'gath-1', 'Gath 1 (the Philistine city)'),
+    pleiades('889522884', 'Gimtu/Gath at Tell es-Safi'),
+  ),
+  gaza: reviewedWithNote(
+    'Ancient Gaza lies beneath and around the modern city, so both datasets provide representative rather than excavated point coordinates. The marker follows OpenBible; Pleiades’ city point is about 2.5 km northwest.',
+    openBible('aa8edd2', 'gaza', 'Gaza'),
+    pleiades('687902', 'Gaza'),
   ),
 }
