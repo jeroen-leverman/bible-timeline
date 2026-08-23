@@ -30,11 +30,11 @@ from:
 | Estimated from external evidence | a scholarly date |
 | No date given | scripture supplies nothing |
 
-Every parent link is checked at load to span exactly one generation. That matters more
-than it sounds: the Judahite king list is easy to write with four kings missing, and a
-tree drawn from it would quietly assert that Jehoshaphat was Rehoboam's son. It is also
-worth remembering that the Hebrew "X fathered Y" does not require Y to be an immediate
-son, so even a complete chain may telescope.
+Every named-descent link occupies the next displayed generation. That matters more than
+it sounds: the Judahite king list is easy to write with four kings missing, and a tree
+drawn from it could quietly assert that Jehoshaphat was Rehoboam's immediate son. It is
+also worth remembering that biblical genealogies can telescope, so an adjacent displayed
+link may still stand for a later descendant rather than an immediate child.
 
 ## Lives and threads
 

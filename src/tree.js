@@ -6,10 +6,10 @@
  * single spine with a handful of branches, so ordering each row by where its parent sits
  * in the row above is enough to keep the lines from crossing.
  *
- * Every parent link in people.js spans exactly one generation, which is checked at load.
+ * Every named-descent link in people.js occupies the next displayed generation.
  * That matters more than it sounds: the Judahite king list is easy to write with four
- * generations missing, and a tree drawn from it would quietly assert that Jehoshaphat
- * was Rehoboam's son.
+ * generations missing, and a tree drawn from it could quietly assert that Jehoshaphat
+ * was Rehoboam's immediate son.
  */
 import { PEOPLE, PERSON_BY_ID, DATING_LABEL, childrenOf } from './data/people.js'
 import { ERA_BY_ID } from './data/eras.js'
@@ -72,9 +72,9 @@ export function createTree(root, { onShowInAtlas }) {
             </div>
           </div>
           <div class="tree-toolbar-foot">
-            <div><span id="tree-context" aria-live="polite"></span><small>Dates are approximate; spacing follows generations, not elapsed years.</small></div>
+            <div><span id="tree-context" aria-live="polite"></span><small>Spacing follows named generations; genealogies may skip unnamed ancestors.</small></div>
             <div class="tree-legend" aria-label="Relationship line legend">
-              <span><i class="legend-descent"></i>Parent &amp; child</span>
+              <span><i class="legend-descent"></i>Named descent</span>
               <span><i class="legend-spouse"></i>Spouses</span>
             </div>
           </div>
@@ -422,9 +422,9 @@ export function createTree(root, { onShowInAtlas }) {
       <p class="td-bio">${escapeHtml(p.bio)}</p>
       ${p.note ? `<p class="td-note"><strong>Note</strong>${escapeHtml(p.note)}</p>` : ''}
       <div class="td-rels">
-        ${rel('Parents', [father, mother].filter(Boolean))}
+        ${rel('Named parent / ancestor', [father, mother].filter(Boolean))}
         ${rel(spouses.length > 1 ? 'Spouses' : 'Spouse', spouses)}
-        ${rel('Children', kids)}
+        ${rel('Named child / descendant', kids)}
       </div>
       <div class="td-section">
         <span class="td-label">Scripture</span>
