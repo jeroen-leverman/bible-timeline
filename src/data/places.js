@@ -1,4 +1,5 @@
 import { buildPlaceProvenance } from './provenance.js'
+import { PLACE_SOURCE_AUDITS } from './placeSourceAudits.js'
 
 /**
  * Gazetteer of biblical places.
@@ -14,16 +15,22 @@ import { buildPlaceProvenance } from './provenance.js'
  */
 
 const P = (id, name, lat, lng, certainty, opts = {}) => {
-  const item = { id, name, lat, lng, certainty, ...opts }
+  const audit = PLACE_SOURCE_AUDITS[id] ?? {}
+  const item = {
+    id, name, lat, lng, certainty,
+    ...audit,
+    ...opts,
+    sourceRefs: [...(audit.sourceRefs ?? []), ...(opts.sourceRefs ?? [])],
+  }
   return { ...item, provenance: buildPlaceProvenance(item) }
 }
 
 export const PLACES = [
   // ---- Mesopotamia & the east -------------------------------------------
-  P('ur', 'Ur of the Chaldees', 30.9626, 46.1030, 'secure', { modern: 'Tell el-Muqayyar, Iraq' }),
-  P('haran', 'Haran', 36.8642, 39.0306, 'secure', { modern: 'Harran, Türkiye' }),
-  P('babylon', 'Babylon', 32.5364, 44.4208, 'secure', { modern: 'Hillah, Iraq' }),
-  P('nineveh', 'Nineveh', 36.3594, 43.1525, 'secure', { modern: 'Mosul, Iraq' }),
+  P('ur', 'Ur of the Chaldees', 30.962222, 46.104444, 'secure', { modern: 'Tell el-Muqayyar, Iraq' }),
+  P('haran', 'Haran', 36.864444, 39.032778, 'secure', { modern: 'Harran, Türkiye' }),
+  P('babylon', 'Babylon', 32.543333, 44.422222, 'secure', { modern: 'Hillah, Iraq' }),
+  P('nineveh', 'Nineveh', 36.359400, 43.152800, 'secure', { modern: 'Mosul, Iraq' }),
   P('asshur', 'Asshur', 35.4569, 43.2597, 'secure', { modern: 'Qal‘at Sharqat, Iraq' }),
   P('susa', 'Susa (Shushan)', 32.1897, 48.2575, 'secure', { modern: 'Shush, Iran' }),
   P('ecbatana', 'Ecbatana', 34.7981, 48.5147, 'secure', { modern: 'Hamadan, Iran' }),
@@ -67,19 +74,19 @@ export const PLACES = [
   P('mount-hor', 'Mount Hor', 30.3167, 35.4067, 'traditional'),
 
   // ---- Canaan: highlands & Judah ----------------------------------------
-  P('jerusalem', 'Jerusalem', 31.7683, 35.2137, 'secure'),
+  P('jerusalem', 'Jerusalem', 31.776667, 35.234167, 'secure'),
   P('temple-mount', 'Temple Mount (Moriah)', 31.7780, 35.2354, 'secure'),
-  P('bethlehem', 'Bethlehem', 31.7054, 35.2024, 'secure'),
-  P('hebron', 'Hebron', 31.5326, 35.0998, 'secure'),
-  P('beersheba', 'Beersheba', 31.2518, 34.7913, 'secure'),
+  P('bethlehem', 'Bethlehem', 31.704306, 35.207639, 'secure'),
+  P('hebron', 'Hebron', 31.525087, 35.102220, 'secure'),
+  P('beersheba', 'Beersheba', 31.244722, 34.840833, 'secure'),
   P('beer-lahai-roi', 'Beer-lahai-roi', 30.7000, 34.7000, 'disputed', {
     note: 'The well where Hagar named God — "the well of the Living One who sees me". ' +
           'Genesis places it between Kadesh and Bered, neither of which is securely located.',
   }),
   P('gerar', 'Gerar', 31.3833, 34.5833, 'probable', { modern: 'Tel Haror, Israel' }),
-  P('bethel', 'Bethel', 31.9275, 35.2333, 'probable', { modern: 'Beitin' }),
+  P('bethel', 'Bethel', 31.922778, 35.241389, 'probable', { modern: 'Beitin' }),
   P('ai', 'Ai', 31.9167, 35.2611, 'disputed', { modern: 'et-Tell' }),
-  P('shechem', 'Shechem', 32.2137, 35.2833, 'secure', { modern: 'Tell Balata, Nablus' }),
+  P('shechem', 'Shechem', 32.213611, 35.281944, 'secure', { modern: 'Tell Balata, Nablus' }),
   P('shiloh', 'Shiloh', 32.0556, 35.2894, 'secure', { modern: 'Khirbet Seilun' }),
   P('gerizim', 'Mount Gerizim', 32.2000, 35.2733, 'secure'),
   P('ebal', 'Mount Ebal', 32.2333, 35.2833, 'secure'),
@@ -112,7 +119,7 @@ export const PLACES = [
   }),
 
   // ---- Canaan: Jordan valley, north & coast ------------------------------
-  P('jericho', 'Jericho', 31.8711, 35.4436, 'secure', { modern: 'Tell es-Sultan' }),
+  P('jericho', 'Jericho', 31.871719, 35.444564, 'secure', { modern: 'Tell es-Sultan' }),
   P('gilgal', 'Gilgal', 31.8700, 35.5100, 'disputed'),
   P('jordan-crossing', 'Jordan crossing / Bethany beyond the Jordan', 31.8372, 35.5450, 'probable', {
     modern: 'Al-Maghtas, Jordan',
@@ -153,10 +160,10 @@ export const PLACES = [
   P('dan', 'Dan', 33.2486, 35.6522, 'secure', { modern: 'Tel Dan' }),
   P('hermon', 'Mount Hermon', 33.4162, 35.8571, 'secure'),
   P('caesarea-philippi', 'Caesarea Philippi', 33.2481, 35.6944, 'secure', { modern: 'Banias' }),
-  P('nazareth', 'Nazareth', 32.6996, 35.3035, 'secure'),
+  P('nazareth', 'Nazareth', 32.702140, 35.297690, 'secure'),
   P('cana', 'Cana', 32.7458, 35.3417, 'disputed'),
   P('nain', 'Nain', 32.6300, 35.3400, 'probable'),
-  P('capernaum', 'Capernaum', 32.8808, 35.5750, 'secure'),
+  P('capernaum', 'Capernaum', 32.881111, 35.575000, 'secure'),
   P('bethsaida', 'Bethsaida', 32.9100, 35.6300, 'disputed'),
   P('magdala', 'Magdala', 32.8244, 35.5158, 'secure'),
   P('tiberias', 'Tiberias', 32.7922, 35.5312, 'secure'),
@@ -175,15 +182,15 @@ export const PLACES = [
   P('gath', 'Gath', 31.6997, 34.8472, 'probable', { modern: 'Tell es-Safi' }),
 
   // ---- Syria, Phoenicia, Arabia -----------------------------------------
-  P('damascus', 'Damascus', 33.5138, 36.2765, 'secure'),
+  P('damascus', 'Damascus', 33.511112, 36.306390, 'secure'),
   P('riblah', 'Riblah', 34.4500, 36.5300, 'probable'),
-  P('tyre', 'Tyre', 33.2705, 35.2038, 'secure'),
+  P('tyre', 'Tyre', 33.270833, 35.196111, 'secure'),
   P('sidon', 'Sidon', 33.5606, 35.3758, 'secure'),
   P('zarephath', 'Zarephath', 33.4600, 35.2900, 'probable'),
   P('sheba', 'Sheba', 15.4200, 45.3300, 'probable', { modern: 'Marib, Yemen' }),
 
   // ---- Asia Minor & the Aegean -------------------------------------------
-  P('antioch-syria', 'Antioch on the Orontes', 36.2021, 36.1604, 'secure', { modern: 'Antakya, Türkiye' }),
+  P('antioch-syria', 'Antioch on the Orontes', 36.226691, 36.171743, 'secure', { modern: 'Antakya, Türkiye' }),
   P('seleucia', 'Seleucia Pieria', 36.1200, 35.9300, 'secure'),
   P('tarsus', 'Tarsus', 36.9177, 34.8956, 'secure'),
   P('salamis', 'Salamis (Cyprus)', 35.1833, 33.9000, 'secure'),
@@ -196,7 +203,7 @@ export const PLACES = [
   P('derbe', 'Derbe', 37.3500, 33.4500, 'probable'),
   P('troas', 'Troas', 39.7500, 26.1600, 'secure'),
   P('assos', 'Assos', 39.4900, 26.3400, 'secure'),
-  P('ephesus', 'Ephesus', 37.9397, 27.3417, 'secure'),
+  P('ephesus', 'Ephesus', 37.939125, 27.340700, 'secure'),
   P('miletus', 'Miletus', 37.5300, 27.2775, 'secure'),
   P('smyrna', 'Smyrna', 38.4192, 27.1287, 'secure', { modern: 'İzmir' }),
   P('pergamum', 'Pergamum', 39.1319, 27.1839, 'secure'),
@@ -213,15 +220,15 @@ export const PLACES = [
   P('philippi', 'Philippi', 41.0136, 24.2864, 'secure'),
   P('thessalonica', 'Thessalonica', 40.6401, 22.9444, 'secure'),
   P('berea', 'Berea', 40.5236, 22.2028, 'secure', { modern: 'Veria' }),
-  P('athens', 'Athens', 37.9838, 23.7275, 'secure'),
-  P('corinth', 'Corinth', 37.9060, 22.8781, 'secure'),
+  P('athens', 'Athens', 37.971851, 23.726738, 'secure'),
+  P('corinth', 'Corinth', 37.905785, 22.878741, 'secure'),
   P('cenchreae', 'Cenchreae', 37.8869, 22.9878, 'secure'),
   P('nicopolis', 'Nicopolis', 39.0100, 20.7300, 'secure'),
   P('fair-havens', 'Fair Havens (Crete)', 34.9400, 24.8100, 'probable'),
   P('malta', 'Malta', 35.9375, 14.3754, 'secure'),
   P('syracuse', 'Syracuse', 37.0755, 15.2866, 'secure'),
   P('puteoli', 'Puteoli', 40.8250, 14.1200, 'secure', { modern: 'Pozzuoli' }),
-  P('rome', 'Rome', 41.9028, 12.4964, 'secure'),
+  P('rome', 'Rome', 41.892200, 12.485200, 'secure'),
   P('tarshish', 'Tarshish', 36.9000, -6.3500, 'disputed', {
     note: 'Unidentified. Tartessos in southern Spain is the usual guess — the point ' +
           'in Jonah is that it is as far from Nineveh as a ship could go.',

@@ -21,4 +21,7 @@ for (const [kind, records] of collections) {
   console.log(`✓ ${records.length} ${kind} records · ${statuses}`)
 }
 
+const reviewedPlaces = PLACES.filter(({ provenance }) => provenance.reviewedOn).length
+console.log(`✓ ${reviewedPlaces} place records have completed source reviews`)
+
 console.log(`✓ ${collections.reduce((total, [, records]) => total + records.length, 0)} provenance records valid`)
