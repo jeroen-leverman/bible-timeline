@@ -169,6 +169,17 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
 .event-note strong { display: block; margin-bottom: 2px; color: #927039; font-family: 'DM Sans', sans-serif; font-size: 7px; letter-spacing: .1em; text-transform: uppercase; }
 .event-anchor { color: #4a5f55; background: #eaf1ec; border-left-color: #34604f; }
 .event-anchor strong { color: #34604f; }
+.evidence-panel { margin: 11px 0; padding: 11px; color: #314f63; background: #e7f0f4; border: 1px solid rgba(49,94,118,.18); border-left: 3px solid #3e718c; }
+.evidence-panel-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 7px; }
+.evidence-panel-head span { font-size: 8px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.evidence-panel-head b, .rail-evidence { color: #fff; background: #315e76; font-size: 7px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.evidence-panel-head b { padding: 3px 5px; }
+.evidence-panel > p { margin: 0; font-size: 10px; line-height: 1.5; }
+.evidence-panel .evidence-limit { margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(49,94,118,.16); color: #506979; }
+.evidence-limit strong { display: block; margin-bottom: 2px; color: #a3442c; font-size: 7px; letter-spacing: .08em; text-transform: uppercase; }
+.evidence-links { display: grid; gap: 4px; margin-top: 9px; }
+.evidence-links a { color: #2f596e; font-size: 8px; line-height: 1.4; text-decoration: none; }
+.evidence-links a:hover { color: #a83f25; text-decoration: underline; }
 .scripture-row { display: flex; align-items: flex-start; gap: 9px; padding-top: 2px; }
 .scripture-row svg { width: 15px; color: #98743b; }
 .scripture-row span, .scripture-row strong { display: block; }
@@ -385,7 +396,7 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; strok
 .rail-event.active .rail-node { background: var(--category-color); box-shadow: 0 0 0 5px color-mix(in srgb, var(--category-color), transparent 72%); }
 .rail-event.active strong { color: #fff; }
 .rail-event.active { color: rgba(255,255,255,.7); }
-.rail-heritage { display: inline-block; margin-left: 5px; padding: 2px 4px; vertical-align: middle; }
+.rail-heritage, .rail-evidence { display: inline-block; margin-left: 5px; padding: 2px 4px; vertical-align: middle; }
 
 .atlas-marker-wrap { background: transparent; border: 0; }
 .atlas-marker { position: relative; width: 100%; height: 100%; display: grid; place-items: center; }
@@ -813,6 +824,10 @@ body { background: var(--paper); }
   .event-card h2 { font-size: 20px; }
   .event-summary { display: -webkit-box; margin: 8px 0; overflow: hidden; font-size: 12px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
   .place-sequence, .event-note, .heritage-context { display: none; }
+  .evidence-panel { margin: 7px 0 0; padding: 7px 8px; }
+  .evidence-panel-head { margin: 0; }
+  .evidence-panel-head b { display: none; }
+  .evidence-panel > p, .evidence-links { display: none; }
   .timeline-panel { height: 172px; }
   .timeline-controls { height: 68px; padding: 10px 14px 7px; }
   .timeline-meta .eyebrow, .timeline-meta > span { display: none; }

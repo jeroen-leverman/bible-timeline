@@ -566,6 +566,18 @@ function heritageContextMarkup(item) {
   </aside>`
 }
 
+function historicalEvidenceMarkup(item) {
+  if (!item.anchor) return ''
+  const sources = item.provenance.sources.filter(({ role, url }) => role === 'historical-evidence' && url)
+  return `<aside class="evidence-panel" aria-label="Historical evidence and limitations">
+    <div class="evidence-panel-head"><span>Historical evidence</span><b>Evidence reviewed</b></div>
+    <p>${escapeHtml(item.anchor)}</p>
+    ${item.evidenceLimit ? `<p class="evidence-limit"><strong>What it does not prove</strong>${escapeHtml(item.evidenceLimit)}</p>` : ''}
+    ${sources.length ? `<div class="evidence-links">${sources.map(({ citation, citations, url }, index) =>
+      `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Source ${index + 1}: ${escapeHtml((citations ?? [citation])[0])} ↗</a>`).join('')}</div>` : ''}
+  </aside>`
+}
+
 function renderEventCard() {
   const card = document.querySelector('#event-card')
   const item = EVENT_BY_ID[state.selectedEvent]
@@ -597,7 +609,7 @@ function renderEventCard() {
     <div class="place-sequence">${placeNames.map((name, index) => `<span>${name}</span>${index < placeNames.length - 1 ? '<i>→</i>' : ''}`).join('')}</div>
     ${heritageContextMarkup(item)}
     ${item.note ? `<p class="event-note"><strong>Historical note</strong>${item.note}</p>` : ''}
-    ${item.anchor ? `<p class="event-note event-anchor"><strong>Outside evidence</strong>${item.anchor}</p>` : ''}
+    ${historicalEvidenceMarkup(item)}
     <div class="scripture-row">${ICONS.book}<div><span>Primary texts</span>
       <div class="scripture-refs">${item.scripture.map((ref) =>
         `<button class="ref-btn${state.openRef === ref ? ' open' : ''}" data-ref="${ref}">${ref}</button>`).join('')}</div>
@@ -621,7 +633,7 @@ function renderEventRail() {
       <span class="rail-node"></span>
       <small>${item.dateLabel}</small>
       <strong>${item.title}</strong>
-      <span>${item.places.length} ${item.places.length === 1 ? 'place' : 'places'}${heritageSourcesForEvent(item).length ? '<b class="rail-heritage">UNESCO</b>' : ''}</span>
+      <span>${item.places.length} ${item.places.length === 1 ? 'place' : 'places'}${item.evidenceLimit ? '<b class="rail-evidence">Evidence</b>' : ''}${heritageSourcesForEvent(item).length ? '<b class="rail-heritage">UNESCO</b>' : ''}</span>
     </button>`
   }).join('')
   rail.querySelectorAll('.rail-event').forEach((button) => button.addEventListener('click', () => selectEvent(button.dataset.eventId)))

@@ -1,4 +1,5 @@
 import { buildEventProvenance } from './provenance.js'
+import { EVENT_SOURCE_AUDITS } from './eventSourceAudits.js'
 
 /**
  * Events of the biblical narrative, placed in time and space.
@@ -21,7 +22,18 @@ import { buildEventProvenance } from './provenance.js'
  */
 
 const event = (id, title, year, era, category, places, details = {}) => {
-  const item = { id, title, year, era, category, places, dateConfidence: 'estimated', ...details }
+  const audit = EVENT_SOURCE_AUDITS[id] ?? {}
+  const item = {
+    id, title, year, era, category, places, dateConfidence: 'estimated',
+    ...details,
+    ...audit,
+    sourceRefs: [...(audit.sourceRefs ?? []), ...(details.sourceRefs ?? [])],
+  }
+  if (audit.reviewedOn && item.dateConfidence === 'anchored'
+    && !item.sourceRefs.some(({ role }) => role === 'chronology')) {
+    const anchorSource = item.sourceRefs.find(({ role }) => role === 'historical-evidence')
+    if (anchorSource) item.sourceRefs.push({ ...anchorSource, role: 'chronology' })
+  }
   return { ...item, provenance: buildEventProvenance(item) }
 }
 
@@ -745,6 +757,11 @@ export const EVENTS = [
     scripture: ['2 Kings 2:1–18'],
     summary: 'Three times told to stay behind and three times refusing, Elisha asks for a double share and watches the whirlwind take his master. Fifty men search for three days anyway.',
     route: ['gilgal', 'bethel', 'jericho', 'jordan-crossing'],
+  }),
+  event('mesha-revolt', 'Mesha’s revolt in Moab', -850, 'divided-kingdom', 'battle', ['samaria', 'moab-plains'], {
+    dateLabel: 'c. 850 BC', dateConfidence: 'estimated',
+    scripture: ['2 Kings 1:1', '2 Kings 3:4–27'],
+    summary: 'Mesha of Moab stops paying tribute after Ahab’s death, and Israel, Judah, and Edom campaign against him.',
   }),
   event('elisha', 'Elisha’s miracles in Israel', -848, 'divided-kingdom', 'miracle', ['samaria', 'jezreel', 'jericho'], {
     dateLabel: 'c. 850–800 BC', dateConfidence: 'estimated',
