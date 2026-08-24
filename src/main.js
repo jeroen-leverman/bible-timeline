@@ -10,6 +10,7 @@ import { BOOKS, BOOK_GROUP_LABEL, booksForReferences } from './data/books.js'
 import { contextualPlaceProvenance } from './data/provenance.js'
 import { renderPassageInto, escapeHtml } from './verses.js'
 import { provenanceMarkup, provenanceStatusMarkup } from './provenanceView.js'
+import { sourcesPageMarkup } from './sourcesView.js'
 import { createTree } from './tree.js'
 
 const ICONS = {
@@ -33,6 +34,7 @@ app.innerHTML = `
     <nav class="view-tabs" role="tablist" aria-label="View">
       <button role="tab" data-view="atlas" aria-selected="true" class="on">Atlas</button>
       <button role="tab" data-view="tree" aria-selected="false">Family tree</button>
+      <button role="tab" data-view="sources" aria-selected="false">Sources</button>
     </nav>
     <div class="top-actions">
       <button class="icon-button mobile-only" id="mobile-filters" aria-label="Open filters">${ICONS.layers}</button>
@@ -128,6 +130,7 @@ app.innerHTML = `
   </main>
 
   <section class="tree-view" id="tree-view" hidden></section>
+  <section class="sources-view" id="sources-view" aria-label="Sources and research method" hidden>${sourcesPageMarkup()}</section>
 
   <dialog class="method-dialog" id="method-dialog">
     <button class="dialog-close icon-button" id="dialog-close" aria-label="Close">${ICONS.close}</button>
@@ -147,8 +150,10 @@ app.innerHTML = `
       <div class="source-links" aria-label="Open source candidates">
         <a href="https://www.openbible.info/geo/" target="_blank" rel="noreferrer">OpenBible.info <span>CC BY 4.0</span></a>
         <a href="https://pleiades.stoa.org/" target="_blank" rel="noreferrer">Pleiades <span>CC BY 3.0</span></a>
+        <a href="https://whc.unesco.org/" target="_blank" rel="noreferrer">UNESCO <span>Terms vary by item</span></a>
         <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap <span>ODbL</span></a>
       </div>
+      <button class="sources-page-button" id="open-sources-page">Browse the complete source register →</button>
     </section>
     <p class="dialog-footnote">The basemap shows modern coastlines and terrain with present-day labels removed, so the ancient names stand on their own. It does not depict ancient political boundaries.</p>
   </dialog>
@@ -156,6 +161,7 @@ app.innerHTML = `
 `
 
 const state = {
+  view: 'atlas',
   selectedEra: null,
   selectedBook: null,
   selectedTheme: null,
@@ -537,6 +543,29 @@ function confidenceClass(confidence) {
   return ['anchored', 'estimated', 'disputed', 'traditional', 'undated'].includes(confidence) ? confidence : 'estimated'
 }
 
+function heritageSourcesForEvent(item) {
+  const records = new Map()
+  for (const placeId of item.places) {
+    const place = PLACE_BY_ID[placeId]
+    for (const source of place?.provenance.sources ?? []) {
+      if (source.sourceId !== 'unesco-world-heritage' || records.has(source.url)) continue
+      records.set(source.url, { place, source })
+    }
+  }
+  return [...records.values()]
+}
+
+function heritageContextMarkup(item) {
+  const records = heritageSourcesForEvent(item)
+  if (!records.length) return ''
+  return `<aside class="heritage-context" aria-label="UNESCO World Heritage context">
+    <div class="heritage-context-head"><span>World Heritage context</span><b>UNESCO</b></div>
+    <div class="heritage-context-links">${records.map(({ place, source }) =>
+      `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer"><strong>${escapeHtml(place.name)}</strong><small>${escapeHtml(source.citations[0])}</small></a>`).join('')}</div>
+    <p>Archaeological context for the place; not independent proof of the event.</p>
+  </aside>`
+}
+
 function renderEventCard() {
   const card = document.querySelector('#event-card')
   const item = EVENT_BY_ID[state.selectedEvent]
@@ -566,6 +595,7 @@ function renderEventCard() {
     ${books.length ? `<div class="event-books" aria-label="Biblical books">${books.map((book) =>
       `<span>${escapeHtml(book)}</span>`).join('')}</div>` : ''}
     <div class="place-sequence">${placeNames.map((name, index) => `<span>${name}</span>${index < placeNames.length - 1 ? '<i>→</i>' : ''}`).join('')}</div>
+    ${heritageContextMarkup(item)}
     ${item.note ? `<p class="event-note"><strong>Historical note</strong>${item.note}</p>` : ''}
     ${item.anchor ? `<p class="event-note event-anchor"><strong>Outside evidence</strong>${item.anchor}</p>` : ''}
     <div class="scripture-row">${ICONS.book}<div><span>Primary texts</span>
@@ -591,7 +621,7 @@ function renderEventRail() {
       <span class="rail-node"></span>
       <small>${item.dateLabel}</small>
       <strong>${item.title}</strong>
-      <span>${item.places.length} ${item.places.length === 1 ? 'place' : 'places'}</span>
+      <span>${item.places.length} ${item.places.length === 1 ? 'place' : 'places'}${heritageSourcesForEvent(item).length ? '<b class="rail-heritage">UNESCO</b>' : ''}</span>
     </button>`
   }).join('')
   rail.querySelectorAll('.rail-event').forEach((button) => button.addEventListener('click', () => selectEvent(button.dataset.eventId)))
@@ -727,10 +757,14 @@ const tree = createTree(document.querySelector('#tree-view'), {
 })
 
 function setView(view) {
+  state.view = view
   const isTree = view === 'tree'
-  document.querySelector('.topbar').classList.toggle('tree-mode', isTree)
-  document.querySelector('.atlas-shell').hidden = isTree
+  const isSources = view === 'sources'
+  const isAtlas = view === 'atlas'
+  document.querySelector('.topbar').classList.toggle('tree-mode', !isAtlas)
+  document.querySelector('.atlas-shell').hidden = !isAtlas
   document.querySelector('#tree-view').hidden = !isTree
+  document.querySelector('#sources-view').hidden = !isSources
   document.querySelectorAll('[data-view]').forEach((b) => {
     const on = b.dataset.view === view
     b.classList.toggle('on', on)
@@ -741,12 +775,25 @@ function setView(view) {
     tree.show()
   }
   // Leaflet cannot measure a hidden container, so the map is re-measured on return.
-  else requestAnimationFrame(() => map.invalidateSize())
+  else if (isAtlas) requestAnimationFrame(() => map.invalidateSize())
+
+  const nextHash = isAtlas ? '' : `#${view}`
+  if (window.location.hash !== nextHash) history.pushState({ view }, '', nextHash || window.location.pathname + window.location.search)
 }
 
 document.querySelector('.view-tabs').addEventListener('click', (event) => {
   const view = event.target.closest('[data-view]')?.dataset.view
   if (view) setView(view)
+})
+
+document.querySelector('.brand').addEventListener('click', (event) => {
+  event.preventDefault()
+  setView('atlas')
+})
+
+window.addEventListener('popstate', () => {
+  const view = window.location.hash === '#tree' ? 'tree' : window.location.hash === '#sources' ? 'sources' : 'atlas'
+  setView(view)
 })
 
 document.querySelector('#clear-era').addEventListener('click', () => {
@@ -789,6 +836,10 @@ document.querySelector('#atlas-search').addEventListener('input', (event) => {
 const methodDialog = document.querySelector('#method-dialog')
 document.querySelector('#method-button').addEventListener('click', () => methodDialog.showModal())
 document.querySelector('#dialog-close').addEventListener('click', () => methodDialog.close())
+document.querySelector('#open-sources-page').addEventListener('click', () => {
+  methodDialog.close()
+  setView('sources')
+})
 methodDialog.addEventListener('click', (event) => {
   if (event.target === methodDialog) methodDialog.close()
 })
@@ -797,13 +848,13 @@ document.querySelector('#sidebar-close').addEventListener('click', closeSidebar)
 document.querySelector('#mobile-scrim').addEventListener('click', closeSidebar)
 
 document.addEventListener('keydown', (event) => {
-  if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+  if (state.view === 'atlas' && (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
     event.preventDefault()
     document.querySelector('#atlas-search').focus()
     openSidebar()
   }
   if (event.key === 'Escape') closeSidebar()
-  if (['ArrowRight', 'ArrowLeft'].includes(event.key) && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+  if (state.view === 'atlas' && ['ArrowRight', 'ArrowLeft'].includes(event.key) && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
     const events = filteredEvents()
     const index = events.findIndex(({ id }) => id === state.selectedEvent)
     const next = event.key === 'ArrowRight' ? index + 1 : index - 1
@@ -813,6 +864,8 @@ document.addEventListener('keydown', (event) => {
 
 renderAllPlaces()
 render()
+if (window.location.hash === '#tree') setView('tree')
+if (window.location.hash === '#sources') setView('sources')
 
 // Leaflet measures its container when the map is created, which happens before the
 // shell has been laid out, and the stylesheet pulls in webfonts that reflow it again
