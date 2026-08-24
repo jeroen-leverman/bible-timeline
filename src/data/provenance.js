@@ -65,7 +65,7 @@ export const SOURCE_CATALOG = {
   'unesco-world-heritage': {
     title: 'UNESCO World Heritage Centre',
     type: 'archaeological-reference',
-    license: 'Page text CC BY-SA 3.0 IGO; citation only',
+    license: 'Citation only; reuse terms vary by item',
     url: 'https://whc.unesco.org/',
   },
   'israel-nature-parks': {

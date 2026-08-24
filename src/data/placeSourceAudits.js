@@ -23,7 +23,7 @@ const unesco = (id, label) => ({
   role: 'historical-evidence',
   citation: `UNESCO World Heritage property ${id} — ${label}`,
   url: `https://whc.unesco.org/en/list/${id}`,
-  license: 'Page text CC BY-SA 3.0 IGO; citation only',
+  license: 'Citation only; reuse terms vary by item',
   verification: 'cited',
 })
 
