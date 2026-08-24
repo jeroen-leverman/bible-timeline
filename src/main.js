@@ -10,7 +10,6 @@ import { BOOKS, BOOK_GROUP_LABEL, booksForReferences } from './data/books.js'
 import { contextualPlaceProvenance } from './data/provenance.js'
 import { renderPassageInto, escapeHtml } from './verses.js'
 import { provenanceMarkup, provenanceStatusMarkup } from './provenanceView.js'
-import { sourcesPageMarkup } from './sourcesView.js'
 import { createTree } from './tree.js'
 
 const ICONS = {
@@ -33,6 +32,8 @@ app.innerHTML = `
     </a>
     <nav class="view-tabs" role="tablist" aria-label="View">
       <button role="tab" data-view="atlas" aria-selected="true" class="on">Atlas</button>
+      <button role="tab" data-view="evidence" aria-selected="false">Evidence</button>
+      <button role="tab" data-view="kids" aria-selected="false">Kids</button>
       <button role="tab" data-view="tree" aria-selected="false">Family tree</button>
       <button role="tab" data-view="sources" aria-selected="false">Sources</button>
     </nav>
@@ -130,7 +131,9 @@ app.innerHTML = `
   </main>
 
   <section class="tree-view" id="tree-view" hidden></section>
-  <section class="sources-view" id="sources-view" aria-label="Sources and research method" hidden>${sourcesPageMarkup()}</section>
+  <section class="evidence-view" id="evidence-view" aria-label="Historical evidence explorer" hidden></section>
+  <section class="kids-view" id="kids-view" aria-label="Bible history for younger explorers" hidden></section>
+  <section class="sources-view" id="sources-view" aria-label="Sources and research method" hidden></section>
 
   <dialog class="method-dialog" id="method-dialog">
     <button class="dialog-close icon-button" id="dialog-close" aria-label="Close">${ICONS.close}</button>
@@ -767,15 +770,53 @@ document.querySelector('#event-card').addEventListener('click', (event) => {
 const tree = createTree(document.querySelector('#tree-view'), {
   onShowInAtlas: (eventId) => { setView('atlas'); selectEvent(eventId) },
 })
+let evidenceExplorer = null
+let kidsInitialized = false
+let sourcesInitialized = false
+
+async function ensureEvidenceExplorer() {
+  const container = document.querySelector('#evidence-view')
+  if (evidenceExplorer) { evidenceExplorer.refresh(); return }
+  container.innerHTML = '<p class="view-loading">Opening the evidence register…</p>'
+  const { createEvidenceExplorer } = await import('./evidenceView.js')
+  evidenceExplorer = createEvidenceExplorer(container, {
+    onShowInAtlas: (eventId) => { setView('atlas'); selectEvent(eventId) },
+  })
+}
+
+async function ensureKidsView() {
+  if (kidsInitialized) return
+  const container = document.querySelector('#kids-view')
+  container.innerHTML = '<p class="view-loading">Preparing the kids journey…</p>'
+  const { createKidsView } = await import('./kidsView.js')
+  createKidsView(container, {
+    onShowInAtlas: (eventId) => { setView('atlas'); selectEvent(eventId) },
+    onShowEvidence: () => setView('evidence'),
+  })
+  kidsInitialized = true
+}
+
+async function ensureSourcesView() {
+  if (sourcesInitialized) return
+  const container = document.querySelector('#sources-view')
+  container.innerHTML = '<p class="view-loading">Opening the source register…</p>'
+  const { sourcesPageMarkup } = await import('./sourcesView.js')
+  container.innerHTML = sourcesPageMarkup()
+  sourcesInitialized = true
+}
 
 function setView(view) {
   state.view = view
   const isTree = view === 'tree'
   const isSources = view === 'sources'
+  const isEvidence = view === 'evidence'
+  const isKids = view === 'kids'
   const isAtlas = view === 'atlas'
   document.querySelector('.topbar').classList.toggle('tree-mode', !isAtlas)
   document.querySelector('.atlas-shell').hidden = !isAtlas
   document.querySelector('#tree-view').hidden = !isTree
+  document.querySelector('#evidence-view').hidden = !isEvidence
+  document.querySelector('#kids-view').hidden = !isKids
   document.querySelector('#sources-view').hidden = !isSources
   document.querySelectorAll('[data-view]').forEach((b) => {
     const on = b.dataset.view === view
@@ -786,6 +827,9 @@ function setView(view) {
     tree.setBook(state.selectedBook)
     tree.show()
   }
+  else if (isEvidence) ensureEvidenceExplorer()
+  else if (isKids) ensureKidsView()
+  else if (isSources) ensureSourcesView()
   // Leaflet cannot measure a hidden container, so the map is re-measured on return.
   else if (isAtlas) requestAnimationFrame(() => map.invalidateSize())
 
@@ -804,7 +848,8 @@ document.querySelector('.brand').addEventListener('click', (event) => {
 })
 
 window.addEventListener('popstate', () => {
-  const view = window.location.hash === '#tree' ? 'tree' : window.location.hash === '#sources' ? 'sources' : 'atlas'
+  const hashView = window.location.hash.slice(1)
+  const view = ['tree', 'evidence', 'kids', 'sources'].includes(hashView) ? hashView : 'atlas'
   setView(view)
 })
 
@@ -877,6 +922,8 @@ document.addEventListener('keydown', (event) => {
 renderAllPlaces()
 render()
 if (window.location.hash === '#tree') setView('tree')
+if (window.location.hash === '#evidence') setView('evidence')
+if (window.location.hash === '#kids') setView('kids')
 if (window.location.hash === '#sources') setView('sources')
 
 // Leaflet measures its container when the map is created, which happens before the

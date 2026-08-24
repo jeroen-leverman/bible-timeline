@@ -1280,6 +1280,17 @@ export const EVENTS = [
     scripture: ['Acts 11:19–26'],
     summary: 'A mixed Jewish and Gentile congregation in Rome’s third city, and the first place the disciples are called Christians.',
   }),
+  event('agrippa-death', 'Herod Agrippa I dies at Caesarea', 44, 'early-church', 'kingdom', ['caesarea'], {
+    dateLabel: 'AD 44', dateConfidence: 'anchored',
+    scripture: ['Acts 12:20–23'],
+    summary: 'Acclaimed as a god during a public appearance at Caesarea, Agrippa is suddenly struck down and dies.',
+  }),
+  event('claudius-famine', 'Famine under Claudius', 46, 'early-church', 'ministry', ['antioch-syria', 'jerusalem'], {
+    dateLabel: 'c. AD 46–48', dateConfidence: 'estimated',
+    scripture: ['Acts 11:27–30'],
+    summary: 'The Antioch church sends relief to Judea after Agabus predicts a severe famine during the reign of Claudius.',
+    route: ['antioch-syria', 'jerusalem'],
+  }),
   event('paul-1', 'Paul’s first missionary journey', 46, 'early-church', 'migration',
     ['antioch-syria', 'salamis', 'paphos', 'antioch-pisidia', 'iconium', 'lystra', 'derbe'], {
     dateLabel: 'c. AD 46–48', dateConfidence: 'estimated',
