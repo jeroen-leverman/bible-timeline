@@ -16,6 +16,18 @@ const SOURCE_TYPE_LABEL = {
 const SOURCE_ORDER = [
   'biblical-text',
   'ancient-text',
+  'ucl-digital-egypt',
+  'jewish-museum',
+  'digital-karnak',
+  'louvre-collections',
+  'british-museum',
+  'oracc',
+  'michigan-image-database',
+  'elephantine-project',
+  'perseus',
+  'israel-museum',
+  'phi-inscriptions',
+  'parco-colosseo',
   'unesco-world-heritage',
   'openbible-geocoding',
   'pleiades',
@@ -49,8 +61,8 @@ export function sourcesPageMarkup() {
   const heritagePlaces = unescoPlaces()
   const heritagePlaceIds = new Set(heritagePlaces.map(({ place }) => place.id))
   const reviewedPlaces = PLACES.filter(({ provenance }) => provenance.status === 'primary-cited').length
-  const reviewedEvents = EVENTS.filter(({ provenance }) => provenance.status === 'primary-cited').length
-  const latestReview = PLACES.map(({ provenance }) => provenance.reviewedOn)
+  const evidenceReviewedEvents = EVENTS.filter(({ evidenceLimit }) => evidenceLimit).length
+  const latestReview = [...PLACES, ...EVENTS].map(({ provenance }) => provenance.reviewedOn)
     .filter(Boolean).sort().at(-1)
 
   const sourceCards = SOURCE_ORDER.map((id) => {
@@ -80,9 +92,9 @@ export function sourcesPageMarkup() {
       </div>
       <dl class="sources-stats" aria-label="Source review progress">
         <div><dt>${reviewedPlaces}</dt><dd>places source-reviewed</dd></div>
-        <div><dt>${reviewedEvents}</dt><dd>events fully cited</dd></div>
+        <div><dt>${evidenceReviewedEvents}</dt><dd>events evidence-reviewed</dd></div>
         <div><dt>${heritagePlaces.length}</dt><dd>UNESCO-linked places</dd></div>
-        <div><dt>${eventsUsingPlaces(heritagePlaceIds)}</dt><dd>timeline events with UNESCO context</dd></div>
+        <div><dt>${eventsUsingPlaces(heritagePlaceIds)}</dt><dd>events with UNESCO context</dd></div>
       </dl>
     </header>
 

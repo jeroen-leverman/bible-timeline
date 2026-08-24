@@ -24,4 +24,8 @@ for (const [kind, records] of collections) {
 const reviewedPlaces = PLACES.filter(({ provenance }) => provenance.reviewedOn).length
 console.log(`✓ ${reviewedPlaces} place records have completed source reviews`)
 
+const evidenceReviewedEvents = EVENTS.filter(({ evidenceLimit, provenance }) => evidenceLimit && provenance.reviewedOn).length
+if (evidenceReviewedEvents < 20) throw new Error(`Expected at least 20 evidence-reviewed events; found ${evidenceReviewedEvents}`)
+console.log(`✓ ${evidenceReviewedEvents} event records have completed historical-evidence reviews`)
+
 console.log(`✓ ${collections.reduce((total, [, records]) => total + records.length, 0)} provenance records valid`)
