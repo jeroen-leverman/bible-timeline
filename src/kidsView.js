@@ -65,6 +65,69 @@ const KIDS_STORIES = [
   },
 ]
 
+const NOAH_SCENES = [
+  {
+    title: 'Build the ark', reference: 'Genesis 6:13–22',
+    narration: 'Noah follows the instructions he is given. Piece by piece, a huge wooden ark rises on dry ground.',
+    prompt: 'Imagine building something this large before the first drop of rain.',
+  },
+  {
+    title: 'The animals enter', reference: 'Genesis 7:1–16',
+    narration: 'Animals arrive in pairs and move up the ramp. Noah’s family enters too, and the door is shut.',
+    prompt: 'The story slows down to count, gather, and make room for every living creature.',
+  },
+  {
+    title: 'The waters rise', reference: 'Genesis 7:17–24',
+    narration: 'Rain falls, streams fill, and the ark lifts from the ground. Inside, its passengers wait together.',
+    prompt: 'The Bible presents the flood as a story of judgment, rescue, and a new beginning.',
+  },
+  {
+    title: 'The dove returns', reference: 'Genesis 8:6–12',
+    narration: 'After many days, Noah sends out a dove. It comes back carrying a fresh olive leaf.',
+    prompt: 'One small leaf becomes a sign that dry land and growing things are returning.',
+  },
+  {
+    title: 'The rainbow promise', reference: 'Genesis 9:8–17',
+    narration: 'The family leaves the ark. A rainbow becomes the sign of a covenant with people and every living creature.',
+    prompt: 'The story ends with a promise for the whole earth—not only for Noah’s family.',
+  },
+]
+
+const rainDrops = Array.from({ length: 28 }, (_, index) =>
+  `<i style="--rain-x:${(index * 37) % 101}%;--rain-delay:-${(index % 7) * .18}s"></i>`).join('')
+
+function noahStoryMarkup() {
+  return `<section class="noah-player" id="noah-player" hidden aria-label="Animated story of Noah's ark">
+    <div class="noah-player-top">
+      <div><p>Animated Bible story</p><h2>Noah and the Ark</h2></div>
+      <button class="noah-close" id="noah-close" aria-label="Close Noah story">×</button>
+    </div>
+    <div class="noah-stage scene-0" id="noah-stage">
+      <div class="noah-visual" id="noah-visual" role="img" aria-label="Noah building the ark in a wide valley">
+        <div class="noah-builder" aria-hidden="true"><span></span><i></i><b></b></div>
+        <div class="noah-animals" aria-hidden="true"><span>🐘</span><span>🦒</span><span>🦓</span><span>🐫</span><span>🦌</span><span>🐑</span></div>
+        <div class="noah-rain" aria-hidden="true">${rainDrops}</div>
+        <div class="noah-water" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="noah-dove" aria-hidden="true">🕊</div>
+        <div class="noah-rainbow" aria-hidden="true"><i></i></div>
+      </div>
+      <div class="noah-caption" aria-live="polite">
+        <p class="noah-step" id="noah-step">Scene 1 of ${NOAH_SCENES.length}</p>
+        <h3 id="noah-title"></h3>
+        <p id="noah-narration"></p>
+        <p class="noah-think"><strong>Think about it</strong><span id="noah-prompt"></span></p>
+        <p class="noah-reference" id="noah-reference"></p>
+      </div>
+    </div>
+    <div class="noah-controls">
+      <button id="noah-prev" aria-label="Previous scene">← Previous</button>
+      <div class="noah-progress" id="noah-progress" aria-label="Story progress">${NOAH_SCENES.map((_, index) => `<button data-noah-scene="${index}" aria-label="Go to scene ${index + 1}"></button>`).join('')}</div>
+      <button id="noah-play" aria-pressed="false">Pause</button>
+      <button id="noah-next">Next →</button>
+    </div>
+  </section>`
+}
+
 function storyCard(entry, index) {
   const event = EVENT_BY_ID[entry.id]
   const era = ERA_BY_ID[event.era]
@@ -84,9 +147,11 @@ export function createKidsView(container, { onShowInAtlas, onShowEvidence }) {
   container.innerHTML = `<div class="kids-shell">
     <header class="kids-hero">
       <div><p class="kids-kicker">A simpler way to explore</p><h1>Big stories.<br><em>Real places.</em></h1>
-      <p>Read the Bible story, look for history clues, and learn why some questions do not have one easy answer.</p></div>
+      <p>Read the Bible story, look for history clues, and learn why some questions do not have one easy answer.</p>
+      <button class="kids-story-launch" id="noah-launch"><span>New animated story</span>Play Noah and the Ark →</button></div>
       <div class="kids-compass" aria-hidden="true"><span>N</span><i></i><b>Explore</b></div>
     </header>
+    ${noahStoryMarkup()}
     <main class="kids-content">
       <section class="kids-guide" aria-label="How to use Kids View">
         <div><span>1</span><strong>Read the story</strong><p>Start with what the Bible says.</p></div>
@@ -97,9 +162,92 @@ export function createKidsView(container, { onShowInAtlas, onShowEvidence }) {
       <section class="kids-grid">${KIDS_STORIES.map(storyCard).join('')}</section>
     </main>
   </div>`
+  let noahScene = 0
+  let noahTimer = null
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const player = container.querySelector('#noah-player')
+  const stage = container.querySelector('#noah-stage')
+  const playButton = container.querySelector('#noah-play')
+
+  const stopNoah = () => {
+    clearInterval(noahTimer)
+    noahTimer = null
+    playButton.textContent = 'Play'
+    playButton.setAttribute('aria-pressed', 'true')
+  }
+  const renderNoah = () => {
+    const scene = NOAH_SCENES[noahScene]
+    stage.className = `noah-stage scene-${noahScene}`
+    container.querySelector('#noah-step').textContent = `Scene ${noahScene + 1} of ${NOAH_SCENES.length}`
+    container.querySelector('#noah-title').textContent = scene.title
+    container.querySelector('#noah-narration').textContent = scene.narration
+    container.querySelector('#noah-prompt').textContent = scene.prompt
+    container.querySelector('#noah-reference').textContent = scene.reference
+    container.querySelector('#noah-prev').disabled = noahScene === 0
+    container.querySelector('#noah-next').textContent = noahScene === NOAH_SCENES.length - 1 ? 'Replay ↻' : 'Next →'
+    container.querySelector('#noah-visual').setAttribute('aria-label', `${scene.title}. ${scene.narration}`)
+    container.querySelectorAll('[data-noah-scene]').forEach((button, index) => {
+      button.classList.toggle('on', index === noahScene)
+      button.setAttribute('aria-current', index === noahScene ? 'step' : 'false')
+    })
+  }
+  const nextNoah = () => {
+    noahScene = noahScene === NOAH_SCENES.length - 1 ? 0 : noahScene + 1
+    renderNoah()
+  }
+  const startNoah = () => {
+    if (reducedMotion) { stopNoah(); return }
+    clearInterval(noahTimer)
+    noahTimer = setInterval(nextNoah, 7500)
+    playButton.textContent = 'Pause'
+    playButton.setAttribute('aria-pressed', 'false')
+  }
+  const openNoah = () => {
+    player.hidden = false
+    player.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' })
+    renderNoah()
+    startNoah()
+    container.querySelector('#noah-close').focus({ preventScroll: true })
+  }
+  const closeNoah = () => {
+    stopNoah()
+    player.hidden = true
+    container.querySelector('#noah-launch').focus({ preventScroll: true })
+  }
+
+  container.querySelector('#noah-launch').addEventListener('click', openNoah)
+  container.querySelector('#noah-close').addEventListener('click', closeNoah)
+  container.querySelector('#noah-prev').addEventListener('click', () => {
+    noahScene = Math.max(0, noahScene - 1)
+    renderNoah()
+    if (noahTimer) startNoah()
+  })
+  container.querySelector('#noah-next').addEventListener('click', () => {
+    nextNoah()
+    if (noahTimer) startNoah()
+  })
+  playButton.addEventListener('click', () => noahTimer ? stopNoah() : startNoah())
+  container.querySelector('#noah-progress').addEventListener('click', (event) => {
+    const index = event.target.closest('[data-noah-scene]')?.dataset.noahScene
+    if (index === undefined) return
+    noahScene = Number(index)
+    renderNoah()
+    if (noahTimer) startNoah()
+  })
+  container.addEventListener('keydown', (event) => {
+    if (player.hidden) return
+    if (event.key === 'Escape') closeNoah()
+    if (event.key === 'ArrowRight') { nextNoah(); if (noahTimer) startNoah() }
+    if (event.key === 'ArrowLeft' && noahScene > 0) {
+      noahScene--
+      renderNoah()
+      if (noahTimer) startNoah()
+    }
+  })
   container.addEventListener('click', (event) => {
     const eventId = event.target.closest('[data-kids-event]')?.dataset.kidsEvent
     if (eventId) onShowInAtlas(eventId)
   })
   container.querySelector('#kids-evidence-link').addEventListener('click', onShowEvidence)
+  renderNoah()
 }
