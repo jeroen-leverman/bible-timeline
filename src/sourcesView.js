@@ -28,6 +28,7 @@ const SOURCE_ORDER = [
   'israel-museum',
   'phi-inscriptions',
   'parco-colosseo',
+  'met-museum',
   'unesco-world-heritage',
   'openbible-geocoding',
   'pleiades',

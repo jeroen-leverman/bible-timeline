@@ -146,6 +146,12 @@ export const SOURCE_CATALOG = {
     license: 'Citation only; page rights retained by publisher',
     url: 'https://colosseo.it/en/',
   },
+  'met-museum': {
+    title: 'The Metropolitan Museum of Art',
+    type: 'archaeological-reference',
+    license: 'Object metadata and Open Access terms shown by publisher',
+    url: 'https://www.metmuseum.org/art/collection',
+  },
   openstreetmap: {
     title: 'OpenStreetMap',
     type: 'basemap-data',
